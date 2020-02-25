@@ -5,9 +5,9 @@
 /*global colours and margins*/
 :root {
     --main-bg-color: #2cbbbf;
-    --animie1-color1: #96d1d3; 
+    --animie1-color1: #96d1d3;
+    --animie1-color2: #c0e3e5;
     --form-bg-color: #ffffff;
-
     --margin-left: 50px;
     --margin-right: 50px;
 }
@@ -39,15 +39,12 @@ body {
     margin-right: var(--margin-right);
 }
 
-/*header*/
+/*header
 .header {
     display: grid;
     grid-template-columns: auto auto;
-}
+}*/
 
-#element1 {
-    span
-}
 
 /*making waves*/
 @keyframes animateWave {
