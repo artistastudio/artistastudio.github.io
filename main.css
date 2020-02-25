@@ -5,6 +5,7 @@
 :root {
     --main-bg-color: #2cbbbf;
     --main-color: #2cbbbf;
+    --form-bg-color: #ffffff;
 }
 
 body {
@@ -12,9 +13,11 @@ body {
 }
 
 .wave-container {
-    background: #EEE;
+    background: var(--form-bg-color);
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-    .wave-container > svg {
+.wave-container > svg {
         display: block;
-    }
+}
