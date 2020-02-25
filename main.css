@@ -53,13 +53,14 @@ body {
     display: block;
     width: 30%;
     height: auto;
-    margin: 20px;
+    margin: 30px;
 }
 
 @media screen and (max-width: 767px) {
     #logo {
+        margin-left: auto;
+        margin-right: auto;
         width: 80%;
-        margin: 20px;
     }
     #animie1 {
         display: none;
