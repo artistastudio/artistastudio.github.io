@@ -4,6 +4,7 @@
 
 /*global colours and margins*/
 :root {
+    --accent-bg-color: #2cbbbf; 
     --main-bg-color: #1fc296;
     --animie1-color1: #96d1d3;
     --animie1-color2: #c0e3e5;
@@ -20,8 +21,8 @@ body {
 
 /*all containers*/
 .container {
-    /*temp*/
-    border: 2px solid #B22222;
+    /*temp
+    border: 2px solid #B22222;*/
 }
 
 /*outer body container - for everything*/
@@ -42,7 +43,7 @@ body {
 /*header*/
 .header {
     display: grid;
-    background-image: linear-gradient(#2cbbbf,#1fc296);
+    background-image: linear-gradient(var(--accent-bg-color),var(--main-bg-color));
     grid-template-columns: auto auto;
 }
 
@@ -54,11 +55,11 @@ body {
     margin: 20px;
 }
 
-@media only screen and (max-width: 1000px) {
-    #logo img {
-        width: 50%;
-        height: auto;
-    }
+/*footer*/
+.footer {
+    display: grid;
+    background-image: linear-gradient(var(--main-bg-color),var(--accent-bg-color));
+    grid-template-columns: auto auto auto;
 }
 
 /*making waves*/
@@ -71,9 +72,15 @@ body {
         transform: scale(1,1);
     }
 }
-.wave-container {
-    position: relative;
+
+#top-wave-container {
+    /*position: relative;*/
     background: var(--main-bg-color);
+}
+
+#bottom-wave-container {
+    /*position: relative;*/
+    background: var(--form-bg-color);
 }
 
 .wave-container > svg {
