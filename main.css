@@ -22,8 +22,8 @@ body {
 
 /*all containers*/
 .container {
-    /*temp
-    border: 2px solid #B22222;*/
+    /*temp*/
+    border: 2px solid #B22222;
 }
 
 /*outer body container - for everything*/
@@ -60,6 +60,9 @@ body {
     #logo {
         width: 150%;
         margin: 30px;
+    }
+    #animie1 {
+        display: none;
     }
 }
 
