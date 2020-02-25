@@ -5,9 +5,10 @@
 /*global colours and margins*/
 :root {
     --main-bg-color: #2cbbbf;
+    --animie1-color1: #96d1d3; 
     --form-bg-color: #ffffff;
 
-    --margin-left:  50px;
+    --margin-left: 50px;
     --margin-right: 50px;
 }
 
@@ -36,6 +37,16 @@ body {
 #inner-body-container {
     margin-left: var(--margin-left);
     margin-right: var(--margin-right);
+}
+
+/*header*/
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#element1 {
+    span
 }
 
 /*making waves*/
