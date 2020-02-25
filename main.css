@@ -5,7 +5,6 @@
 /*global colours and margins*/
 :root {
     --main-bg-color: #2cbbbf;
-    --main-color: #2cbbbf;
     --form-bg-color: #ffffff;
 
     --margin-left:  50px;
@@ -24,11 +23,19 @@ body {
     border: 2px solid #B22222;
 }
 
-/*outer body container*/
+/*outer body container - for everything*/
 #outer-body-container {
-    color: var(--main-bg-color);
-    /*temp*/
-    border: 2px solid #000000;
+    background-color: var(--main-bg-color);
+}
+
+/*middle body container - except header and footer*/
+#middle-body-container {
+    background-color: var(--form-bg-color);
+}
+/*inner body container*/
+#inner-body-container {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
 }
 
 /*making waves*/
@@ -50,4 +57,10 @@ body {
     display: block;
     transform-origin: bottom;
     animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/*logo image*/
+.logoimage {
+    display: block;
+    width: 20%;
 }
