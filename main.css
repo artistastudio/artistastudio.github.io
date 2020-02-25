@@ -1,23 +1,53 @@
 /* ==========================================================================
-   Start of custom Webflow CSS
+   Start of custom CSS
    ========================================================================== */
 
+/*global colours and margins*/
 :root {
     --main-bg-color: #2cbbbf;
     --main-color: #2cbbbf;
     --form-bg-color: #ffffff;
+
+    --margin-left:  50px;
+    --margin-right: 50px;
 }
 
+/*body*/
 body {
     background-color: var(--main-bg-color);
+    margin: 0px;
 }
 
+/*all containers*/
+.container {
+    /*temp*/
+    border: 2px solid #B22222;
+}
+
+/*outer body container*/
+#outer-body-container {
+    color: var(--main-bg-color);
+    /*temp*/
+    border: 2px solid #000000;
+}
+
+/*making waves*/
+@keyframes animateWave {
+    0% {
+        transform: scale(1,0);
+    }
+
+    100% {
+        transform: scale(1,1);
+    }
+}
 .wave-container {
-    background: var(--form-bg-color);
-    margin-left: 30px;
-    margin-right: 30px;
+    position: relative;
+    background: var(--main-bg-color);
 }
 
 .wave-container > svg {
-        display: block;
+    display: block;
+    transform-origin: bottom;
+    animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
