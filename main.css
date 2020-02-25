@@ -52,6 +52,14 @@ body {
     height: auto;
 }
 
+@media only screen and (max-width: 768px) {
+
+    #logo img {
+        width: 50%;
+        height: auto;
+    }
+}
+
 /*making waves*/
 @keyframes animateWave {
     0% {
