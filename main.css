@@ -4,26 +4,86 @@
 
 /*global colours and margins*/
 :root {
-    --accent-bg-color: #2cbbbf; 
-    --main-bg-color: #1fc296;
-    --animie1-color1: #96d1d3;
-    --animie1-color2: #c0e3e5;
-    --form-bg-color: #ffffff;
+    --bright-blue: #2cbbbf;
+    --bright-green: #1fc296;
+    --grey: #8d9c9c;
+    --navy: #214180;
+    --royal-blue: #2a5ec5;
+    --light-hint-of-blue: #f9fbfe;
+    --light-blue: #ceedee;
+    --light-green: #cbebe2;
+    --light-grey: #dfe7e7;
+    --white: #ffffff;
+    
+    --accent-bg-color: var(--bright-blue);
+    --main-bg-color: var(--bright-green);
+    --animie1-color1: var(--light-green);
+    --animie1-color2: var(--light-blue);
+    --form-bg-color: var(--white);
     --margin-left: 50px;
     --margin-right: 50px;
-    --zero-margin:  0px;
+    --zero-margin: 0px;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h2, h3, h4, p {
+    color: var(--navy);
+}
+
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 44px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    color: var(--royal-blue);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 400;
+}
+
+cite,
+em {
+    font-style: italic;
 }
 
 /*body*/
 body {
     background-color: var(--accent-bg-color);
     margin: var(--zero-margin);
+    font: 300 16px/22px "OrkneyRegular"
 }
 
 /*all containers*/
 .container {
-    /*temp
-    border: 2px solid #B22222;*/
+    /*temp*/
+    border: 2px solid #B22222;
 }
 
 /*outer body container - for everything*/
@@ -237,3 +297,9 @@ body {
         order: -1;
     }
 }
+
+/*form*/
+#form1 {
+    background-color: var(--main-bg-color)
+}
+

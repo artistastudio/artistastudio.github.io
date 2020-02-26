@@ -6,6 +6,8 @@
     <title>Artista Studio</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="main.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css" />
 </head>
 
 <body>
@@ -85,6 +87,51 @@
                 </path>
             </svg>
         </div>
+
+        <form class="container form" id="form1">
+            <div class="form" id="forminput" align="center">
+                <label>Get in now for exclusive prelaunch access! <br /></label>
+                <input type="email" name="email" placeholder="name@domain.com" />
+            </div>
+
+            <div class="form" id="formbutton" align="center">
+                <button type="submit" class="btn btn-default" id="postForm">Submit</button>
+            </div>
+        </form>
+
+        <script>
+            $(document).ready(function () {
+                $.fn.serializeObject = function () {
+                    var o = {};
+                    var a = this.serializeArray();
+                    $.each(a, function () {
+                        if (o[this.name]) {
+                            if (!o[this.name].push) {
+                                o[this.name] = [o[this.name]];
+                            }
+                            o[this.name].push(this.value || '');
+                        } else {
+                            o[this.name] = this.value || '';
+                        }
+                    });
+                    return o;
+                };
+                var form = $('form#form1'),
+                    url = 'https://script.google.com/macros/s/AKfycbymCLmA9e3LPQ8jsXMHEjKS22Ct2tN1jdkfrcxOUP0e7XSdwzI/exec';
+                form.submit(function (e) {
+                    e.preventDefault();
+                    var jqxhr = $.ajax({
+                        url: url,
+                        method: "GET",
+                        dataType: "json",
+                        data: form.serializeObject()
+                    });
+                    $(".thanks").html("Thank you for getting in touch!").css("font-size", "4rem");
+                    $(".form-control").remove();
+                    $("#submit").remove();
+                });
+            });
+        </script>
 
         <footer class="footer container" id="footer1">
             <div class="container" align="center">
