@@ -28,10 +28,80 @@
             </div>
         </header>
 
+        <!--typewriter-->
+        <div class="container typewriter" id="typewriter1" align="center">
+            <h1>
+                <br><br>
+                Artista Studio is
+                <span class="txt-rotate"
+                      data-period="2000"
+                      data-rotate='[ "awesome.", "amazing.", "legendary.", "pretty.", "fun!" ]'></span><br><br>
+            </h1>
+        </div>
+
+        <script>
+            var TxtRotate = function(el, toRotate, period) {
+              this.toRotate = toRotate;
+              this.el = el;
+              this.loopNum = 0;
+              this.period = parseInt(period, 10) || 2000;
+              this.txt = '';
+              this.tick();
+              this.isDeleting = false;
+            };
+
+            TxtRotate.prototype.tick = function() {
+              var i = this.loopNum % this.toRotate.length;
+              var fullTxt = this.toRotate[i];
+
+              if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+              } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+              }
+
+              this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+              var that = this;
+              var delta = 300 - Math.random() * 100;
+
+              if (this.isDeleting) { delta /= 2; }
+
+              if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+              } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+              }
+
+              setTimeout(function() {
+                that.tick();
+              }, delta);
+            };
+
+            window.onload = function() {
+              var elements = document.getElementsByClassName('txt-rotate');
+              for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+              }
+              // INJECT CSS
+              var css = document.createElement("style");
+              css.type = "text/css";
+              css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+              document.body.appendChild(css);
+            };
+        </script>
+
         <div class="wave-container container" id="top-wave-container">
-            <!-- Your wave goes here... to make box smaller viewbox= 0 0 1440 320-->
+            <!-- Your wave goes here... to make box smaller viewbox=0 124 1440 110 -->
             <!-- from getwaves.io/...-->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 124 1440 110">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill=var(--form-bg-color) fill-opacity="1" d="M0,160L120,149.3C240,139,480,117,720,128C960,139,1200,181,1320,202.7L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
                 </path>
             </svg>
