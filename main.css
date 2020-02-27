@@ -166,7 +166,7 @@ body {
 /*logo in header*/
 #logo {
     display: block;
-    width: 30%;
+    /*width: 30%;*/
     height: auto;
     margin: 30px;
 }
@@ -182,8 +182,9 @@ body {
     }
 }
 
-.typewriter {
+.typewriter h1 {
     background-color: var(--bright-green);
+    color: var(--white);
 }
 
 /*footer*/
