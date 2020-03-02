@@ -41,11 +41,11 @@ blockquote, q {
     quotes: none;
 }
 
-    blockquote:before, blockquote:after,
-    q:before, q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
         content: '';
         content: none;
-    }
+}
 
 table {
     border-collapse: collapse;
@@ -87,40 +87,39 @@ table {
 
 h1, h2, h3, h4, p {
     color: var(--navy);
+    font-weight: 400;
 }
 
-/*
-h1, h2, h3, h4, h5, p {
-    margin-bottom: 22px;
-}*/
-
 h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 46px;
+    line-height: 50px;
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 44px;
+    font-size: 34px;
+    line-height: 40px;
 }
 
 h3 {
-    font-size: 21px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 h5 {
     color: var(--royal-blue);
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 strong {
-    font-weight: 400;
+    font-weight: 800;
 }
 
 cite,
@@ -132,13 +131,13 @@ em {
 body {
     background-color: var(--accent-bg-color);
     margin: var(--zero-margin);
-    font: 300 16px/22px "OrkneyRegular"
+    font: 300 16px/22px "Raleway"
 }
 
 /*all containers*/
 .container {
-    /*temp
-    border: 2px solid #B22222;*/
+    /*temp*/
+    border: 2px solid #B22222;
 }
 
 /*outer body container - for everything*/
@@ -164,11 +163,20 @@ body {
 }
 
 /*logo in header*/
-#logo {
+#logo1 {
     display: block;
     /*width: 30%;*/
     height: auto;
     margin: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+img.logo {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 200px;
 }
 
 @media screen and (max-width: 767px) {
@@ -210,6 +218,9 @@ body {
 #top-wave-container {
     /*position: relative;*/
     background: var(--main-bg-color);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 #bottom-wave-container {
@@ -365,3 +376,16 @@ body {
     background-color: var(--main-bg-color)
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+} 
