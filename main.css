@@ -70,6 +70,9 @@ table {
   --white: #ffffff;
 
   --zero-margin: 0px;
+  --low-margin: 5px;
+  --medium-margin: 10px;
+  --large-margin: 20px;
 
   --body-bg: var(--white);
   --border: var(--grey);
@@ -129,13 +132,14 @@ em {
 body {
     background-color: var(--body-bg);
     margin: var(--zero-margin);
+    padding: var(--zero-margin);
     font: 300 16px/22px "Raleway";
 }
 
 /*all containers*/
 .cnt {
-    /*temp*/
-    border: 2px solid var(--border);
+  /*temp*/
+  border: 2px solid var(--border);
 }
 
 /*
@@ -144,19 +148,22 @@ body {
   ========================================
 */
 
-.header{
-  /*position: -webkit-sticky;
-  position: sticky;
-  margin: var(--zero-margin);*/
+#header1{
+  padding-top: var(--low-margin);
+  padding-bottom: var(--low-margin);
+  border-bottom: 4px solid var(--header-border);
 }
+
 /*logo*/
 #logo1{
-  width:200px;
+  width:100px;
   height: auto;
 }
 
-@media only screen and (max-width: 767px) {
-  /*for mobile*/
-  width:100px;
-  height: auto;
+@media only screen and (min-width: 768px) {
+  /*for non mobile*/
+  #logo1{
+    width:150px;
+    height: auto;
+  }
 }
