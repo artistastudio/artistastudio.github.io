@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>Artista Studio</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- outer body container-->
+    <div class="container" id="outer-body-container">
+        <!-- header -->
+        <header class="header container" id="header1">
+            <!-- logo style="width: 20%;height: auto;"-->
+            <div class="container" id="logoimage" align="left">
+                <img src="logo_8_tran_inv_lowres.png" alt="logo" class="logo" id="logo1">
+            </div>
+            <!-- animie1-->
+            <div class="container" id="animie1" align="right">
+                <svg class="container" width="200" height="200" viewBox="-25 0 200 200">
+                    <circle cx="100" cy="100" r="100" fill=var(--animie1-color1) />
+                    <circle cx="100" cy="100" r="80" fill=var(--animie1-color2) />
+                </svg>
+            </div>
+        </header>
+        <!-- header end-->
+        <!--font test
+    <div>
+        <h1>This is h1<br><strong>This is h1</strong></h1>
+        <h2>This is h2</h2>
+        <h3>This is h3</h3>
+        <h4>This is h4</h4>
+        <h5>This is h5</h5>
+        <p>This is paragraph</p>
+    </div>
+    <!--font test end-->
+        <!--typewriter-->
+        <div class="container typewriter" id="typewriter1" align="center">
+            <h1>
+                <br><br>
+                Artista Studio is
+                <span class="txt-rotate"
+                      data-period="2000"
+                      data-rotate='[ "awesome.", "amazing.", "legendary.", "pretty.", "fun!" ]'></span>
+                <br><br>
+            </h1>
+        </div>
+
+        <script>
+            var TxtRotate = function (el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtRotate.prototype.tick = function () {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                var that = this;
+                var delta = 300 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function () {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function () {
+                var elements = document.getElementsByClassName('txt-rotate');
+                for (var i = 0; i < elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-rotate');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+                document.body.appendChild(css);
+            };
+        </script>
+
+        <div class="wave-container container" id="top-wave-container">
+            <!-- Your wave goes here... to make box smaller viewbox=0 124 1440 110 original size viewbox=0 0 1440 320-->
+            <!-- from getwaves.io/...-->
+            <input type="button" onClick="document.getElementById('inner-body-container').scrollIntoView();" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 124 1440 110">
+                <path fill=var(--form-bg-color) fill-opacity="1" d="M0,160L120,149.3C240,139,480,117,720,128C960,139,1200,181,1320,202.7L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+
+
+        <div class="container1">
+            <svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            <path class="star" d="M246.573,89.84l42.511,126.463l137.566,0l-111.293,78.158l42.51,126.462l-111.294,-78.158l-111.293,78.158l42.51,-126.462l-111.293,-78.158l137.566,0l42.51,-126.463Z" />
+
+
+
+        </svg>
+        </div>
+
+        <div class="container1">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="-5 -5 1000 1000" width="349.67" height="484.22">
+
+
+                <defs>
+                    <path class="star1" d="M349.67 299.12C292.78 231.88 257.22 189.86 243 173.05C233.75 162.12 231.05 147.07 235.91 133.61C237.93 128.01 234.34 137.96 235.91 133.61C241.04 119.41 258.16 113.84 270.66 122.29C275.13 125.32 265.73 118.96 270.66 122.29C282.59 130.36 284.86 147 275.53 157.97C269.63 164.91 279.03 153.86 275.53 157.97C256 180.95 232.67 200.41 206.56 215.51C196.76 221.17 214.45 210.94 206.56 215.51C174.26 234.18 146.27 259.47 124.42 289.71C120.27 295.46 131.05 280.54 124.42 289.71C112.15 306.71 112.72 329.8 125.81 346.16C128.02 348.92 121.38 340.62 125.81 346.16C131.99 353.88 143.13 355.42 151.16 349.66C162.94 341.21 148.29 351.71 151.16 349.66C180.06 328.93 180.02 285.94 151.08 265.27C141.6 258.49 156.7 269.28 143.36 259.75C120.3 243.28 88.81 245.47 68.26 264.96C54.05 278.42 75.34 258.24 68.26 264.96C25.83 305.18 13.85 368.02 38.49 421.03C44.89 434.79 30.24 403.28 38.49 421.03C57.73 462.41 100.66 487.47 146.14 483.88C162.53 482.58 131.01 485.07 146.14 483.88C196.81 479.88 241.49 449.11 263.28 403.19C269.23 390.67 256.24 418.03 263.28 403.19C281.48 364.86 276.31 319.52 249.94 286.28C233.12 265.07 242.63 277.06 230.03 261.18C187.57 207.63 154.71 147.13 132.92 82.37C129.55 72.37 139.51 101.94 132.92 82.37C123.11 53.22 135.05 21.2 161.54 5.59C167.93 1.82 152.45 10.94 161.54 5.59C179.61 -5.06 202.81 -0.09 214.93 17.02C220.04 24.24 215.23 17.45 220.67 25.12C232.58 41.94 232.76 64.39 221.12 81.4C214.22 91.5 225 75.74 221.12 81.4C198.6 114.33 166.89 139.91 129.94 154.96C112.62 162.02 69.3 179.66 0 207.9" id="dnIsRklsU">
+                    </path>
+                </defs>
+                <g>
+                    <g>
+                        <g>
+                            <use xlink:href="#dnIsRklsU" opacity="1" fill-opacity="0" stroke="#214180" stroke-width="10" stroke-opacity="1">
+                            </use>
+                        </g>
+                    </g>
+                </g>
+
+                <defs>
+                    <path class="star" d="M68.96 166.03C67.61 217.12 66.76 249.05 66.42 261.82C65.83 284.33 83.25 303.22 105.73 304.45C109.25 304.64 118.04 305.12 132.1 305.88C109.14 320.11 94.8 329 89.06 332.56C78.26 339.25 72.21 351.49 73.45 364.13C74.26 372.37 76.28 392.98 79.52 425.96C100.14 413.95 113.02 406.45 118.18 403.45C137.88 391.97 149.42 370.35 147.97 347.59C147.72 343.75 147.11 334.13 146.13 318.74C153.56 331.66 158.21 339.73 160.07 342.96C169.2 358.83 185.4 369.33 203.61 371.18C210.54 371.89 227.84 373.65 255.54 376.48C249.05 350 244.99 333.46 243.36 326.84C239.8 312.32 226.96 301.99 212.02 301.61C204.12 301.41 184.36 300.91 152.74 300.11C181.3 295.99 199.14 293.41 206.28 292.38C223.08 289.96 238.32 281.22 248.89 267.95C252.48 263.45 261.44 252.2 275.77 234.21C249.27 226.95 232.7 222.42 226.07 220.6C205.92 215.09 184.61 224.05 174.46 242.32C171.25 248.11 163.2 262.59 150.33 285.75C150.33 259.97 150.33 243.86 150.33 237.41C150.33 218.97 139.97 202.1 123.53 193.75C116.26 190.05 98.06 180.82 68.96 166.03Z" id="c1gsKjpEE4">
+                    </path>
+                </defs>
+                <g>
+                    <g>
+                        <g>
+                            <use xlink:href="#c1gsKjpEE4" opacity="1" fill="#214180" fill-opacity="1" stroke="#1fc296" stroke-width="10" stroke-opacity="1">
+                            </use>
+                        </g>
+                    </g>
+                </g>
+
+            </svg>
+
+
+
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="-5 -5 440 480" width="430" height="430">
+                <defs>
+                    <path class="star" d="M429.23 478.08C418.1 467.16 411.15 460.33 408.36 457.6C363.1 413.16 295.81 399.76 236.98 423.47C212.53 433.32 244.89 420.28 222.65 429.24C152.52 457.5 75.22 462.72 1.92 444.15C1.66 444.08 1.02 443.92 0 443.66" id="a1iMisxJL">
+                    </path>
+                    <path class="star" d="M368.05 122.39C337.26 122.39 311.36 99.29 307.86 68.7C306.28 54.96 309.01 78.8 307.76 67.9C303.62 31.72 331.91 0 368.33 0C381.69 0 354.66 0 368.33 0C404.16 0 432.23 30.82 428.89 66.5C427.84 77.68 430.09 53.63 428.84 67.04C425.9 98.41 399.56 122.39 368.05 122.39C357.24 122.39 379.17 122.39 368.05 122.39Z" id="c1qLMxcDj">
+                    </path>
+                    <path class="star" d="M230.58 293L136.72 452.59C139.97 431.89 142 418.95 142.81 413.77C148.31 378.8 166.27 347 193.38 324.23C198.34 320.07 210.74 309.65 230.58 293Z" id="d7DlQou7U">
+                    </path>
+                    <path class="star" d="M40.56 319.42L136.72 452.22C130.96 428.25 127.36 413.26 125.92 407.27C118.23 375.28 96.95 348.24 67.65 333.27C64.04 331.42 55.01 326.8 40.56 319.42Z" id="e1hngALmJ8">
+                    </path>
+                    <path class="star" d="" id="bCSTBGf3">
+                    </path>
+                </defs>
+
+                <g>
+                    <g>
+                        <g>
+                            <use xlink:href="#a1iMisxJL" opacity="1" fill-opacity="0" stroke="#214180" stroke-width="10" stroke-opacity="1">
+                            </use>
+                            <use xlink:href="#c1qLMxcDj" opacity="1" fill-opacity="0" stroke="#214180" stroke-width="10" stroke-opacity="1">
+                            </use>
+                            <use xlink:href="#d7DlQou7U" opacity="1" fill="#214180" fill-opacity="1" stroke="#1fc296" stroke-width="10" stroke-opacity="1">
+                            </use>
+                            <use xlink:href="#e1hngALmJ8" opacity="1" fill="#214180" fill-opacity="1" stroke="#1fc296" stroke-width="10" stroke-opacity="1">
+                            </use>
+                            <use xlink:href="#bCSTBGf3" opacity="1" fill="#214180" fill-opacity="1" stroke="#1fc296" stroke-width="10" stroke-opacity="1">
+                            </use>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+
+
+
+        <div class="container" id="middle-body-container">
+            <div class="container" id="inner-body-container">
+
+                <section id="hero" class="hero container">
+                    <div class="flex-container w-container  container">
+                        <div class="container">
+                            <h1>Define your Brand Identity</h1>
+                            <p>Make amazing brand identity</p>
+                        </div>
+                        <div class="hero-image-mask container">
+                            <iframe style="border: none;" src="test.gif" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="feature-section" class="feature-section container">
+                    <div class="flex-container w-container container">
+                        <div class="feature-image-mask container">
+                            <iframe src="https://giphy.com/embed/FhOCTD5CzzAm4" width="480" height="331" frameBorder="0" class="feature-image" allowFullScreen></iframe>
+                        </div>
+                        <div class="container">
+                            <h2>Create Posts for Social Media</h2>
+                            <p>Create social media posts in your brand identity automatically!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hero" class="hero container">
+                    <div class="flex-container w-container container">
+                        <div class="container">
+                            <h2>Create Videos for Social Media</h2>
+                            <p>Create high traction videos from your creative contents in your brand identity, all automatically!</p>
+                        </div>
+                        <div class="hero-image-mask container" height="1400">
+                            <iframe src="test.gif" width="1480" height="1360" frameBorder="0" class="hero-image" allowFullScreen></iframe>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="wave-container container" id="bottom-wave-container">
+            <!-- Your wave goes here... to make box smaller viewbox= 0 0 1440 320-->
+            <!-- from getwaves.io/...-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 39">
+                <path fill=var(--main-bg-color) fill-opacity="1" d="M0,32L1440,0L1440,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+        <form class="container form" id="form1">
+            <div class="form" id="forminput" align="center">
+                <label>Get in now for exclusive prelaunch access! <br /></label>
+                <input type="email" name="email" placeholder="name@domain.com" />
+            </div>
+
+            <div class="form" id="formbutton" align="center">
+                <button type="submit" class="btn btn-default" id="postForm">Submit</button>
+            </div>
+        </form>
+
+        <script>
+            $(document).ready(function () {
+                $.fn.serializeObject = function () {
+                    var o = {};
+                    var a = this.serializeArray();
+                    $.each(a, function () {
+                        if (o[this.name]) {
+                            if (!o[this.name].push) {
+                                o[this.name] = [o[this.name]];
+                            }
+                            o[this.name].push(this.value || '');
+                        } else {
+                            o[this.name] = this.value || '';
+                        }
+                    });
+                    return o;
+                };
+                var form = $('form#form1'),
+                    url = 'https://script.google.com/macros/s/AKfycbymCLmA9e3LPQ8jsXMHEjKS22Ct2tN1jdkfrcxOUP0e7XSdwzI/exec';
+                form.submit(function (e) {
+                    e.preventDefault();
+                    var jqxhr = $.ajax({
+                        url: url,
+                        method: "GET",
+                        dataType: "json",
+                        data: form.serializeObject()
+                    });
+                    $(".thanks").html("Thank you for getting in touch!").css("font-size", "4rem");
+                    $(".form-control").remove();
+                    $("#submit").remove();
+                });
+            });
+        </script>
+
+        <footer class="footer container" id="footer1">
+            <div class="container" align="center">
+                <section>Contact Us</section>
+            </div>
+            <div class="container" align="center">
+                <section>About Us<br><br><br><br><br><br><br></section>
+            </div>
+            <div class="container" align="center">
+                <section>All right reserved</section>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
