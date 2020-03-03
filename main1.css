@@ -1,0 +1,125 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+        content: '';
+        content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==========================================================================
+   Start of custom CSS
+   ========================================================================== */
+
+/*global colours and other settings*/
+:root {
+    --bright-blue: #2cbbbf;
+    --bright-green: #1fc296;
+    --grey: #8d9c9c;
+    --navy: #214180;
+    --royal-blue: #2a5ec5;
+    --light-hint-of-blue: #f9fbfe;
+    --light-blue: #ceedee;
+    --light-green: #cbebe2;
+    --light-grey: #dfe7e7;
+    --white: #ffffff;
+
+    --accent-bg-color: var(--bright-blue);
+    --main-bg-color: var(--bright-green);
+    --animie1-color1: var(--light-green);
+    --animie1-color2: var(--light-blue);
+    --form-bg-color: var(--white);
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h2, h3, h4, p {
+    color: var(--navy);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 50px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h5 {
+    color: var(--royal-blue);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 800;
+}
+
+cite,
+em {
+    font-style: italic;
+}
