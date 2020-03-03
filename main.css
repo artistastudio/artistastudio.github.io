@@ -76,7 +76,7 @@ table {
 
   --body-bg: var(--white);
   --border: var(--grey);
-  --header-border: var(--bright-green);
+  --header-border: var(--bright-blue);
   --text-lightbg: var(--navy);
   --text-highlight: var(--royal-blue);
 }
@@ -138,8 +138,8 @@ body {
 
 /*all containers*/
 .cnt {
-  /*temp*/
-  border: 2px solid var(--border);
+  /*temp
+  border: 2px solid var(--border);*/
 }
 
 /*
@@ -177,6 +177,10 @@ body {
   hero
   ========================================
 */
-#hero1{
-  background-image: linear-gradient(to right, var(--bright-blue),var(--bright-green));
+#hero1left{
+  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+}
+#hero1right{
+  background-color: var(--navy);
+  color: var(--white);
 }
