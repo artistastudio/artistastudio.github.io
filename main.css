@@ -149,9 +149,9 @@ body {
 */
 
 #header1{
-  padding-top: var(--low-margin);
-  padding-bottom: var(--low-margin);
-  border-bottom: 4px solid var(--header-border);
+  padding-top: var(--medium-margin);
+  padding-bottom: var(--medium-margin);
+  border-bottom: 1px solid var(--header-border);
 }
 
 /*logo*/
@@ -177,12 +177,14 @@ body {
   hero
   ========================================
 */
+#hero1{
+  border-right: 30px solid var(--white)
+}
 #hero1left{
   /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));*/
-  background-color: var(--navy);
+  background-color: var(--bright-green);
 }
 #hero1right{
-  background-color: var(--light-green);
-  border-left:
-  /*color: var(--white);*/
+  background-color: var(--light-blue);
+  color: var(--navy);
 }
