@@ -136,18 +136,18 @@ body {
 
 /*all containers*/
 .container {
-    /*temp*/
-    border: 2px solid #B22222;
+    /*temp
+    border: 2px solid #B22222;*/
 }
 
 /*outer body container - for everything*/
 #outer-body-container {
-    background-color: var(--accent-bg-color);
+    background-color: var(--white);
 }
 
 /*middle body container - except header and footer*/
 #middle-body-container {
-    background-color: var(--form-bg-color);
+    background-color: var(--white);
 }
 /*inner body container*/
 #inner-body-container {
@@ -388,4 +388,29 @@ a {
 #down {
     margin-top: 100%;
     padding-bottom: 25%;
-} 
+}
+
+
+
+
+.container1 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.star {
+    fill: #1fc296;
+    stroke: #214180;
+    stroke-width: 17px;
+    /* Stroke-dasharray property */
+    stroke-dasharray: 1353px;
+    stroke-dashoffset: 1353px;
+    animation: move 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
