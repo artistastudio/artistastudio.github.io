@@ -58,22 +58,23 @@ table {
 
 /*global colours and other settings*/
 :root {
-    --bright-blue: #2cbbbf;
-    --bright-green: #1fc296;
-    --grey: #8d9c9c;
-    --navy: #214180;
-    --royal-blue: #2a5ec5;
-    --light-hint-of-blue: #f9fbfe;
-    --light-blue: #ceedee;
-    --light-green: #cbebe2;
-    --light-grey: #dfe7e7;
-    --white: #ffffff;
+  --bright-blue: #2cbbbf;
+  --bright-green: #1fc296;
+  --grey: #8d9c9c;
+  --navy: #214180;
+  --royal-blue: #2a5ec5;
+  --light-hint-of-blue: #f9fbfe;
+  --light-blue: #ceedee;
+  --light-green: #cbebe2;
+  --light-grey: #dfe7e7;
+  --white: #ffffff;
 
-    --accent-bg-color: var(--bright-blue);
-    --main-bg-color: var(--bright-green);
-    --animie1-color1: var(--light-green);
-    --animie1-color2: var(--light-blue);
-    --form-bg-color: var(--white);
+  --zero-margin: 0px;
+
+  --body-bg: var(--white)
+  --border: var(--grey)
+  --text-lightbg: var(--navy)
+  --text-highlight: var(--royal-blue)
 }
 
 /*
@@ -83,7 +84,7 @@ table {
 */
 
 h1, h2, h3, h4, p {
-    color: var(--navy);
+    color: var(--text-lightbg);
     font-weight: 400;
 }
 
@@ -108,10 +109,9 @@ h4 {
 }
 
 h5 {
-    color: var(--royal-blue);
+    color: var(--text-highlight);
     font-size: 20px;
     line-height: 30px;
-    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -122,4 +122,17 @@ strong {
 cite,
 em {
     font-style: italic;
+}
+
+/*body*/
+body {
+    background-color: var(--body-bg);
+    margin: var(--zero-margin);
+    font: 300 16px/22px "Raleway"
+}
+
+/*all containers*/
+.cnt {
+    /*temp*/
+    border: 2px solid --border;
 }
