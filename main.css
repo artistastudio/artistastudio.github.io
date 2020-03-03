@@ -93,8 +93,8 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-    font-size: 46px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 55px;
 }
 
 h2 {
@@ -178,9 +178,10 @@ body {
   ========================================
 */
 #hero1left{
-  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+  /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));*/
+  background-color: var(--navy);
 }
 #hero1right{
-  background-color: var(--navy);
-  color: var(--white);
+  background-color: var(--light-blue);
+  /*color: var(--white);*/
 }
