@@ -150,8 +150,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp*/
-  border: 2px solid var(--border);
+  /*temp
+  border: 2px solid var(--border);*/
 }
 
 /*
@@ -161,20 +161,11 @@ body {
 */
 /*logo*/
 #imglogo1{
-  width:100px;
+  width:150px;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  /*for non mobile*/
-  #imglogo1{
-    width:150px;
-    height: auto;
-    float: left;
-  }
 }
 
 /*
