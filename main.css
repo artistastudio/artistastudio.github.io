@@ -150,8 +150,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp
-  border: 2px solid var(--border);*/
+  /*temp*/
+  border: 2px solid var(--border);
 }
 
 /*
@@ -189,7 +189,7 @@ body {
   position: relative;
   z-index: 1;
   height: 400px;
-  width: 300px;
+  width: 250px;
   /*background-color: var(--bright-blue);*/
   background-image: linear-gradient(var(--bright-blue),var(--bright-green));
   /*animation : name duration timing-funtion fill-mode*/
@@ -255,7 +255,7 @@ body {
     width: 800px;
   }
 }
-
+/*
 @-webkit-keyframes heroright {
    from {margin-left: 100%}
      to {margin-left: -20%}
@@ -275,10 +275,10 @@ body {
    from {margin-left: 100%}
      to {margin-left: -20%}
 }
-
+*/
 @keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: -20%}
+     to {margin-left: -50%}
 }
 
 #heroanimation3 {
@@ -299,10 +299,10 @@ body {
 @media screen and (min-width: 768px) {
   #heroanimation3 {
     height: 500px;
-    width: 300px;
+    width: 600px;
   }
 }
-
+/*
 @-webkit-keyframes heroright3 {
    from {margin-left: 100%}
      to {margin-left: 0%}
@@ -322,10 +322,10 @@ body {
    from {margin-left: 100%}
      to {margin-left: 0%}
 }
-
+*/
 @keyframes heroright3 {
    from {margin-left: 100%}
-     to {margin-left: 0%}
+     to {margin-left: -50%}
 }
 
 /*
