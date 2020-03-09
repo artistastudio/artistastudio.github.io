@@ -159,18 +159,8 @@ body {
   header row
   ========================================
 */
+
 /*logo*/
-
-#row1 {
-  height: 30vh;
-}
-
-@media screen and (min-width: 768px) {
-  #row1 {
-    height: 15vh;
-  }
-}
-
 #imglogo1 {
   width:150px;
   height: auto;
@@ -186,12 +176,12 @@ body {
 */
 
 #row2 {
-  height: 55vh;
+  height: 800px;
 }
 
 @media screen and (min-width: 768px) {
   #row2 {
-    height: 80vh;
+
   }
 }
 
