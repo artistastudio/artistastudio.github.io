@@ -1,38 +1,49 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <!-- regular stuff-->
+  <!--uk regular stuff-->
   <meta charset="utf-8">
   <title>Artista Studio</title>
   <link rel="stylesheet" href="main.css">
 
-  <!-- import hosted bootstrap css and js-->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-  <!-- for proper rendering on mobile and zoom off-->
+  <!--uk for proper rendering on mobile and zoom off-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!-- import jquery library from google CDN-->
+  <!--uk import jquery library from google CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- import google font Raleway-->
+  <!--uk import google font Raleway-->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!--uk import hosted semantic-ui from cloudflare-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js" integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+  <!--uk end of import hosted semantic-ui from cloudflare-->
 
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="header cnt container-fluid" id="header1">
-
-    <!-- logo -->
-    <img class="logo" id="logo1" src="logo_8_tran_light.png" alt="">
-
+  <!-- uk start of semantic-ui grid container-->
+  <div class="ui grid container ukcnt" id="grid1">
+    <!--uk Header row -->
+    <div class="equal width stackable row ukcnt" id="row1">
+      <div class="column ukcnt" id="row1col1">
+      <!--uk logo image-->
+        <img class="imglogo1 ukcnt" id="imglogo1" src="logo_8_tran_light.png" alt="">
+      </div>
+      <div class="computer only column ukcnt" id="row1col2">
+      </div>
+      <div class="column ukcnt" id="row1col3">
+      </div>
+    </div>
+    <!--uk end of Header row-->
   </div>
 
+
+
+
   <!-- Hero -->
+  <!--
   <div class="hero cnt" id="hero2">
 
     <div class="hero animated cnt" id="heroanimated1">
@@ -48,6 +59,7 @@
     <div class="hero animated cnt" id="heroanimated2">
     </div>
   </div>
+-->
 
   <!-- Hero old  - TODO remove
   <div class="hero cnt container-fluid" id="hero1">

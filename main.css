@@ -130,7 +130,12 @@ em {
     font-style: italic;
 }
 
-/*body*/
+/*
+  ========================================
+  body
+  ========================================
+*/
+
 body {
     background-color: var(--body-bg);
     margin: var(--zero-margin);
@@ -138,26 +143,24 @@ body {
     font: 300 16px/22px "Raleway";
 }
 
+#grid1 {
+  margin: var(--zero-margin);
+  padding: var(--zero-margin);
+}
+
 /*all containers*/
-.cnt {
-  /*temp
-  border: 2px solid var(--border);*/
+.ukcnt {
+  /*temp*/
+  border: 2px solid var(--border);
 }
 
 /*
   ========================================
-  header
+  header row
   ========================================
 */
-
-#header1{
-  padding-top: var(--medium-margin);
-  padding-bottom: var(--medium-margin);
-  /*border-bottom: 1px solid var(--header-border);*/
-}
-
 /*logo*/
-#logo1{
+#imglogo1{
   width:100px;
   height: auto;
   display: block;
@@ -167,7 +170,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   /*for non mobile*/
-  #logo1{
+  #imglogo1{
     width:150px;
     height: auto;
     float: left;
