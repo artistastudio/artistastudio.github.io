@@ -150,8 +150,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp*/
-  border: 2px solid var(--border);
+  /*temp
+  border: 2px solid var(--border);*/
 }
 
 /*
@@ -255,27 +255,27 @@ body {
     width: 800px;
   }
 }
-/*
+
 @-webkit-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: -20%}
+     to {margin-left: -50%}
 }
 
 @-moz-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: -20%}
+     to {margin-left: -50%}
 }
 
 @-ms-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: -20%}
+     to {margin-left: -50%}
 }
 
 @-o-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: -20%}
+     to {margin-left: -50%}
 }
-*/
+
 @keyframes heroright {
    from {margin-left: 100%}
      to {margin-left: -50%}
@@ -302,27 +302,27 @@ body {
     width: 600px;
   }
 }
-/*
+
 @-webkit-keyframes heroright3 {
    from {margin-left: 100%}
-     to {margin-left: 0%}
+     to {margin-left: -50%}
 }
 
 @-moz-keyframes heroright3 {
    from {margin-left: 100%}
-     to {margin-left: 0%}
+     to {margin-left: -50%}
 }
 
 @-ms-keyframes heroright3 {
    from {margin-left: 100%}
-     to {margin-left: 0%}
+     to {margin-left: -50%}
 }
 
 @-o-keyframes heroright3 {
    from {margin-left: 100%}
-     to {margin-left: 0%}
+     to {margin-left: -50%}
 }
-*/
+
 @keyframes heroright3 {
    from {margin-left: 100%}
      to {margin-left: -50%}
