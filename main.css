@@ -150,8 +150,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp
-  border: 2px solid var(--border);*/
+  /*temp*/
+  border: 2px solid var(--border);
 }
 
 /*
@@ -160,7 +160,18 @@ body {
   ========================================
 */
 /*logo*/
-#imglogo1{
+
+#row1 {
+  height: 30vh;
+}
+
+@media screen and (min-width: 768px) {
+  #row1 {
+    height: 15vh;
+  }
+}
+
+#imglogo1 {
   width:150px;
   height: auto;
   display: block;
@@ -171,6 +182,22 @@ body {
 /*
   ========================================
   hero
+  ========================================
+*/
+
+#row2 {
+  height: 55vh;
+}
+
+@media screen and (min-width: 768px) {
+  #row2 {
+    height: 80vh;
+  }
+}
+
+/*
+  ========================================
+  hero another old - TODO remove
   ========================================
 */
 

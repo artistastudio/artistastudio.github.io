@@ -23,15 +23,18 @@
 </head>
 
 <body>
+
+
   <!-- uk start of semantic-ui grid container-->
   <div class="ui grid container ukcnt" id="grid1">
+
     <!--uk Header row -->
-    <div class="stackable row ukcnt" id="row1">
+    <div class="stackable row ukcnt header" id="row1">
       <div class="lefted float three wide column ukcnt" id="row1col1">
       <!--uk logo image-->
-        <img class="imglogo1 ukcnt" id="imglogo1" src="logo_8_tran_light.png" alt="">
+        <img class="imglogo ukcnt" id="imglogo1" src="logo_8_tran_light.png" alt="">
       </div>
-      <div class="right floated right aligned six wide column ukcnt" id="row1col2">
+      <div class="right floated right aligned seven wide column ukcnt" id="row1col2">
         <div class="ui fluid five item secondary menu">
           <a class="item">Home</a>
           <a class="item">Branding</a>
@@ -39,12 +42,27 @@
           <a class="item">Videos</a>
           <a class="item">About Us</a>
         </div>
-        </div>
       </div>
     </div>
     <!--uk end of Header row-->
+
+    <!--uk hero row -->
+    <div class="row ukcnt hero" id="row2">
+      <div class="six wide column ukcnt" id="row2col1">
+        hello
+      </div>
+      <div class="ten wide column ukcnt" id="row2col2">
+        hi
+      </div>
+    </div>
+    <!--uk end of hero row -->
+
   </div>
 
+  <!--uk animations scripts -->
+  <!--uk hero row animations -->
+  <script>$('#row2col1').transition('fly right in')</script>
+  <script>$('#row2col2').transition('fly left in')</script>
 
 
 
