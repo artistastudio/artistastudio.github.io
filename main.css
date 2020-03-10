@@ -286,6 +286,8 @@ body {
 
 
 #heroani2 {
+  display: flex;
+  align-items: center; /* align vertical */
   position: absolute;
   z-index: 2;
   top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
@@ -339,33 +341,80 @@ body {
      to {margin-left: 8%}
 }
 
-
 @-webkit-keyframes herorightd {
    from {margin-left: 100%}
-     to {margin-left: 30%}
+     to {margin-left: 13%}
 }
 
 @-moz-keyframes herorightd {
    from {margin-left: 100%}
-     to {margin-left: 30%}
+     to {margin-left: 13%}
 }
 
 @-ms-keyframes herorightd {
    from {margin-left: 100%}
-     to {margin-left: 30%}
+     to {margin-left: 13%}
 }
 
 @-o-keyframes herorightd {
    from {margin-left: 100%}
-     to {margin-left: 30%}
+     to {margin-left: 13%}
 }
 
 @keyframes herorightd {
    from {margin-left: 100%}
-     to {margin-left: 30%}
+     to {margin-left: 13%}
 }
 
+#heroani3 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--low-margin) + var(--header-height-m));
+  height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
+  width: 100vw;
+  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+  /*animation : name duration timing-funtion fill-mode*/
+  -webkit-animation: heroleft3 3s ease-out forwards;
+     -moz-animation: heroleft3 3s ease-out forwards;
+      -ms-animation: heroleft3 3s ease-out forwards;
+       -o-animation: heroleft3 3s ease-out forwards;
+          animation: heroleft3 3s ease-out forwards;
+}
 
+@media screen and (min-width: 768px) {
+  #heroani3 {
+    display: block;
+    top: calc(var(--low-margin) + var(--header-height-d));
+    height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
+    width: 20vw;
+  }
+}
+
+@-webkit-keyframes heroleft3 {
+   from {margin-left: 100%}
+     to {margin-left: 80%}
+}
+
+@-moz-keyframes heroleft3 {
+   from {margin-left: 100%}
+     to {margin-left: 80%}
+}
+
+@-ms-keyframes heroleft3 {
+   from {margin-left: 100%}
+     to {margin-left: 80%}
+}
+
+@-o-keyframes heroleft3 {
+   from {margin-left: 100%}
+     to {margin-left: 80%}
+}
+
+@keyframes heroleft3 {
+   from {margin-left: 100%}
+     to {margin-left: 80%}
+}
 
 
 #row2 {
