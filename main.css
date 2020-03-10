@@ -76,6 +76,12 @@ table {
   --extra-large-margin: 50px;
   --super-extra-large-margin:100px;
 
+  --header-height-m: 120px;
+  --header-height-d: 75px;
+
+  --logo-width-m: 150px;
+  --logo-width-d: 150px;
+
   --body-bg: var(--white);
   --border: var(--grey);
   --header-border: var(--bright-blue);
@@ -136,6 +142,15 @@ em {
   ========================================
 */
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
 body {
     background-color: var(--body-bg);
     margin: var(--zero-margin);
@@ -156,47 +171,49 @@ body {
 
 /*
   ========================================
-  header row
+  header
   ========================================
 */
 
 #header2 {
   width: 100%;
-  height: 120px;
+  height: var(--header-height-m);
 }
 
 #header1 {
   position: fixed;
   z-index: 10;
   width: 100%;
-  height: 120px;
+  height: var(--header-height-m);
   background-color: var(--body-bg);
   border-bottom: 2px solid var(--bright-green);
 }
 
 /*logo*/
 #imglogo1 {
-  width:150px;
+  width: var(--logo-width-m);
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: var(--medium-margin);
 }
 
 
 @media screen and (min-width: 768px) {
   #header2 {
-    height: 75px;
+    height: var(--header-height-d);
   }
   #header1 {
-    height: 75px;
+    height: var(--header-height-d);
     display: grid;
     grid-template-columns: auto auto;
   }
 
   #imglogo1 {
-    margin-left: 30px;
+    width: var(--logo-width-d);
+    height: auto;
+    margin-left: var(--extra-large-margin);
   }
 }
 
@@ -205,6 +222,151 @@ body {
   hero
   ========================================
 */
+
+#hero1 {
+  width: 100%;
+  height: calc(100vh - var(--low-margin) - var(--header-height-m));
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #hero1 {
+    width: 100%;
+    height: calc(100vh - var(--low-margin) - var(--header-height-d));
+  }
+}
+
+#heroani1 {
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--low-margin) + var(--header-height-m));
+  height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
+  width: 100vw;
+  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+  /*animation : name duration timing-funtion fill-mode*/
+  -webkit-animation: heroleft 3s ease-out forwards;
+     -moz-animation: heroleft 3s ease-out forwards;
+      -ms-animation: heroleft 3s ease-out forwards;
+       -o-animation: heroleft 3s ease-out forwards;
+          animation: heroleft 3s ease-out forwards;
+}
+
+@media screen and (min-width: 768px) {
+  #heroani1 {
+    top: calc(var(--low-margin) + var(--header-height-d));
+    height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
+    width: 50vw;
+  }
+}
+
+@-webkit-keyframes heroleft {
+   from {margin-left: -50%}
+     to {margin-left: 0%}
+}
+
+@-moz-keyframes heroleft {
+   from {margin-left: -50%}
+     to {margin-left: 0%}
+}
+
+@-ms-keyframes heroleft {
+   from {margin-left: -50%}
+     to {margin-left: 0%}
+}
+
+@-o-keyframes heroleft {
+   from {margin-left: -50%}
+     to {margin-left: 0%}
+}
+
+@keyframes heroleft {
+   from {margin-left: -50%}
+     to {margin-left: 0%}
+}
+
+
+#heroani2 {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
+  height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
+  width: 80vw;
+  background-color: var(--light-blue);
+  /*animation : name duration timing-funtion fill-mode*/
+  -webkit-animation: heroright 3s ease-out forwards;
+     -moz-animation: heroright 3s ease-out forwards;
+      -ms-animation: heroright 3s ease-out forwards;
+       -o-animation: heroright 3s ease-out forwards;
+          animation: heroright 3s ease-out forwards;
+}
+
+@media screen and (min-width: 768px) {
+  #heroani2 {
+    top: calc(var(--low-margin) + var(--header-height-d)  + var(--large-margin) + var(--large-margin));
+    height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d) - var(--large-margin) - var(--large-margin) - var(--large-margin) - var(--large-margin));
+    width: 70vw;
+    /*animation : name duration timing-funtion fill-mode*/
+    -webkit-animation: herorightd 3s ease-out forwards;
+       -moz-animation: herorightd 3s ease-out forwards;
+        -ms-animation: herorightd 3s ease-out forwards;
+         -o-animation: herorightd 3s ease-out forwards;
+            animation: herorightd 3s ease-out forwards;
+  }
+}
+
+@-webkit-keyframes heroright {
+   from {margin-left: 100%}
+     to {margin-left: 8%}
+}
+
+@-moz-keyframes heroright {
+   from {margin-left: 100%}
+     to {margin-left: 8%}
+}
+
+@-ms-keyframes heroright {
+   from {margin-left: 100%}
+     to {margin-left: 8%}
+}
+
+@-o-keyframes heroright {
+   from {margin-left: 100%}
+     to {margin-left: 8%}
+}
+
+@keyframes heroright {
+   from {margin-left: 100%}
+     to {margin-left: 8%}
+}
+
+
+@-webkit-keyframes herorightd {
+   from {margin-left: 100%}
+     to {margin-left: 30%}
+}
+
+@-moz-keyframes herorightd {
+   from {margin-left: 100%}
+     to {margin-left: 30%}
+}
+
+@-ms-keyframes herorightd {
+   from {margin-left: 100%}
+     to {margin-left: 30%}
+}
+
+@-o-keyframes herorightd {
+   from {margin-left: 100%}
+     to {margin-left: 30%}
+}
+
+@keyframes herorightd {
+   from {margin-left: 100%}
+     to {margin-left: 30%}
+}
+
+
+
 
 #row2 {
   padding-top : var(--low-margin);
@@ -225,7 +387,7 @@ body {
        -o-animation: heroleft 3s ease-out forwards;
           animation: heroleft 3s ease-out forwards;
 }
-
+/*
 @media screen and (min-width: 768px) {
   #heroanimation1 {
     height: 500px;
@@ -257,7 +419,7 @@ body {
    from {margin-left: -100%}
      to {margin-left: -50%}
 }
-
+*/
 
 #heroanimation2 {
   padding : var(--medium-margin);
@@ -281,7 +443,7 @@ body {
     width: 800px;
   }
 }
-
+/*
 @-webkit-keyframes heroright {
    from {margin-left: 100%}
      to {margin-left: -50%}
@@ -306,7 +468,7 @@ body {
    from {margin-left: 100%}
      to {margin-left: -50%}
 }
-
+*/
 #heroanimation3 {
   position: relative;
   z-index: 1;
