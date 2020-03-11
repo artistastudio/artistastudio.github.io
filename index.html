@@ -42,23 +42,24 @@
   <!--uk end of Header row-->
 
   <!--uk hero animation-->
-  <div class="hero ukcnt" id="hero1">
-    <div class="heroanimation ukcnt" id="heroani1">
-    </div>
+  <section class="hero ukcnt" id="hero1">
+    <section class="heroanimation ukcnt" id="heroani1"></section>
 
-    <div class="heroanimation ukcnt" id="heroani2">
-      <div class="herotext ukcnt" id="herotext1">
+    <section class="heroanimation ukcnt" id="heroani2">
+      <article class="herotext ukcnt" id="herotext1">
         <h1>Authentic Designs..<br>In a Matter of Clicks..<br>Coming to Life..</h1>
         <h4>Don't have a brand identity for promotional posts?
           <br>Struggle with giving your promotional content a unique yet brand consistent touch?
           <br>Can't keep up with the production of promotional content at the pace of social media platforms?
           <br><br>Artista Studio has got your back.</h4>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <div class="heroanimation ukcnt" id="heroani3">
-    </div>
-  </div>
+    <section class="heroanimation ukcnt" id="heroani3"></section>
+
+    <aside class="heroarrow ukcnt" id="downarrow1"><a class="arrow" href="#row3">&dArr;</a></aside>
+
+  </section>
   <!--uk end of hero animation-->
 
 
@@ -225,15 +226,41 @@
 
   <!--uk animations scripts -->
   <!--uk hero row animations -->
+
+
+  <script>
+  $(document)
+      .on('click', 'a[href^="#"]', function(e) {
+          e.preventDefault();
+          var target = $(this).attr('href');
+          $('html, body')
+            .animate({
+                scrollTop: $(target).offset().top}, 'slow', 'swing', function() {});
+              })
+  </script>
   <!--
   <script>$('#row2col1').transition('fly right in')</script>
   <script>$('#row2col2').transition('fly left in')</script>
-  -->
+
   <script>
-  $(function() {
-    while( $('#herotext1 div').height() > $('#herotext1').height() ) {
-        $('#herotext1 div').css('font-size', (parseInt($('#herotext1 div').css('font-size')) - 1) + "px" );
+  $(document).ready(function() {
+    while( $('#heroani2').height() > $('#herotext1').height() ) {
+        $('#herotext1').css('font-size', (parseInt($('#herotext1').css('font-size')) - 1) + "px" );
     }
   });</script>
+  -->
+  <!--
+  <script>
+  $(function() {$("selector").method("activity")});
+  </script>
+  <script>
+function scrollWin() {
+  window.scrollBy(0, 100);
+}
+</script>
+
+  -->
+
+
 
 </body>

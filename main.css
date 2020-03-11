@@ -138,6 +138,16 @@ em {
 
 /*
   ========================================
+  Navigational elements (arrows etc.)
+  ========================================
+*/
+.arrow {
+  font-size: 50px;
+  color: var(--navy);
+}
+
+/*
+  ========================================
   body
   ========================================
 */
@@ -148,7 +158,6 @@ em {
       -ms-box-sizing: border-box;
        -o-box-sizing: border-box;
           box-sizing: border-box;
-
 }
 
 body {
@@ -165,8 +174,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp*/
-  border: 2px solid var(--border);
+  /*temp
+  border: 2px solid var(--border);*/
 }
 
 /*
@@ -300,8 +309,6 @@ body {
 }
 
 #herotext1 {
-  height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
-  width: 80vw;
   overflow: hidden;
 }
 
@@ -319,8 +326,7 @@ body {
   }
 
   #herotext1 {
-    height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d) - var(--large-margin) - var(--large-margin) - var(--large-margin) - var(--large-margin));
-    width: 70vw;
+
   }
 }
 
@@ -422,4 +428,11 @@ body {
 @keyframes heroleft3 {
    from {margin-left: 100%}
      to {margin-left: 80%}
+}
+
+#downarrow1 {
+  position: absolute;
+  z-index: 3;
+  top: 95vh;
+  left: 50vw;
 }
