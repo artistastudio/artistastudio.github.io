@@ -138,16 +138,6 @@ em {
 
 /*
   ========================================
-  Navigational elements (arrows etc.)
-  ========================================
-*/
-.arrow {
-  font-size: 50px;
-  color: var(--navy);
-}
-
-/*
-  ========================================
   body
   ========================================
 */
@@ -332,27 +322,27 @@ body {
 
 @-webkit-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: 8%}
+     to {margin-left: 9%}
 }
 
 @-moz-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: 8%}
+     to {margin-left: 9%}
 }
 
 @-ms-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: 8%}
+     to {margin-left: 9%}
 }
 
 @-o-keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: 8%}
+     to {margin-left: 9%}
 }
 
 @keyframes heroright {
    from {margin-left: 100%}
-     to {margin-left: 8%}
+     to {margin-left: 9%}
 }
 
 @-webkit-keyframes herorightd {
@@ -431,6 +421,8 @@ body {
 }
 
 #downarrow1 {
+  font-size: 40px;
+  color: var(--navy);
   position: absolute;
   z-index: 3;
   top: 93vh;
