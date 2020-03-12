@@ -159,8 +159,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp*/
-  border: 2px solid var(--border);
+  /*temp
+  border: 2px solid var(--border);*/
 }
 
 .thearrow {
@@ -448,12 +448,15 @@ body {
 
 #advantagewrapper1 {
   padding-bottom: var(--extra-large-margin);
+  padding-top: var(--extra-large-margin);
+  margin-top: var(--extra-large-margin);
 }
 #downarrow2 {
   visibility: hidden;
 }
 #header3 {
   visibility: hidden;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -466,6 +469,7 @@ body {
   }
   #header3 {
     visibility: visible;
+    display: block;
   }
 }
 
