@@ -159,8 +159,8 @@ body {
 
 /*all containers*/
 .ukcnt {
-  /*temp
-  border: 2px solid var(--border);*/
+  /*temp*/
+  border: 2px solid var(--border);
 }
 
 .thearrow {
@@ -169,8 +169,14 @@ body {
   position: relative;
   z-index: 3;
   top: 93vh;
-  left: 48vw;
+  left: 46vw;
   width: 10%;
+}
+
+@media screen and (min-width: 768px) {
+  .thearrow {
+    left: 49vw;
+  }
 }
 
 /*
@@ -224,6 +230,9 @@ body {
   ========================================
 */
 
+#downarrow1 {
+  visibility: hidden;
+}
 #hero1 {
   width: 100%;
   height: calc(100vh - var(--low-margin) - var(--header-height-m));
@@ -234,6 +243,10 @@ body {
   #hero1 {
     width: 100%;
     height: calc(100vh - var(--low-margin) - var(--header-height-d));
+  }
+
+  #downarrow1 {
+    visibility: visible;
   }
 }
 
@@ -293,6 +306,7 @@ body {
   width: 80vw;
   background-color: var(--light-blue);
   border-radius: var(--large-margin);
+  text-align: center;
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroright 3s ease-out forwards;
      -moz-animation: heroright 3s ease-out forwards;
@@ -303,6 +317,9 @@ body {
 
 #herotext1 {
   overflow: hidden;
+  display: inline-block;
+  margin: var(--zero-margin) auto;
+  padding: var(--medium-margin);
 }
 
 @media screen and (min-width: 768px) {
@@ -428,7 +445,14 @@ body {
   Advantages card feature
   ========================================
 */
-#downarrow21 {
+
+#advantagewrapper1 {
+  padding-bottom: var(--extra-large-margin);
+}
+#downarrow2 {
+  visibility: hidden;
+}
+#header3 {
   visibility: hidden;
 }
 
@@ -437,39 +461,25 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
   }
-  #header4 {
-    visibility: hidden;
-  }
-  #header5 {
-    visibility: hidden;
-  }
   #downarrow2 {
-    visibility: hidden;
-  }
-  #downarrow21 {
     visibility: visible;
   }
-  #downarrow3 {
-    visibility: hidden;
-  }
-  #downarrow4 {
-    visibility: hidden;
+  #header3 {
+    visibility: visible;
   }
 }
 
 #advfeature1 {
-  background-color: var(--light-blue)
+  background-color: var(--light-blue);
 }
 
 /*.advantage is the section surrounding the animation and text*/
 .advantage {
   text-align: center;
-  height: 80vh;
 }
 
 /*.advanimation is the div surrounding the animation*/
 .advanimation {
-
 }
 
 /*.advanimate is the svg itself*/
@@ -493,11 +503,12 @@ body {
 
 /*.advanimation is the article surrounding the text*/
 .advtext {
+  background-color: var(--white);
+  border-radius: var(--large-margin);
+  margin: var(--medium-margin);
+  padding: var(--medium-margin);
 }
 
 @media screen and (min-width: 768px) {
-  #advanimation1{
-  width: 30vw;
-  }
 
 }
