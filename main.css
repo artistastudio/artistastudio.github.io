@@ -177,6 +177,7 @@ body {
 @media screen and (min-width: 768px) {
   .thearrow {
     left: 49vw;
+    top: 96vh;
   }
 }
 
@@ -511,6 +512,7 @@ body {
   padding-bottom: var(--medium-margin);
   border: solid 2px var(--light-green);/*V2*/
   border-radius: var(--large-margin);/*V2*/
+  margin: var(--medium-margin);
 
 }
 
