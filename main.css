@@ -157,15 +157,20 @@ body {
     font: 300 16px/22px "Raleway";
 }
 
-#grid1 {
-  margin: var(--zero-margin);
-  padding: var(--zero-margin);
-}
-
 /*all containers*/
 .ukcnt {
   /*temp
   border: 2px solid var(--border);*/
+}
+
+.thearrow {
+  font-size: 40px;
+  color: var(--navy);
+  position: relative;
+  z-index: 3;
+  top: 93vh;
+  left: 48vw;
+  width: 10%;
 }
 
 /*
@@ -174,7 +179,7 @@ body {
   ========================================
 */
 
-#header2 {
+.header {
   width: 100%;
   height: var(--header-height-m);
 }
@@ -182,8 +187,6 @@ body {
 #header1 {
   position: fixed;
   z-index: 10;
-  width: 100%;
-  height: var(--header-height-m);
   background-color: var(--body-bg);
   border-bottom: 2px solid var(--bright-green);
 }
@@ -200,11 +203,10 @@ body {
 
 
 @media screen and (min-width: 768px) {
-  #header2 {
+  .header {
     height: var(--header-height-d);
   }
   #header1 {
-    height: var(--header-height-d);
     display: grid;
     grid-template-columns: auto auto;
   }
@@ -290,6 +292,7 @@ body {
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
   width: 80vw;
   background-color: var(--light-blue);
+  border-radius: var(--large-margin);
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroright 3s ease-out forwards;
      -moz-animation: heroright 3s ease-out forwards;
@@ -420,11 +423,81 @@ body {
      to {margin-left: 80%}
 }
 
-#downarrow1 {
-  font-size: 40px;
-  color: var(--navy);
-  position: absolute;
-  z-index: 3;
-  top: 93vh;
-  left: 48vw;
+/*
+  ========================================
+  Advantages card feature
+  ========================================
+*/
+#downarrow21 {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  #advantagewrapper1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  #header4 {
+    visibility: hidden;
+  }
+  #header5 {
+    visibility: hidden;
+  }
+  #downarrow2 {
+    visibility: hidden;
+  }
+  #downarrow21 {
+    visibility: visible;
+  }
+  #downarrow3 {
+    visibility: hidden;
+  }
+  #downarrow4 {
+    visibility: hidden;
+  }
+}
+
+#advfeature1 {
+  background-color: var(--light-blue)
+}
+
+/*.advantage is the section surrounding the animation and text*/
+.advantage {
+  text-align: center;
+  height: 80vh;
+}
+
+/*.advanimation is the div surrounding the animation*/
+.advanimation {
+
+}
+
+/*.advanimate is the svg itself*/
+.advanimate {
+    fill: var(--bright-green);
+    stroke: var(--navy);
+    stroke-width: 5px;
+
+    /* Stroke-dasharray property */
+    stroke-dasharray: 1353px;
+    stroke-dashoffset: 1353px;
+    animation: move 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/*.advanimation is the article surrounding the text*/
+.advtext {
+}
+
+@media screen and (min-width: 768px) {
+  #advanimation1{
+  width: 30vw;
+  }
+
 }
