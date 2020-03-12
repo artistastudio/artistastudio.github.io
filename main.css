@@ -68,6 +68,7 @@ table {
   --light-green: #cbebe2;
   --light-grey: #dfe7e7;
   --white: #ffffff;
+  --black: #000000;
 
   --zero-margin: 0px;
   --low-margin: 5px;
@@ -256,7 +257,8 @@ body {
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
   width: 100vw;
-  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+  /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
+  background-color: var(--light-blue);
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroleft 3s ease-out forwards;
      -moz-animation: heroleft 3s ease-out forwards;
@@ -304,9 +306,13 @@ body {
   top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
   width: 80vw;
-  background-color: var(--light-blue);
+  /*background-color: var(--light-blue);V2*/
+  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
   border-radius: var(--large-margin);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroright 3s ease-out forwards;
      -moz-animation: heroright 3s ease-out forwards;
@@ -316,10 +322,12 @@ body {
 }
 
 #herotext1 {
-  overflow: hidden;
-  display: inline-block;
-  margin: var(--zero-margin) auto;
-  padding: var(--medium-margin);
+  padding-left: var(--medium-margin);
+  padding-right: var(--medium-margin);
+}
+
+#herotext1 h1, #herotext1 h4 {
+  color: var(--light-hint-of-blue);/*V2*/
 }
 
 @media screen and (min-width: 768px) {
@@ -397,7 +405,8 @@ body {
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
   width: 100vw;
-  background-image: linear-gradient(var(--bright-blue),var(--bright-green));
+  /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
+  background-color: var(--light-green);
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroleft3 3s ease-out forwards;
      -moz-animation: heroleft3 3s ease-out forwards;
@@ -450,36 +459,59 @@ body {
   padding-bottom: var(--extra-large-margin);
   padding-top: var(--extra-large-margin);
   margin-top: var(--extra-large-margin);
+  /*background-color: var(--light-blue);V2*/
+  background-color: var(--white);
 }
 #downarrow2 {
   visibility: hidden;
 }
 #header3 {
-  visibility: hidden;
   display: none;
+}
+#advantage2 {
+  border-top: solid 4px var(--white);
+  border-bottom: solid 4px var(--white);
 }
 
 @media screen and (min-width: 768px) {
+  #advfeature1 {
+    padding-bottom: var(--zero-margin);
+    padding-top: var(--zero-margin);
+  }
   #advantagewrapper1 {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
   }
   #downarrow2 {
     visibility: visible;
   }
   #header3 {
-    visibility: visible;
     display: block;
+  }
+  #advantage2 {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 4px var(--white);
+    border-right: solid 4px var(--white);
   }
 }
 
-#advfeature1 {
-  background-color: var(--light-blue);
+/*advfeature is the entire screen including header and wrapper*/
+.advfeature {
+}
+
+/*.advantagewrapper is the wrapper around all three cards*/
+.advantagewrapper{
 }
 
 /*.advantage is the section surrounding the animation and text*/
 .advantage {
   text-align: center;
+  padding-top: var(--medium-margin);
+  padding-bottom: var(--medium-margin);
+  border: solid 2px var(--light-green);/*V2*/
+  border-radius: var(--large-margin);/*V2*/
+
 }
 
 /*.advanimation is the div surrounding the animation*/
@@ -488,8 +520,8 @@ body {
 
 /*.advanimate is the svg itself*/
 .advanimate {
-    fill: var(--bright-green);
-    stroke: var(--navy);
+    fill: var(--bright-green);/*V2*/
+    stroke: var(--bright-blue);/*V2*/
     stroke-width: 5px;
 
     /* Stroke-dasharray property */
@@ -507,12 +539,21 @@ body {
 
 /*.advanimation is the article surrounding the text*/
 .advtext {
-  background-color: var(--white);
+  background-color: var(--white);/*V2*/
   border-radius: var(--large-margin);
   margin: var(--medium-margin);
   padding: var(--medium-margin);
 }
 
 @media screen and (min-width: 768px) {
+  .advanimate {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  .advtext {
+    margin: var(--extra-large-margin);
+    padding: var(--large-margin);
+  }
 
 }
