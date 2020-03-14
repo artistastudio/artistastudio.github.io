@@ -41,6 +41,40 @@
                 scrollTop: $(target).offset().top}, 'slow', 'swing', function() {});
               })
   </script>
+  <script>
+  //for storing form data to google sheet
+      $(document).ready(function () {
+          $.fn.serializeObject = function () {
+              var o = {};
+              var a = this.serializeArray();
+              $.each(a, function () {
+                  if (o[this.name]) {
+                      if (!o[this.name].push) {
+                          o[this.name] = [o[this.name]];
+                      }
+                      o[this.name].push(this.value || '');
+                  } else {
+                      o[this.name] = this.value || '';
+                  }
+              });
+              return o;
+          };
+          var form = $('form#form1'),
+              url = 'https://script.google.com/macros/s/AKfycbymCLmA9e3LPQ8jsXMHEjKS22Ct2tN1jdkfrcxOUP0e7XSdwzI/exec';
+          form.submit(function (e) {
+              e.preventDefault();
+              var jqxhr = $.ajax({
+                  url: url,
+                  method: "GET",
+                  dataType: "json",
+                  data: form.serializeObject()
+              });
+              $(".thanks").html("Thank you for getting in touch!").css("font-size", "4rem");
+              $(".form-control").remove();
+              $("#submit").remove();
+          });
+      });
+  </script>
 </head>
 
 <body>
@@ -82,7 +116,7 @@
   <section class="advfeature ukcnt" id="advfeature1">
     <!- -uk this is the shadow header of same size as main header to keep the place of main header on canvas - ->
     <header class="header ukcnt shadow" id="header3">
-      <aside class="thearrow ukcnt" id="downarrow2"><a href="#header4">&#9661;</a></aside>
+      <aside class="thearrow ukcnt" id="downarrow2"><a href="#footer1">&#9661;</a></aside>
     </header>
 
     <!- -uk section containing all cards to grid in desktop- ->
@@ -187,6 +221,29 @@
     </section>
   </section>
   <!- -uk end of advantages cards here- ->
+
+  <!- -uk footer here- ->
+  <footer class="footer ukcnt" id="footer1">
+    <section class="subfooter leftfooter ukcnt" id="leftfooter1">
+    </section>
+    <section class="subfooter midfooter ukcnt" id="midfooter1">
+
+      <h5>Get in now for an exclusive prelaunch access!</h5>
+        <form class="form ukcnt" id="form1">
+        <input class="input email" name="email" type="email" id="email1" placeholder="Enter your email here*" />
+        <p><br></p>
+        <textarea class="input message" name="message" id="messsage1" rows="1" placeholder="Any message for the team?"></textarea>
+        <p><br></p>
+        <button class="button" id="button1" formid="form1" type="submit">
+          <h3>Submit</h3>
+        </button>
+    </form>
+
+    </section>
+    <section class="subfooter rightfooter ukcnt" id="rightfooter1">
+    </section>
+  </footer>
+  <!- -uk end of footer here- ->
 
   <!--
   <!- -uk product features here- ->
@@ -318,21 +375,7 @@
 
   -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!--
   <!- -uk start of semantic-ui grid container- ->
   <div class="ui grid container ukcnt" id="grid1">
 
@@ -360,7 +403,7 @@
     <!- -uk end of subscription form row - ->
 
   </div>
-
+  -->
   <!- -uk animations scripts - ->
 
 

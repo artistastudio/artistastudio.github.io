@@ -234,6 +234,10 @@ body {
     height: auto;
     margin-left: var(--extra-large-margin);
   }
+
+  #menu1 {
+    padding-right: var(--super-extra-large-margin);
+  }
 }
 
 /*
@@ -496,33 +500,30 @@ body {
 /*.advanimate is the svg itself*/
 
 #advanimate1 {
-    /* Stroke-dasharray property */
-    stroke-dasharray: 2500px;
-    stroke-dashoffset: 2500px;
+  /* Stroke-dasharray property */
+  stroke-dasharray: 2500px;
+  stroke-dashoffset: 2500px;
 }
 
 #advanimate2 {
-    /* Stroke-dasharray property */
-    stroke-dasharray: 1000px;
-    stroke-dashoffset: 1000px;
+  /* Stroke-dasharray property */
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
 }
 
 #advanimate3 {
-    /* Stroke-dasharray property */
-    stroke-dasharray: 800px;
-    stroke-dashoffset: 800px;
+  /* Stroke-dasharray property */
+  stroke-dasharray: 800px;
+  stroke-dashoffset: 800px;
 }
 
 .advanimate {
-    fill: var(--bright-green);/*V2*/
-    stroke: var(--bright-blue);/*V2*/
-    stroke-width: 5px;
+  fill: var(--bright-green);/*V2*/
+  stroke: var(--bright-blue);/*V2*/
+  stroke-width: 5px;
 
-    /* Stroke-dasharray property */
-    stroke-dasharray: 800px;
-    stroke-dashoffset: 800px;
-    animation: move 3s linear;
-    animation-fill-mode: forwards;
+  animation: move 3s linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes move {
@@ -547,4 +548,55 @@ body {
     margin: var(--large-margin);
     padding: var(--large-margin);
   }
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#footer1 {
+  border-top: 2px solid var(--bright-green);
+  text-align: center;
+  padding: var(--medium-margin);
+}
+
+@media screen and (min-width: 768px) {
+  #footer1 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+.subfooter {
+  padding: var(--medium-margin);
+}
+
+.input{
+  border: none;
+  box-shadow: none;
+  width: 70%;
+  border-bottom: solid 2px var(--border);
+  height: 25px;
+}
+
+.button {
+  border: none;
+  border: solid 2px var(--light-grey);
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--body-bg);
+}
+
+.button:hover {
+  border: none;
+  border: solid 2px var(--bright-blue);
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--bright-blue);
 }
