@@ -171,17 +171,17 @@ body {
 }
 
 .thearrow {
-  font-size: 40px;
-  color: var(--navy);
-  position: relative;
-  z-index: 3;
-  top: 93vh;
-  left: 46vw;
-  width: 10%;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .thearrow {
+    display: block;
+    font-size: 40px;
+    color: var(--navy);
+    position: relative;
+    z-index: 3;
+    top: 93vh;
     left: 49vw;
     top: 96vh;
   }
@@ -228,10 +228,6 @@ body {
   .header {
     height: var(--header-height-d);
   }
-  #header1 {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
 
   #imglogo1 {
     width: var(--logo-width-d);
@@ -252,28 +248,18 @@ body {
   text-align: center;
 }
 
-#downarrow1 {
-  visibility: hidden;
-}
-
 @media screen and (min-width: 768px) {
   #hero1 {
-    width: 100%;
     height: calc(100vh - var(--low-margin) - var(--header-height-d));
-  }
-
-  #downarrow1 {
-    visibility: visible;
   }
 }
 
 #heroani1 {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
-  width: 100vw;
-  /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
+  width: 100%;
   background-color: var(--light-blue);
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroleft var(--ani-slow) ease-out forwards;
@@ -287,7 +273,7 @@ body {
   #heroani1 {
     top: calc(var(--low-margin) + var(--header-height-d));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
-    width: 50vw;
+    width: 45%;
   }
 }
 
@@ -318,23 +304,23 @@ body {
 
 #heroani2 {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
-  width: 80vw;
+  width: 80%;
   /*background-color: var(--light-blue);V2*/
   background-image: linear-gradient(var(--bright-blue),var(--bright-green));
-  border-radius: var(--large-margin);
+  /*border-radius: var(--large-margin);*/
   display: flex;
   justify-content:center;
   align-items:center;
   overflow: hidden;
   /*animation : name duration timing-funtion fill-mode*/
-  -webkit-animation: heroright 1000ms ease-out forwards;
-     -moz-animation: heroright 1000ms ease-out forwards;
-      -ms-animation: heroright 1000ms ease-out forwards;
-       -o-animation: heroright 1000ms ease-out forwards;
-          animation: heroright 1000ms ease-out forwards;
+  -webkit-animation: heroright var(--ani-fast) ease-out forwards;
+     -moz-animation: heroright var(--ani-fast) ease-out forwards;
+      -ms-animation: heroright var(--ani-fast) ease-out forwards;
+       -o-animation: heroright var(--ani-fast) ease-out forwards;
+          animation: heroright var(--ani-fast) ease-out forwards;
 }
 
 #herotext1 {
@@ -350,17 +336,13 @@ body {
   #heroani2 {
     top: calc(var(--low-margin) + var(--header-height-d)  + var(--large-margin) + var(--large-margin));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d) - var(--large-margin) - var(--large-margin) - var(--large-margin) - var(--large-margin));
-    width: 70vw;
+    width: 70%;
     /*animation : name duration timing-funtion fill-mode*/
     -webkit-animation: herorightd var(--ani-fast) ease-out forwards;
        -moz-animation: herorightd var(--ani-fast) ease-out forwards;
         -ms-animation: herorightd var(--ani-fast) ease-out forwards;
          -o-animation: herorightd var(--ani-fast) ease-out forwards;
             animation: herorightd var(--ani-fast) ease-out forwards;
-  }
-
-  #herotext1 {
-
   }
 }
 
@@ -417,10 +399,10 @@ body {
 #heroani3 {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
-  width: 100vw;
+  width: 100%;
   /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
   background-color: var(--light-green);
   /*animation : name duration timing-funtion fill-mode*/
@@ -436,33 +418,33 @@ body {
     display: block;
     top: calc(var(--low-margin) + var(--header-height-d));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
-    width: 20vw;
+    width: 30%;
   }
 }
 
 @-webkit-keyframes heroleft3 {
    from {margin-left: 100%}
-     to {margin-left: 80%}
+     to {margin-left: 70%}
 }
 
 @-moz-keyframes heroleft3 {
    from {margin-left: 100%}
-     to {margin-left: 80%}
+     to {margin-left: 70%}
 }
 
 @-ms-keyframes heroleft3 {
    from {margin-left: 100%}
-     to {margin-left: 80%}
+     to {margin-left: 70%}
 }
 
 @-o-keyframes heroleft3 {
    from {margin-left: 100%}
-     to {margin-left: 80%}
+     to {margin-left: 70%}
 }
 
 @keyframes heroleft3 {
    from {margin-left: 100%}
-     to {margin-left: 80%}
+     to {margin-left: 70%}
 }
 
 /*
@@ -472,39 +454,22 @@ body {
 */
 
 #advfeature1 {
-  padding-bottom: var(--extra-large-margin);
-  padding-top: var(--extra-large-margin);
-  margin-top: var(--extra-large-margin);
-  /*background-color: var(--light-blue);V2*/
-  background-color: var(--white);
-}
-#downarrow2 {
-  visibility: hidden;
-}
-#header3 {
-  display: none;
-}
-#advantage2 {
-  border: none;
+  padding-bottom: var(--zero-margin);
+  padding-top: var(--zero-margin);
+  margin-top: var(--zero-margin);
 }
 
 @media screen and (min-width: 768px) {
   #advfeature1 {
     padding-bottom: var(--zero-margin);
     padding-top: var(--zero-margin);
+    margin-top: var(--zero-margin);
+    height: 100%;
+    width: 100%;
   }
   #advantagewrapper1 {
     display: grid;
     grid-template-columns: auto auto auto;
-  }
-  #downarrow2 {
-    visibility: visible;
-  }
-  #header3 {
-    display: block;
-  }
-  #advantage2 {
-    border: none;
   }
 }
 
@@ -521,40 +486,53 @@ body {
   text-align: center;
   padding-top: var(--medium-margin);
   padding-bottom: var(--medium-margin);
-  border: solid 2px var(--light-green);/*V2*/
-  border-radius: var(--large-margin);/*V2*/
   margin: var(--medium-margin);
-
 }
-
 
 /*.advanimation is the div surrounding the animation
 .advanimation {
 } */
 
 /*.advanimate is the svg itself*/
+
+#advanimate1 {
+    /* Stroke-dasharray property */
+    stroke-dasharray: 2500px;
+    stroke-dashoffset: 2500px;
+}
+
+#advanimate2 {
+    /* Stroke-dasharray property */
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+}
+
+#advanimate3 {
+    /* Stroke-dasharray property */
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+}
+
 .advanimate {
     fill: var(--bright-green);/*V2*/
     stroke: var(--bright-blue);/*V2*/
     stroke-width: 5px;
 
     /* Stroke-dasharray property */
-    /*stroke-dasharray: 1353px;
-    stroke-dashoffset: 1353px;*/
-    /*animation: move 3s linear;
-    animation-fill-mode: forwards;*/
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation: move 3s linear;
+    animation-fill-mode: forwards;
 }
-/*
+
 @keyframes move {
     100% {
         stroke-dashoffset: 0;
     }
-}*/
+}
 
 /*.advanimation is the article surrounding the text*/
 .advtext {
-  background-color: var(--white);/*V2*/
-  border-radius: var(--large-margin);
   margin: var(--medium-margin);
   padding: var(--medium-margin);
 }
