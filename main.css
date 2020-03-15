@@ -104,43 +104,52 @@ table {
 
 h1, h2, h3, h4, p {
     color: var(--text-lightbg);
-    font-weight: 400;
+    font-weight: 100;
 }
 
 h1 {
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 25px;
+    line-height: 30px;
 }
 
 h2 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 h3 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 h5 {
     color: var(--text-highlight);
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 8px;
+    line-height: 15px;
     text-transform: uppercase;
 }
 
+p {
+  font-size: 10px;
+  line-height: 15px;
+}
+
 strong {
-    font-weight: 800;
+    font-weight: 400;
 }
 
 cite,
 em {
     font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+  
 }
 
 /*
@@ -180,8 +189,8 @@ body {
     font-size: 40px;
     color: var(--navy);
     position: relative;
-    z-index: 4;
-    top: 93vh;
+    z-index: 10;
+    top: 96vh;
     left: 49vw;
   }
 }
