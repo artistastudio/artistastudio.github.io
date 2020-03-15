@@ -108,48 +108,70 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 h2 {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 25px;
+    line-height: 35px;
 }
 
 h3 {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 h4 {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 30px;
 }
 
 h5 {
     color: var(--text-highlight);
-    font-size: 8px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 25px;
     text-transform: uppercase;
 }
 
 p {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: 15px;
+  line-height: 30px;
+}
+::placeholder {
+  font: 300 16px/22px "Raleway";
+  font-size: 12px;
+  line-height: 12px;
 }
 
 strong {
     font-weight: 400;
 }
 
-cite,
+cite
 em {
     font-style: italic;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+  color: var(--bright-green);
+}
+
 @media screen and (min-width: 768px) {
-  
+
 }
 
 /*
@@ -187,11 +209,12 @@ body {
   .thearrow {
     display: block;
     font-size: 40px;
-    color: var(--navy);
+    color: var(--bright-blue);
     position: relative;
-    z-index: 10;
-    top: 96vh;
+    z-index: 4;
+    top: 94vh;
     left: 49vw;
+    width: 10%;
   }
 }
 
@@ -271,7 +294,7 @@ body {
   z-index: 2;
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
-  width: 100%;
+  width: 100vw;
   background-color: var(--light-blue);
   /*animation : name duration timing-funtion fill-mode*/
   -webkit-animation: heroleft var(--ani-slow) ease-out forwards;
@@ -285,33 +308,33 @@ body {
   #heroani1 {
     top: calc(var(--low-margin) + var(--header-height-d));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
-    width: 45%;
+    width: 45vw;
   }
 }
 
 @-webkit-keyframes heroleft {
-   from {margin-left: -50%}
-     to {margin-left: 0%}
+   from {margin-left: -50%;}
+     to {margin-left: 0%;}
 }
 
 @-moz-keyframes heroleft {
-   from {margin-left: -50%}
-     to {margin-left: 0%}
+   from {margin-left: -50%;}
+     to {margin-left: 0%;}
 }
 
 @-ms-keyframes heroleft {
-   from {margin-left: -50%}
-     to {margin-left: 0%}
+   from {margin-left: -50%;}
+     to {margin-left: 0%;}
 }
 
 @-o-keyframes heroleft {
-   from {margin-left: -50%}
-     to {margin-left: 0%}
+   from {margin-left: -50%;}
+     to {margin-left: 0%;}
 }
 
 @keyframes heroleft {
-   from {margin-left: -50%}
-     to {margin-left: 0%}
+   from {margin-left: -50%;}
+     to {margin-left: 0%;}
 }
 
 #heroani2 {
@@ -319,7 +342,6 @@ body {
   z-index: 3;
   top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
-  width: 80%;
   /*background-color: var(--light-blue);V2*/
   background-image: linear-gradient(var(--bright-blue),var(--bright-green));
   /*border-radius: var(--large-margin);*/
@@ -340,7 +362,7 @@ body {
   padding-right: var(--medium-margin);
 }
 
-#herotext1 h1, #herotext1 h4 {
+#herotext1 h1, #herotext1 p {
   color: var(--white);/*V2*/
 }
 
@@ -348,7 +370,6 @@ body {
   #heroani2 {
     top: calc(var(--low-margin) + var(--header-height-d)  + var(--large-margin) + var(--large-margin));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d) - var(--large-margin) - var(--large-margin) - var(--large-margin) - var(--large-margin));
-    width: 70%;
     /*animation : name duration timing-funtion fill-mode*/
     -webkit-animation: herorightd var(--ani-fast) ease-out forwards;
        -moz-animation: herorightd var(--ani-fast) ease-out forwards;
@@ -359,53 +380,53 @@ body {
 }
 
 @-webkit-keyframes heroright {
-   from {margin-left: 100%}
-     to {margin-left: 9%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 9%; width: 80vw;}
 }
 
 @-moz-keyframes heroright {
-   from {margin-left: 100%}
-     to {margin-left: 9%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 9%; width: 80vw;}
 }
 
 @-ms-keyframes heroright {
-   from {margin-left: 100%}
-     to {margin-left: 9%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 9%; width: 80vw;}
 }
 
 @-o-keyframes heroright {
-   from {margin-left: 100%}
-     to {margin-left: 9%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 9%; width: 80vw;}
 }
 
 @keyframes heroright {
-   from {margin-left: 100%}
-     to {margin-left: 9%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 9%; width: 80vw;}
 }
 
 @-webkit-keyframes herorightd {
-   from {margin-left: 100%}
-     to {margin-left: 13%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 13%; width: 70vw;}
 }
 
 @-moz-keyframes herorightd {
-   from {margin-left: 100%}
-     to {margin-left: 13%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 13%; width: 70vw;}
 }
 
 @-ms-keyframes herorightd {
-   from {margin-left: 100%}
-     to {margin-left: 13%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 13%; width: 70vw;}
 }
 
 @-o-keyframes herorightd {
-   from {margin-left: 100%}
-     to {margin-left: 13%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 13%; width: 70vw;}
 }
 
 @keyframes herorightd {
-   from {margin-left: 100%}
-     to {margin-left: 13%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 13%; width: 70vw;}
 }
 
 #heroani3 {
@@ -414,7 +435,7 @@ body {
   z-index: 2;
   top: calc(var(--low-margin) + var(--header-height-m));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m));
-  width: 100%;
+  width: 100vw;
   /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
   background-color: var(--light-green);
   /*animation : name duration timing-funtion fill-mode*/
@@ -430,33 +451,33 @@ body {
     display: block;
     top: calc(var(--low-margin) + var(--header-height-d));
     height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-d));
-    width: 30%;
+    width: 29.6vw;
   }
 }
 
 @-webkit-keyframes heroleft3 {
-   from {margin-left: 100%}
-     to {margin-left: 70%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 70%; width: 29.6vw;}
 }
 
 @-moz-keyframes heroleft3 {
-   from {margin-left: 100%}
-     to {margin-left: 70%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 70%; width: 29.6vw;}
 }
 
 @-ms-keyframes heroleft3 {
-   from {margin-left: 100%}
-     to {margin-left: 70%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 70%; width: 29.6vw;}
 }
 
 @-o-keyframes heroleft3 {
-   from {margin-left: 100%}
-     to {margin-left: 70%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 70%; width: 29.6vw;}
 }
 
 @keyframes heroleft3 {
-   from {margin-left: 100%}
-     to {margin-left: 70%}
+   from {margin-left: 100%; width: 0vw;}
+     to {margin-left: 70%; width: 29.6vw;}
 }
 
 /*
@@ -495,15 +516,17 @@ body {
 
 /*.advantage is the section surrounding the animation and text*/
 .advantage {
-  text-align: center;
   padding-top: var(--medium-margin);
   padding-bottom: var(--medium-margin);
   margin: var(--medium-margin);
 }
 
-/*.advanimation is the div surrounding the animation
+/*.advanimation is the div surrounding the animation*/
 .advanimation {
-} */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
 
 /*.advanimate is the svg itself*/
 
@@ -535,15 +558,18 @@ body {
 }
 
 @keyframes move {
-    100% {
-        stroke-dashoffset: 0;
-    }
+    100% {stroke-dashoffset: 0;}
 }
 
 /*.advanimation is the article surrounding the text*/
 .advtext {
+  text-align: justify;
   margin: var(--medium-margin);
   padding: var(--medium-margin);
+}
+
+.advtext h2 {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -607,4 +633,89 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   background-color: var(--bright-blue);
+}
+
+/*
+  ========================================
+  Blog
+  ========================================
+*/
+/*blog page*/
+.blogpg {
+  /*background-color: var(--light-green);*/
+  background-image: linear-gradient(var(--light-blue),var(--light-green));
+  padding: var(--large-margin);
+  border-bottom: solid 2px var(--bright-green);
+}
+
+/*wrapper around all the blogs*/
+.blogwrapper {
+}
+
+/*name of blog page*/
+.blogname {
+  text-align: center;
+}
+
+.blogname h1 {
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+/*wrapper arond each blog*/
+.blog {
+  padding: var(--large-margin);
+  background-color: var(--white);
+  margin-top: var(--large-margin);
+  margin-bottom: var(--large-margin);
+  border-radius: 5px;
+}
+
+/*blog header of each blog*/
+.bloghead {
+  border-bottom: solid 1px var(--grey);
+}
+
+/*blog body of each blog*/
+.blogbody {
+  text-align: justify;
+  padding-top: var(--large-margin);
+}
+
+@media screen and (min-width: 768px) {
+  /*blog page*/
+  .blogpg {
+    padding-left: var(--super-extra-large-margin);
+    padding-right: var(--super-extra-large-margin);
+  }
+
+  /*wrapper around all the blogs*/
+  .blogwrapper {
+  }
+
+  /*name of blog page*/
+  .blogname {
+
+  }
+
+  .blogname h1 {
+  }
+
+  /*wrapper arond each blog*/
+  .blog {
+    padding: var(--extra-large-margin);
+    padding-left: var(--super-extra-large-margin);
+    padding-right: var(--super-extra-large-margin);
+    margin-top: var(--extra-large-margin);
+    margin-bottom: var(--extra-large-margin);
+  }
+
+  /*blog header of each blog*/
+  .bloghead {
+  }
+
+  /*blog body of each blog*/
+  .blogbody {
+  }
 }
