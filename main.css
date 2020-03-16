@@ -298,7 +298,6 @@ body {
   width: 100%;
   height: calc(100vh - var(--low-margin) - var(--header-height-m));
   text-align: center;
-  background-color: var(--navy);
 }
 
 @media screen and (min-width: 768px) {
@@ -497,6 +496,21 @@ body {
      to {margin-left: 70%; width: 29.6vw;}
 }
 
+
+#heroani4 {
+  position: absolute;
+  z-index: 1;
+  top: calc(100vh - 50px);
+  height: 50px;
+  width: 99vw;
+  /*background-image: linear-gradient(var(--bright-blue),var(--bright-green));V2*/
+  background-color: var(--navy);
+}
+
+@media screen and (min-width: 768px) {
+  #heroani3 {
+  }
+}
 /*
   ========================================
   Advantages card feature
