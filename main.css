@@ -132,16 +132,37 @@ h5 {
     font-size: 12px;
     line-height: 25px;
     text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 p {
   font-size: 15px;
   line-height: 30px;
 }
+
+::-webkit-placeholder {
+  font: 300 16px/22px "Raleway";
+  font-size: 12px;
+}
+
+::-moz-placeholder {
+  font: 300 16px/22px "Raleway";
+  font-size: 12px;
+}
+
+::-ms-placeholder {
+  font: 300 16px/22px "Raleway";
+  font-size: 12px;
+}
+
+::-o-placeholder {
+  font: 300 16px/22px "Raleway";
+  font-size: 12px;
+}
+
 ::placeholder {
   font: 300 16px/22px "Raleway";
   font-size: 12px;
-  line-height: 12px;
 }
 
 strong {
@@ -168,10 +189,6 @@ a:hover {
 a:active {
   text-decoration: none;
   color: var(--bright-green);
-}
-
-@media screen and (min-width: 768px) {
-
 }
 
 /*
@@ -588,57 +605,6 @@ body {
 
 /*
   ========================================
-  Footer
-  ========================================
-*/
-
-#footer1 {
-  border-top: 2px solid var(--bright-green);
-  text-align: center;
-  padding: var(--medium-margin);
-}
-
-@media screen and (min-width: 768px) {
-  #footer1 {
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-  }
-}
-
-.subfooter {
-  padding: var(--medium-margin);
-}
-
-.input{
-  border: none;
-  box-shadow: none;
-  width: 70%;
-  border-bottom: solid 2px var(--border);
-  height: 25px;
-}
-
-.button {
-  border: none;
-  border: solid 2px var(--light-grey);
-  border-radius: 10px;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: var(--body-bg);
-}
-
-.button:hover {
-  border: none;
-  border: solid 2px var(--bright-blue);
-  border-radius: 10px;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: var(--bright-blue);
-}
-
-/*
-  ========================================
   Blog
   ========================================
 */
@@ -722,4 +688,82 @@ body {
   /*blog body of each blog*/
   .blogbody {
   }
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#footer1 h3,h5 {
+  color: var(--white);
+}
+
+::-webkit-placeholder {
+  color: var(--white);
+}
+
+::-moz-placeholder {
+  color: var(--white);
+}
+
+::-ms-placeholder {
+  color: var(--white);
+}
+
+::-o-placeholder {
+  color: var(--white);
+}
+
+::placeholder {
+  color: var(--white);
+}
+
+#footer1 {
+  /*border-top: 2px solid var(--bright-green);*/
+  background-color: var(--navy);
+  text-align: center;
+  padding: var(--medium-margin);
+}
+
+@media screen and (min-width: 768px) {
+  #footer1 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+.subfooter {
+  padding: var(--medium-margin);
+}
+
+.input{
+  border: none;
+  box-shadow: none;
+  width: 70%;
+  border-bottom: solid 2px var(--white);
+  height: 30px;
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+#button1 {
+  border: none;
+  border: solid 2px var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--navy);
+}
+
+#button1:hover {
+  border: none;
+  border: solid 2px var(--bright-blue);
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--bright-blue);
 }
