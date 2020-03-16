@@ -298,6 +298,7 @@ body {
   width: 100%;
   height: calc(100vh - var(--low-margin) - var(--header-height-m));
   text-align: center;
+  background-color: var(--navy);
 }
 
 @media screen and (min-width: 768px) {
@@ -359,9 +360,8 @@ body {
   z-index: 3;
   top: calc(var(--low-margin) + var(--header-height-m) + var(--large-margin));
   height: calc(100vh - var(--low-margin) - var(--low-margin) - var(--header-height-m) - var(--large-margin) - var(--large-margin));
-  /*background-color: var(--light-blue);V2*/
   background-image: linear-gradient(var(--bright-blue),var(--bright-green));
-  /*border-radius: var(--large-margin);*/
+  border-radius: var(--low-margin);
   display: flex;
   justify-content:center;
   align-items:center;
