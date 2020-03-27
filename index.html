@@ -29,14 +29,14 @@
   </script>
   <script>
   //for smooth hyperlink transitions
-  $(document)
+    $(document)
       .on('click', 'a[href^="#"]', function(e) {
           e.preventDefault();
           var target = $(this).attr('href');
           $('html, body')
             .animate({
                 scrollTop: $(target).offset().top}, 'slow', 'swing', function() {});
-              })
+              });
   </script>
   <script>
   //for storing form data to google sheet
@@ -78,9 +78,11 @@
   <!- -uk Header row - ->
   <!- -uk this is the main header which is fixed on top- ->
   <header class="header ukcnt" id="header1">
-    <img class="imglogo ukcnt" id="imglogo1" src="logo_8_tran_light.png" alt="">
+    <img class="imglogo ukcnt" id="imglogo1" src="logo/logo_8_tran_light.png" alt="">
     <nav class="menu ukcnt" id="menu1">
-      <a href="blog.html"><h4>Read our Blog >></h4></a>
+      <a href="index.html"><h4>Home</h4></a>
+      <a href="product.html"><h4>Product</h4></a>
+      <a href="blog.html"><h4>Blog</h4></a>
     </nav>
   </header>
 
