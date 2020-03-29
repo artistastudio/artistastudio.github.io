@@ -11,8 +11,8 @@
   <!- -uk for proper rendering on mobile and zoom off- ->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!- -uk import jquery library from google CDN- ->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!- -uk import local jquery library- ->
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
 
   <!- -uk import google font Raleway- ->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   <!- - scripts here - ->
   <script>
   //for loading the hero animate text after a delay
-      $(document).ready(function () {
+      $(function () {
           // Hide the div
           $("#herotext1").hide();
           // Show the div after 5s
@@ -40,7 +40,7 @@
   </script>
   <script>
   //for storing form data to google sheet
-      $(document).ready(function () {
+      $(function () {
           $.fn.serializeObject = function () {
               var o = {};
               var a = this.serializeArray();
@@ -83,6 +83,7 @@
       <a href="index.html"><h4>Home</h4></a>
       <a href="product.html"><h4>Product</h4></a>
       <a href="blog.html"><h4>Blog</h4></a>
+      <a href=""><h4>Log in</h4></a>
     </nav>
   </header>
 
