@@ -1,0 +1,72 @@
+/*
+  ========================================
+  header
+  ========================================
+*/
+#indexa1 h4{
+  font-weight: unset;
+}
+#producta1 h4{
+  font-weight: bold;
+}
+#bloga1 h4{
+  font-weight: unset;
+}
+#logina1 h4{
+  font-weight: unset;
+}
+
+/*
+  ========================================
+  Wrapper around Left Menu and app
+  ========================================
+*/
+
+#wrapper1 {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper1 {
+
+  }
+}
+/*
+  ========================================
+  Left Menu
+  ========================================
+*/
+
+#menu2 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  background-color: var(--light-grey);
+  padding: var(--medium-margin);
+}
+
+#menu2 h3 {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  #menu2 {
+    width: unset;
+    display: unset;
+    visibility: visible;
+    padding: var(--large-margin);
+  }
+
+  #menu2 h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/*
+  ========================================
+  Left Menu
+  ========================================
+*/
