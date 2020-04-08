@@ -132,7 +132,7 @@ p {
 
 
 /* "advantage" titles */
-.advtext h3 {
+.advtextall h3 {
     text-align: center;
     line-height: calc(1.25 * var(--font-size-h3));
     color: var(--col-text-advani-title);
@@ -146,7 +146,7 @@ p {
     background-size: 100% 100%;
 }
 /* "advantage" paragraph */
-.advtext p {
+.advtextall p {
     text-align: justify;
 }
 
