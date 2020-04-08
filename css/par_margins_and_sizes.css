@@ -1,0 +1,157 @@
+/*
+========================================
+  Margings
+========================================
+*/
+
+/* mobile (and some are also desktop) */
+:root {
+    /* tb = top / bottom; lr = left / right; all = all four sides*/
+
+    /* body */
+    --marg-body: 0px;
+    --padd-body: 0px;
+
+
+    /* logo */
+    --height-logo: 48px; /* width logo  */
+
+    /* header */
+    --height-header: 70px; /* height header */
+    --width-header-bottomline: 2px; /* width of bottom line */
+    --marg-logo-t: calc(0.5 * (var(--height-header) - var(--height-logo))); /* margin top for logo  */
+    --marg-logo-l: calc(2 * var(--marg-logo-t)); /* margin left for logo */
+    --marg-headermenu-r: 10vw;/* margin right for header menu */
+
+
+    /* hero */
+    --width-hero1: 40%; /* width of hero1 */
+    --marg-hero1-ani-l: -40%; /* ani starting point - left */
+    --marg-hero1-tb: 1.5vh; /* dist bw header and hero2 */
+
+    --width-hero2: 75%; /* width of hero2 */
+    --marg-hero2-l: 15%; /* marging left - where static hero2 rectangle begins */
+    --marg-hero2-tb: calc(6 * var(--marg-hero1-tb)); /* dist bw header and hero2 */
+    --radius-hero2: 3px; /* rounding of corners */
+    --marg-hero2-text-r: 12%; /* margin right for text */
+
+    --width-hero3: 30%; /* width of hero3 */
+    --marg-hero3-l: 70%; /* margin left - where static hero3 begins (100% - width(hero3)) */
+    --marg-hero3-tb: var(--marg-hero1-tb); /* dist bw header and hero3 */
+
+    /* timing */
+    --time-hero1: 2.7s;
+    --time-hero2: 0.5s;
+    --time-hero3: 2.7s;
+
+
+    /* navigation arrow */
+    --size-arrow: 3vw;
+    --marg-arrow-lr: calc(0.5 * (100vw - 2vw - var(--size-arrow))); /* to prevent animation expanding screen */
+    --pos-vert-abs: 89vh; /* abs position of arrow (y axis) */
+    --scale-arrow-50perc: 1.8;
+    --time-arrow-ani: 2s;
+
+
+    /* advantage animations - whole space */
+    --height-advani-tot: 100%;
+    --width-advani-tot-col: 33.3% 33.3% 33.3%; /* col widths */
+    --marg-advani-tot-lr: 3vw; /* left / right margin for the whole table */
+    --marg-advani-tot-tb: 0vw; /* top / bottom margin for the whole table */
+    --padd-advani-tot-b: 0vh; /* bottom padding for the whole table */
+
+    /* advantage animations - each */
+    --padd-advani-svg: 1vh; /* margin for each svg image */
+    --padd-advani-each-all: 3.5vw; /* margin for each column */
+
+    /* advantage animations - height each */
+    --width-advani-stroke-svg1: 8.5px; /* stroke width svg1 */
+    --width-advani-stroke-svg2: 6px; /* stroke width svg2 */
+    --width-advani-stroke-svg3: 7.5px; /* stroke width svg3 */
+    --scale-advani-20perc: 1.5; /* scale ani svg at 0% time */
+    --scale-advani-40perc: 1; /* scale ani svg at 30% time */
+    --scale-advani-100perc: 1; /* scale ani svg at 100% time */
+    --scale-hover: 1.4;  /* scale ani svg while hovering */
+    --height-advani: 24vh; /* height ani svg - desktop */
+    --height-advani-max: 220px; /* max height ani svg (desktop) */
+
+    /* timing */
+    --time-adv: 0s;
+    --time-adv-hover: 4s;
+
+
+    /* footer */
+    --padd-footer: calc(0.5 * var(--padd-advani-each-all));/* padding top */
+    --width-footer-col: 20% 60% 20%;
+    --width-footer-form: 45%; /* width of the registration form (of the 1/3) */
+    --height-footer-form-field: 25px; /* height of each field */
+    --width-footer-form-field-border: 1.5px; /* width of border under field */
+    --radius-footer-form-button: 5px; /* rounding rectangular button */
+
+
+    /* blog */
+    --marg-blog-t: var(--marg-hero1-tb); /* dist from the header */
+    --padd-blog-lr: 7vw; /* padding left / right side of table */
+    --padd-blog-b: 20px; /* padding bottom of table */
+    --padd-blog-entry-lr: 7vw; /* padding left / right around each blog entry */
+    --padd-blog-entry-tb: calc(0.5 * var(--padd-blog-entry-lr)); /* padding top / bottom around each blog entry */
+    --radius-blog-entry: 5px; /* rounding of each blog entry rectangle */
+    --marg-blog-entry-b: calc(1.5 * var(--padd-blog-entry-tb)); /* padding bottom of table */
+    --width-blog-entry-title-border: 1px; /* width of border under blog entry title */
+    --padd-blog-entry-text-t: calc(0.3 * var(--padd-blog-entry-tb)); /* dist bw line and subtitle */
+
+    /* timing */
+    --time-blogname-ani: 1.5s;
+    --scale-blogname-50perc: 1.1;
+}
+
+/* mobile devices */
+@media all and (max-width: 767px) {
+    :root {
+
+        /* logo */
+        --height-logo: 48px; /* width logo - mobile */
+
+
+        /* header */
+        --height-header: 70px; /* height header  */
+        --width-header-bottomline: 2px; /* width of bottom line */
+        --marg-logo-t: calc(0.5 * (var(--height-header) - var(--height-logo))); /* margin top for logo */
+        --marg-logo-l: calc(2 * var(--marg-logo-t)); /* margin left for logo */
+        --marg-headermenu-r: 5vw;/* margin right for header menu */
+
+
+        /* hero */
+        --marg-hero2-text-r: 5%; /* margin right for text */
+        /* timing */
+        --time-hero1: 1.2s;
+        --time-hero3: 1.2s;
+
+
+        /* advantage animations - whole space */
+        --height-advani-tot: auto;
+        --width-advani-tot-col: 100%; /* one column */
+        --marg-advani-tot-lr: 0vw; /* left / right margin for the whole table */
+        --marg-advani-tot-tb: 0vw; /* top / bottom margin for the whole table */
+
+        /* advantage animations - each */
+        --padd-advani-each-all: 4vw; /* margin for each column */
+
+        /* advantage animations - each */
+        --height-advani: 22vh; /* height ani svg */
+
+
+        /* footer */
+        --padd-footer: var(--padd-advani-each-all);/* padding top */
+        --width-footer-col: 0% 100% 0%;
+        --width-footer-form: 70%; /* width of the registration form (of the 1/3) */
+
+
+        /* blog */
+        --padd-blog-lr: 3vw; /* padding left / right side of table */
+        --padd-blog-entry-lr: 6vw; /* padding left / right around each blog entry */
+        --padd-blog-entry-tb: var(--padd-blog-entry-lr); /* padding top / bottom around each blog entry */
+        --marg-blog-entry-b: calc(1.5 * var(--padd-blog-entry-tb)); /* padding bottom of table */
+        --padd-blog-entry-text-t: calc(0.3 * var(--padd-blog-entry-tb)); /* dist bw line and subtitle */
+    }
+}
