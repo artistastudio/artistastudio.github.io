@@ -1,0 +1,130 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <!--uk regular stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Artista Studio Product</title>
+
+    <link rel="icon" href="logo/logo_icon_tran_light.png">
+
+    <link href="css/code_resets.css" rel="stylesheet" type="text/css">
+    <link href="css/par_colors.css" rel="stylesheet" type="text/css">
+    <link href="css/par_text.css" rel="stylesheet" type="text/css">
+    <link href="css/par_margins_and_sizes.css" rel="stylesheet" type="text/css">
+    <link href="css/code_main_header_footer.css" rel="stylesheet" type="text/css">
+    <link href="css/code_prod.css" rel="stylesheet" type="text/css">
+
+
+    <!--uk for proper rendering on mobile and zoom off-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--uk import local jquery library-->
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+
+    <!--uk to import an external html file, header-footer-->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <!--uk import google font Raleway-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- scripts here -->
+
+  </head>
+
+  <body class="websitebody ukcnt" id="websitebody1">
+    <section class="websitewrapper ukcnt" id="websitewrapper1">
+
+      <!--uk Header row with shadow header record-->
+      <div w3-include-html="html/header.html"></div>
+      <!--uk this is the main header which is fixed on top-->
+      <header class="header ukcnt" id="header1">
+        <nav>
+          <a href="index.html">
+            <img class="imglogo ukcnt" id="imglogo1" src="logo/logo_combined_tran_light.png" alt="">
+          </a>
+        </nav>
+
+        <section class="hamburger ukcnt noSelect" id="hamburger1" onclick="transformHamburger(event,this)">
+          <div class="hambar" id="bar1"></div>
+          <div class="hambar" id="bar2"></div>
+          <div class="hambar" id="bar3"></div>
+        </section>
+
+        <nav class="menu ukcnt" id="menu1">
+          <div id="toola" class="menua">
+            <a href="index.html"><h4>Home</h4></a>
+          </div>
+          <div id="bloga" class="menua">
+            <a href="blog.html"><h4>Blog</h4></a>
+          </div>
+          <div id="colorwikia" class="menua">
+            <a href="#"><h4>Color Wiki</h4></a>
+          </div>
+          <!--
+          <div id="menua4" class="menua">
+            <a href="#"><h4>Color Wiki</h4></a>
+          </div>
+          -->
+        </nav>
+      </header>
+
+
+      <!--uk this is the shadow header of same size as main header to keep the place of main header on canvas-->
+
+      <header class="header ukcnt shadow" id="header2">
+      </header>
+
+      <!--uk end of Header row with shadow header record-->
+
+      <!--uk wrapper around react app -->
+      <section class="wrapper ukcnt" id="wrapper1">
+        <div class="app wrapper ukcnt" id="root"></div>
+      </section>
+      <!--uk end of wrapper around react app -->
+
+      <!--uk footer here-->
+      <div w3-include-html="html/footer.html"></div>
+      <footer class="footer ukcnt" id="footer1">
+        <section class="subfooter leftfooter ukcnt" id="leftfooter1">
+          <nav class="footermenu ukcnt" id="footermenu1">
+            <a href="#"><h5>Brand identity</h5></a>
+            <a href="#"><h5>Social posts</h5></a>
+            <a href="#"><h5>Videos</h5></a>
+            <a href="#"><h5>Color Wiki</h5></a>
+            <a href="#"><h5>Color Matcher</h5></a>
+          <nav>
+        </section>
+        <section class="subfooter midfooter ukcnt" id="midfooter1">
+
+            <h5>Register for an exclusive pre-launch access</h5><br>
+            <form class="form ukcnt" id="form1">
+            <input class="input email" name="email" type="email" id="email1" placeholder="Enter your email here*" />
+            <p><br></p>
+            <textarea class="input message" name="message" id="messsage1" rows="1" placeholder="A message for the team"></textarea>
+            <p><br></p>
+            <button class="button footer" id="button1" formid="form1" type="submit">
+              <h5>submit</h5>
+            </button>
+        </form>
+
+        </section>
+        <section class="subfooter rightfooter ukcnt" id="rightfooter1">
+          <nav class="footermenu ukcnt" id="footermenu2">
+            <a href="#"><h5>Privacy policy</h5></a>
+            <a href="#"><h5>Terms of Use</h5></a>
+            <a href="#"><h5>About Us</h5></a>
+          <nav>
+        </section>
+      </footer>
+
+      <!--uk end of footer here-->
+
+      <!--uk custom java scripts here-->
+      <script src = "js/header.js"></script>
+      <!--uk end of custom java scripts here-->
+
+    </section>
+  </body>
+</html>

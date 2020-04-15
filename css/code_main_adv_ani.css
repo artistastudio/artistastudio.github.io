@@ -1,0 +1,226 @@
+/*
+  ========================================
+  Advantages card feature
+  ========================================
+*/
+
+/* "advantage" titles */
+.advtextall h3 {
+    text-align: center;
+    line-height: calc(1.25 * var(--font-size-h3));
+    color: var(--col-text-advani-title);
+
+    background: var(--col-text-advani-title-bg);
+
+    -moz-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+/* "advantage" paragraph */
+.advtextall p {
+    text-align: justify;
+}
+
+
+/* ============ whole space "advantages" ============ */
+#advfeature1 {
+    margin-top: var(--marg-advani-tot-tb);
+    margin-bottom: var(--marg-advani-tot-tb);
+    margin-left: var(--marg-advani-tot-lr);
+    margin-right: var(--marg-advani-tot-lr);
+    height: var(--height-advani-tot);
+    padding-bottom: var(--padd-advani-tot-b);
+}
+
+#advantagewrapper1 {
+    display: grid;
+    grid-template-columns: var(--width-advani-tot-col);
+}
+
+/* ============ space surrounding each animation and text ============ */
+.advantage {
+    padding-left: var(--padd-advani-each-lr);
+    padding-right: var(--padd-advani-each-lr);
+    padding-bottom: var(--padd-advani-each-tb);
+    padding-top: var(--padd-advani-each-tb);
+}
+
+/* ============ coloring of each section for mobile ============ */
+#advantagewrapper1 #advantage1 {
+    background: var(--col-advani-col1);
+}
+#advantagewrapper1 #advantage2 {
+    background: var(--col-advani-col2);
+}
+#advantagewrapper1 #advantage3 {
+    background: var(--col-advani-col3);
+}
+
+
+/* ============ svg animations ============ */
+/* div surrounding the animation*/
+.advanimation {
+    display: flex;
+    justify-content:center;
+    padding: var(--padd-advani-svg);
+}
+
+/* svg characteristics*/
+#advanimate1, #advanimate2, #advanimate3 {
+    stroke-dasharray: 4000px;
+    stroke-dashoffset: 4700px;
+}
+#advanimate1 {
+    stroke-width: var(--width-advani-stroke-svg1);
+}
+#advanimate2 {
+    stroke-width: var(--width-advani-stroke-svg2);
+}
+#advanimate3 {
+    stroke-width: var(--width-advani-stroke-svg3);
+}
+
+
+/* animation of svg */
+/* apply transition */
+.advanimate {
+
+    height: var(--height-advani);
+    max-height: var(--height-advani-max);
+
+    -moz-animation: svg-advani var(--time-adv) ease-in-out;
+    -ms-animation: svg-advani var(--time-adv) ease-in-out;
+    -o-animation: svg-advani var(--time-adv) ease-in-out;
+    -webkit-animation: svg-advani var(--time-adv) ease-in-out;
+    animation: svg-advani var(--time-adv) ease-in-out;
+
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+/* define transition */
+@-moz-keyframes svg-advani {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+@-ms-keyframes svg-advani {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes svg-advani {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes svg-advani {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+@keyframes svg-advani {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+
+/* animation of all when hovering over section */
+#advfeature1:hover #advanimate1, #advfeature1:hover #advanimate2, #advfeature1:hover #advanimate3 {
+
+    height: var(--height-advani);
+    max-height: var(--height-advani-max);
+
+    -moz-animation: svg-advani-hover var(--time-adv-hover) ease-in-out;
+    -ms-animation: svg-advani-hover var(--time-adv-hover) ease-in-out;
+    -o-animation: svg-advani-hover var(--time-adv-hover) ease-in-out;
+    -webkit-animation: svg-advani-hover var(--time-adv-hover) ease-in-out;
+    animation: svg-advani-hover var(--time-adv-hover) ease-in-out;
+
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+/* define transition */
+@-moz-keyframes svg-advani-hover{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(var(--scale-advani-20perc));
+    }
+    40% {
+        transform: scale(var(--scale-advani-40perc));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(var(--scale-advani-100perc));
+    }
+}
+@-ms-keyframes svg-advani-hover{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(var(--scale-advani-20perc));
+    }
+    40% {
+        transform: scale(var(--scale-advani-40perc));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(var(--scale-advani-100perc));
+    }
+}
+@-o-keyframes svg-advani-hover{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(var(--scale-advani-20perc));
+    }
+    40% {
+        transform: scale(var(--scale-advani-40perc));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(var(--scale-advani-100perc));
+    }
+}
+@-webkit-keyframes svg-advani-hover{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(var(--scale-advani-20perc));
+    }
+    40% {
+        transform: scale(var(--scale-advani-40perc));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(var(--scale-advani-100perc));
+    }
+}
+@keyframes svg-advani-hover{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(var(--scale-advani-20perc));
+    }
+    40% {
+        transform: scale(var(--scale-advani-40perc));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(var(--scale-advani-100perc));
+    }
+}
