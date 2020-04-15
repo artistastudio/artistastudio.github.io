@@ -3,27 +3,23 @@
   header
   ========================================
 */
-
-@media screen and (min-width: 768px) {
-  #bloga {
-      border-top: var(--width-header-bottomline) solid var(--col-header-border);
-  }
+#indexa1 h4{
+  font-weight: unset;
 }
-
+#producta1 h4{
+  font-weight: unset;
+}
+#bloga1 h4{
+  font-weight: bold;
+}
+#logina1 h4{
+  font-weight: unset;
+}
 /*
   ========================================
   Blog
   ========================================
 */
-
-/* blog */
-.blogname h2 {
-    text-transform: uppercase;
-    color: var(--col-blog-title);
-    line-height: var(--font-lspace-title-blog);
-}
-
-
 /*blog page*/
 .blogpg {
     margin-top: var(--marg-blog-t);

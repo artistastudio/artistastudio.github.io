@@ -25,8 +25,6 @@
 
     /* header */
     --col-header-border: var(--col-accent1);
-    --col-hamburger-bar: var(--col-accent2-dark);
-    --col-menu-bg-m: var(--white);
 
     /* hero */
     --col-text-hero: var(--col-accent1-dd);
@@ -47,7 +45,7 @@
 
     /* advantages - table columns */
     --col-advani-col1: auto;
-    --col-advani-col2: var(--col-accent1-ll);
+    --col-advani-col2: auto;
     --col-advani-col3: auto;
 
     /* advantage text */
@@ -70,27 +68,14 @@
     --col-blog-bg: var(--white); /* colour of blog entries */
     --col-blog-title: var(--col-accent2-dark); /* title text color */
     --col-blog-entry-title-border: var(--col-accent2); /* border under blog entry title */
-
-    /*************/
-    /* React APP */
-    /*************/
-
-    /* Menu */
-    /*sticky menu*/
-    --col-menu-bar: var(--col-accent2-dark);
-    --col-smenu-bg: var(--col-body-bg);
-    /*left menu*/
-    --col-bottom-border: var(--col-header-border);
-
-    /*Interact*/
-    /*Getting Started component*/
-    --col-start-border: var(--col-header-border);
 }
 
-/*  desktop */
-@media all and (min-width: 1024px) {
+/* mobile devices */
+@media all and (max-width: 767px) {
     :root {
         /* advantages - table columns */
-        --col-advani-col2: auto;
+        --col-advani-col1: auto;
+        --col-advani-col2: var(--col-accent1-ll);
+        --col-advani-col3: auto;
     }
 }

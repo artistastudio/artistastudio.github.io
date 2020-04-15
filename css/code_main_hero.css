@@ -1,97 +1,25 @@
-/* ========================================
-   Arrow (navigation)
-   ======================================== */
-.thearrow {
-    display: none;
-}
-/* desktop */
-@media screen and (min-width: 1024px) {
-    .thearrow {
-        display: block;
-        font-size: var(--size-arrow);
-        position: absolute;
-        z-index: 4;
-        top: var(--pos-vert-abs);
-        text-align: center;
-        margin-left: var(--marg-arrow-lr);
-        margin-right: var(--marg-arrow-lr);
-
-        /*uk - removing arrow animation, I am sorry but it looks so 90s
-        -webkit-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-           -moz-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-            -ms-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-             -o-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-                animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-
-        -webkit-animation-delay: var(--time-hero3);
-           -moz-animation-delay: var(--time-hero3);
-            -ms-animation-delay: var(--time-hero3);
-             -o-animation-delay: var(--time-hero3);
-                animation-delay: var(--time-hero3);
-        */
-    }
-    /* link display */
-    a {
-        color: var(--col-arrow);
-    }
-    a:hover {
-        color: var(--col-arrow-hover);
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .thearrow {
-      margin-left: var(--max-marg-arrow-lr);
-    }
-}
-/* define transition */
 /*
-@-moz-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
+  ========================================
+  header
+  ========================================
+*/
+#indexa1 h4{
+  font-weight: bold;
 }
-@-ms-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
+#producta1 h4{
+  font-weight: unset;
 }
-@-o-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
+#bloga1 h4{
+  font-weight: unset;
 }
-@-webkit-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
+#logina1 h4{
+  font-weight: unset;
 }
-@keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}*/
-
 /*
   ========================================
   hero
   ========================================
 */
-
-/* hero: text */
-#heroani2 {
-    display: flex;
-    direction: rtl;
-    overflow: hidden;
-    padding-top: calc(0.5 * (100vh - var(--height-header) - 2 * var(--marg-hero2-tb) - 3 * var(--font-lspace-title-l)));
-    padding-right: var(--marg-hero2-text-r);
-}
-#herotext2 h1, #herotext2 h2 {
-    text-transform: uppercase;
-    font-weight: var(--font-weight-title-l);
-    line-height: var(--font-lspace-title-l);
-    color: var(--col-text-hero);
-}
 
 /*
 =================
@@ -106,6 +34,7 @@ hero 1 - left
 /* hero1 - animated */
 #heroani1 {
     z-index: 1;
+
     position: absolute;
     top: calc(var(--height-header) + var(--marg-hero1-tb));
     height: calc(100vh - var(--height-header) - 2 * var(--marg-hero1-tb));
@@ -113,35 +42,36 @@ hero 1 - left
 
     /*background: var(--col-hero1-bg-1);*/
     background: linear-gradient(to right, var(--col-hero1-bg-1), var(--col-hero1-bg-2), var(--col-hero1-bg-3));
+
+    -moz-animation: herofromleft var(--time-hero1) ease-out forwards;
+    -ms-animation: herofromleft var(--time-hero1) ease-out forwards;
+    -o-animation: herofromleft var(--time-hero1) ease-out forwards;
     -webkit-animation: herofromleft var(--time-hero1) ease-out forwards;
-       -moz-animation: herofromleft var(--time-hero1) ease-out forwards;
-        -ms-animation: herofromleft var(--time-hero1) ease-out forwards;
-         -o-animation: herofromleft var(--time-hero1) ease-out forwards;
-            animation: herofromleft var(--time-hero1) ease-out forwards;
+    animation: herofromleft var(--time-hero1) ease-out forwards;
 }
 
 /* animation definition */
-
-@-webkit-keyframes herofromleft {
-  from {width: 0px;}
-    to {width: var(--width-hero1);}
-}
 @-moz-keyframes herofromleft {
-  from {width: 0px;}
-    to {width: var(--width-hero1);}
+   from {margin-left: var(--marg-hero1-ani-l);}
+     to {margin-left: 0vw;}
 }
 @-ms-keyframes herofromleft {
-  from {width: 0px;}
-    to {width: var(--width-hero1);}
+   from {margin-left: var(--marg-hero1-ani-l);}
+     to {margin-left: 0vw;}
 }
 @-o-keyframes herofromleft {
-  from {width: 0px;}
-    to {width: var(--width-hero1);}
+   from {margin-left: var(--marg-hero1-ani-l);}
+     to {margin-left: 0vw;}
+}
+@-webkit-keyframes herofromleft {
+   from {margin-left: var(--marg-hero1-ani-l);}
+     to {margin-left: 0vw;}
 }
 @keyframes herofromleft {
-  from {width: 0px;}
-    to {width: var(--width-hero1);}
+   from {margin-left: var(--marg-hero1-ani-l);}
+     to {margin-left: 0vw;}
 }
+
 
 /*
 =================
@@ -159,12 +89,11 @@ hero 2 - center (main card)
     background: var(--col-hero2-bg);
 
     -webkit-animation: herocard var(--time-hero2) ease-out forwards;
-       -moz-animation: herocard var(--time-hero2) ease-out forwards;
-        -ms-animation: herocard var(--time-hero2) ease-out forwards;
-         -o-animation: herocard var(--time-hero2) ease-out forwards;
-            animation: herocard var(--time-hero2) ease-out forwards;
+    -moz-animation: herocard var(--time-hero2) ease-out forwards;
+    -ms-animation: herocard var(--time-hero2) ease-out forwards;
+    -o-animation: herocard var(--time-hero2) ease-out forwards;
+    animation: herocard var(--time-hero2) ease-out forwards;
 }
-
 
 @-webkit-keyframes herocard {
    from {margin-left: 100%; width: 0vw;}
@@ -236,11 +165,4 @@ hero 3 - right
 @keyframes herofromright {
    from {margin-left: 100%; width: 0vw;}
      to {margin-left: var(--marg-hero3-l); width: var(--width-hero3);}
-}
-
-
-@media screen and (min-width: 1920px) {
-    #hero1 {
-        width: var(--width-webwrapper-max);
-    }
 }

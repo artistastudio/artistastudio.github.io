@@ -4,26 +4,6 @@
   ========================================
 */
 
-/* "advantage" titles */
-.advtextall h3 {
-    text-align: center;
-    line-height: calc(1.25 * var(--font-size-h3));
-    color: var(--col-text-advani-title);
-
-    background: var(--col-text-advani-title-bg);
-
-    -moz-background-size: 100% 100%;
-    -ms-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-}
-/* "advantage" paragraph */
-.advtextall p {
-    text-align: justify;
-}
-
-
 /* ============ whole space "advantages" ============ */
 #advfeature1 {
     margin-top: var(--marg-advani-tot-tb);
@@ -41,10 +21,7 @@
 
 /* ============ space surrounding each animation and text ============ */
 .advantage {
-    padding-left: var(--padd-advani-each-lr);
-    padding-right: var(--padd-advani-each-lr);
-    padding-bottom: var(--padd-advani-each-tb);
-    padding-top: var(--padd-advani-each-tb);
+    padding: var(--padd-advani-each-all);
 }
 
 /* ============ coloring of each section for mobile ============ */
