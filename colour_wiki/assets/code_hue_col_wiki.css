@@ -1,0 +1,134 @@
+/*
+  ========================================
+  Overview Colour Hues
+  ========================================
+*/
+
+/* mobile */
+:root {
+    /* whole table */
+    --marg-hue-tab-lr: 7vw;
+    --marg-hue-tab-t: 5vh;
+    --marg-hue-tab-b: 5vh;
+
+    /* each swatch */
+    --height-swatch: 60px;
+    --marg-swatch: 2px;
+    --radius-swatch: 5px;
+    --shadow-swatch: 0 2px 5px rgba(0,0,0,.1);
+    --scale-swatch-hover: 2.5;
+    --border-swatch-hover: 2px solid #ffffff;
+
+    /* title of each swatch */
+    --fontsize-swatch-title: 7px;
+    --lnspace-swatch-title: 10px;
+    --dist-swatch-text-top: 50%;
+    --dist-swatch-text-left: 50%;
+    --dist-swatch-text-top-trans: -50%;
+    --dist-swatch-text-left-trans: -50%;
+
+}
+/* desktop */
+@media all and (min-width: 768px) {
+    :root {
+        /* whole table */
+        --marg-hue-tab-lr: 7vw;
+        --marg-hue-tab-t: 3vh;
+        --marg-hue-tab-b: 10vh;
+
+        /* each swatch */
+        --height-swatch: 80px;
+        --marg-swatch: 3px;
+        --scale-swatch-hover: 1.3;
+
+        /* title of each swatch */
+        --fontsize-swatch-title: var(--font-size-p);
+        --lnspace-swatch-title: 20px;
+    }
+}
+
+
+/* whole table with cards */
+.table-hue-all {
+    margin-left: var(--marg-hue-tab-lr);
+    margin-right: var(--marg-hue-tab-lr);
+    margin-top: var(--marg-hue-tab-t);
+    margin-bottom: var(--marg-hue-tab-b);
+}
+
+/* grid */
+.subtable-hue-all {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+/* colour swatch */
+.card{
+    position: relative;
+    height: var(--height-swatch);
+    margin: var(--marg-swatch);
+    border-radius: var(--radius-swatch);
+
+  -webkit-box-shadow: var(--shadow-swatch);
+     -moz-box-shadow: var(--shadow-swatch);
+      -ms-box-shadow: var(--shadow-swatch);
+       -o-box-shadow: var(--shadow-swatch);
+          box-shadow: var(--shadow-swatch);
+
+  -webkit-transition: .5s;
+     -moz-transition: .5s;
+      -ms-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.card:hover{
+    z-index: 3;
+    border: var(--border-swatch-hover);
+
+  -webkit-transform: scale(var(--scale-swatch-hover));
+     -moz-transform: scale(var(--scale-swatch-hover));
+      -ms-transform: scale(var(--scale-swatch-hover));
+       -o-transform: scale(var(--scale-swatch-hover));
+          transform: scale(var(--scale-swatch-hover));
+}
+
+
+/* table title - description */
+.title-desc h2 {
+  text-align: center;
+  line-height: 100px;
+}
+/* table subtitle -description */
+.title-desc h3 {
+  text-align: center;
+  line-height: 50px;
+  color: var(--col-text);
+}
+/* table text - description */
+.title-desc h4 {
+  margin-left: var(--marg-hue-tab-lr);
+  margin-right: var(--marg-hue-tab-lr);
+  line-height: 50px;
+  color: var(--col-text);
+}
+
+
+/* colour names - on cards */
+.title-hue p {
+  font-size: var(--fontsize-swatch-title);
+  line-height: var(--lnspace-swatch-title);
+  color: transparent;
+
+  z-index: 2;
+  position: absolute;
+  top: var(--dist-swatch-text-top);
+  left: var(--dist-swatch-text-left);
+  text-align: center;
+  -webkit-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+     -moz-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+      -ms-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+       -o-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+          transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+
+}

@@ -1,0 +1,184 @@
+/*
+  ========================================
+  Overview Colour Hues
+  ========================================
+*/
+
+/* mobile */
+:root {
+    /* whole table */
+    --marg-hue-tab-lr: 1vh;
+    --marg-hue-tab-t: 1vh;
+    --marg-hue-tab-b: 5vh;
+
+    /* grid */
+    --grid-tab-hue-groups: 50% 50%;
+
+    /* each swatch */
+    --width-swatch-max: 350px;
+    --marg-swatch: 20px;
+    --padd-swatch-tb: 20px;
+    --radius-swatch: 5px;
+    --shadow-swatch: 0 5px 10px rgba(0,0,0,.1);
+    --scale-swatch-hover: 1.05;
+    --opac-swatch-hover: 1;
+
+    /* card titles */
+    --opac-swatch-title-before: 1;
+    --opac-swatch-title-after: 1;
+    --pos-swatch-title-top: 0;
+    --col-swatch-text: var(--col-text);
+    --col-swatch-text-bg: transparent;
+    --dist-swatch-text-top: 100%;
+    --dist-swatch-text-left: 50%;
+    --dist-swatch-text-top-trans: -100%;
+    --dist-swatch-text-left-trans: -50%;
+    --width-swatch-text: auto;
+    --padd-swatch-text: 0px;
+
+    /* table title */
+    --ln-space-hue-tab-title: 80px;
+}
+
+/* desktop */
+@media all and (min-width: 768px) {
+    :root {
+        /* whole table */
+        --marg-hue-tab-lr: 5vw;
+        --marg-hue-tab-t: 0vh;
+        --marg-hue-tab-b: 10vh;
+
+        /* grid */
+        --grid-tab-hue-groups: 25% 25% 25% 25%;
+
+        /* each swatch */
+        --opac-swatch-hover: 0.3;
+
+        /* card titles */
+        --opac-swatch-title-before: 0;
+        --opac-swatch-title-after: 1;
+        --col-swatch-text: var(--white);
+        --col-swatch-text-bg: var(--col-accent2-dark);
+        --dist-swatch-text-top: 50%;
+        --dist-swatch-text-top-trans: -50%;
+        --width-swatch-text: 100%;
+        --padd-swatch-text: 5px;
+
+        /* table title */
+        --ln-space-hue-tab-title: 130px;
+    }
+}
+
+/* whole table with cards */
+.table-hue-all {
+    margin-left: var(--marg-hue-tab-lr);
+    margin-right: var(--marg-hue-tab-lr);
+    margin-top: var(--marg-hue-tab-t);
+    margin-bottom: var(--marg-hue-tab-b);
+}
+
+/* grid */
+.subtable-hue-all {
+    display: grid;
+    grid-template-columns: var(--grid-tab-hue-groups);
+}
+
+/* colour group container */
+.card{
+    position: relative;
+    max-width: var(--width-swatch-max);
+    margin: var(--marg-swatch);
+    padding-top: var(--padd-swatch-tb);
+    padding-bottom: var(--padd-swatch-tb);
+    border-radius: var(--radius-swatch);
+
+  -webkit-box-shadow: var(--shadow-swatch);
+     -moz-box-shadow: var(--shadow-swatch);
+      -ms-box-shadow: var(--shadow-swatch);
+       -o-box-shadow: var(--shadow-swatch);
+          box-shadow: var(--shadow-swatch);
+
+  -webkit-transition: .5s;
+     -moz-transition: .5s;
+      -ms-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.card:hover {
+    z-index: 3;
+  -webkit-transform: scale(var(--scale-swatch-hover));
+     -moz-transform: scale(var(--scale-swatch-hover));
+      -ms-transform: scale(var(--scale-swatch-hover));
+       -o-transform: scale(var(--scale-swatch-hover));
+          transform: scale(var(--scale-swatch-hover));
+}
+
+
+/* image */
+.card_img {
+    width: 100%;
+}
+.card:hover .card_img {
+    opacity: var(--opac-swatch-hover);
+}
+
+
+/* colour group name */
+.title-hue h4 {
+    z-index: 2;
+    position: absolute;
+    top: var(--dist-swatch-text-top);
+    left: var(--dist-swatch-text-left);
+    width: var(--width-swatch-text);
+    padding: var(--padd-swatch-text);
+    text-align: center;
+-webkit-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+   -moz-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+    -ms-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+     -o-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+        transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+
+    color: var(--col-swatch-text);
+    background: var(--col-swatch-text-bg);
+    opacity: var(--opac-swatch-title-before);
+}
+.card:hover .title-hue h4 {
+   opacity: var(--opac-swatch-title-after);
+}
+
+@media all and (min-width: 768px) {
+    #huegr1 h4 {
+        background: red;
+    }
+    #huegr2 h4 {
+        background: darkorange;
+    }
+    #huegr3 h4 {
+        color: black;
+        background: gold;
+    }
+    #huegr4 h4 {
+        background: seagreen;
+    }
+    #huegr5 h4 {
+        color: black;
+        background: aquamarine;
+    }
+    #huegr6 h4 {
+        background: blue;
+    }
+    #huegr7 h4 {
+        background: purple;
+    }
+    #huegr8 h4 {
+        background: fuchsia;
+    }
+}
+
+
+/* table title */
+.title-desc h1 {
+  text-align: center;
+  line-height: var(--ln-space-hue-tab-title);
+}

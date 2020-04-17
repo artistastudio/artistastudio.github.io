@@ -1,0 +1,40 @@
+/* define colours */
+
+:root {
+    /* main colour scheme */
+    --col-accent1: #e7cc3e; /* #fd9c04; */
+    --col-accent1-light: #fae987; /* #ffd94c; */
+    --col-accent1-ll: #fdfad1; /* #fdf5c1; */
+    --col-accent1-dark: #685a0f;
+    --col-accent1-dd: #443a05;
+
+    --col-accent2: #01bf9b; /* #02b99b */
+    --col-accent2-light: #98fee0; /* #81e0b8 */
+    --col-accent2-ll: #d4fff2; /* #e9f9f0 */
+    --col-accent2-dark: #008478; /* #00736d */
+    --col-accent2-dd: #023148; /* #003c4f */
+
+    /* general colours */
+    --white: #ffffff;
+    --black: #000000;
+
+    /* text */
+    --col-body-bg: var(--white);
+    --col-text: var(--col-accent2-dd);
+    --col-text-title: var(--col-accent2-dark);
+
+    /* header */
+    --col-header-border: var(--col-accent2);
+    --col-hamburger-bar: var(--col-accent2-dark);
+    --col-menu-bg-m: var(--white);
+
+    /* footer */
+    --col-footer-bg: var(--col-accent2-dd);
+    --col-footer-text: var(--white);
+    --col-footer-title: var(--col-accent1-light);
+    --col-footer-button: var(--col-accent1);
+    --col-footer-button-border: var(--col-accent1-dark);
+    --col-footer-button-text: var(--col-accent2-dd);
+    --col-footer-button-hover: var(--col-accent1-light);
+    --col-footer-button-border-hover: var(--col-accent1);
+}

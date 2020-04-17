@@ -1,0 +1,113 @@
+/*
+========================================
+  Typography
+========================================
+*/
+
+:root {
+    /* font family */
+    --font-fam: "Montserrat"; /* Raleway */
+
+    /* text - paragraph */
+    --font-size-h6: 13px;
+    --font-size-h5: 13px;
+    --font-size-p: 15px;
+
+    /* text - title */
+    --font-size-menu: 15px;
+    --font-size-h4: 17px;
+    --font-size-h3: 20px;
+    --font-size-h2: 22px;
+    --font-size-h1: 26px;
+
+    /* space between lines */
+    --font-lspace-p: 25px;
+    --font-lspace-title: 30px;
+
+    /* space between characters */
+    --font-chspace-h5: 1.2px;
+    --font-chspace-h3: 1.3px;
+    --font-chspace-h2: 1.3px;
+    --font-chspace-h1: 1.3px;
+
+    /* weight (bold) */
+    --font-weight-text: 500;
+    --font-weight-title: 700;
+}
+
+/* desktop */
+@media all and (min-width: 768px) {
+    :root {
+        /* text - title */
+        --font-size-h2: 26px;
+        --font-size-h1: 30px;
+
+        /* space between characters */
+        --font-chspace-h5: 1.3px;
+        --font-chspace-h3: 1.5px;
+        --font-chspace-h2: 0.3vw;
+        --font-chspace-h1: 0.6vw;
+    }
+}
+
+
+
+/* default settings */
+h1, h2, h3, h4 {
+    font-family: var(--font-fam);
+    color: var(--col-text-title);
+    font-weight: var(--font-weight-title);
+    line-height: var(--font-lspace-title);
+}
+
+h5, p {
+    font-family: var(--font-fam);
+    color: var(--col-text);
+    font-weight: var(--font-weight-text);
+    line-height: var(--font-lspace-p);
+}
+
+/* updating settings */
+/* ------ h1 ------ */
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: var(--font-chspace-h1);
+}
+
+/* ------ h2 ------ */
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: var(--font-chspace-h2);
+}
+
+/* ------ h3 ------ */
+h3 {
+    font-size: var(--font-size-h3);
+    letter-spacing: var(--font-chspace-h3);
+}
+
+/* ------ h4 ------ */
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+/* ------ h5 ------ */
+h5 {
+    font-size: var(--font-size-h5);
+    letter-spacing: var(--font-chspace-h5);
+}
+
+/* ------ h6 ------ */
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+/* ------ p ------ */
+p {
+    font-size: var(--font-size-p);
+}
+
+/* menu text */
+.header h4 {
+    font-size: var(--font-size-menu);
+}

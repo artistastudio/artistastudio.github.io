@@ -1,0 +1,64 @@
+/*
+========================================
+  Margings
+========================================
+*/
+
+/* mobile (and some are also desktop) */
+:root {
+    /* tb = top / bottom; lr = left / right; all = all four sides*/
+
+    /* body */
+    --marg-body: 0px;
+    --padd-body: 0px;
+
+    /* websitewrapper */
+    --width-webwrapper-max: 1920px;
+
+
+    /* logo */
+    --height-logo: 48px; /* width logo - mobile  */
+
+    /* header */
+    --height-header: 70px; /* height header */
+    --width-header-bottomline: 2px; /* width of bottom line */
+    --marg-logo-t: calc(0.5 * (var(--height-header) - var(--height-logo))); /* margin top for logo  */
+    --marg-logo-l: calc(2 * var(--marg-logo-t)); /* margin left for logo */
+    --width-hamburger-bar: 35px;
+    --height-hamburger-bar: 3px;
+    --spacebw-hamburger-bar: 3px;
+    --padding-menu: 30px;
+    --padding-menu-items: 20px;
+    --width-menu-d: 300px;
+
+
+    /* footer */
+    --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
+    --width-footer-col: 30% 40% 30%;
+    --marg-footer-m: 80px;/*margin between footers in mobile form*/
+    --width-footer-form: 80%; /* width of the registration form (of the 1/3) */
+    --height-footer-form-field: 25px; /* height of each field */
+    --width-footer-form-field-border: 1.5px; /* width of border under field */
+    --radius-footer-form-button: 5px; /* rounding rectangular button */
+}
+
+/* tablet and above */
+@media all and (min-width: 768px) {
+    :root {
+        /* footer */
+        --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
+        --width-footer-col: 20% 60% 20%;
+        --width-footer-form: 45%; /* width of the registration form (of the 1/3) */
+    }
+}
+
+@media all and (min-width: 1024px) {
+  :root {
+
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  :root {
+  }
+}

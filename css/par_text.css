@@ -9,55 +9,61 @@
     --font-fam: "Montserrat"; /* Raleway */
 
     /* text - paragraph */
-    --font-size-h6: 13px;
-    --font-size-h5: 13px;
-    --font-size-p: 15px;
+    --font-size-h6: 10px; /*13px;*/
+    --font-size-h5: 13px; /*13px;*/
+    --font-size-p: 13px; /*15px;*/
 
     /* text - title */
-    --font-size-h4: 20px;
-    --font-size-h3: 22px;
+    /*--font-size-menu: 17px;*/
+    --font-size-h4: 14px; /*20px;*/
+    --font-size-h3: 16px; /*22px;*/
 
     /* large text - title */
-    --font-size-h2: 1.9vw;
-    --font-size-h1: 2.8vw;
+    --font-size-h2: 18px; /*16px;*/
+    --font-size-h1: 20px; /*22px;*/
 
     /* space between lines */
-    --font-lspace-p: 25px;
-    --font-lspace-title: 6vh;
+    --font-lspace-p: 25px; /*h5, h6, p*/
+    --font-lspace-title: 35px; /*6vh;*/ /*h1, h2, h3, h4*/
     --font-lspace-title-blog: 10vh;
-    --font-lspace-title-l: 14vh;
+    --font-lspace-title-l: 10vh; /* uk - only for hero2 text */
 
     /* space between characters */
-    --font-chspace-h5: 1.3px;
-    --font-chspace-h3: 1.5px;
-    --font-chspace-h2: 0.3vw;
-    --font-chspace-h1: 0.6vw;
+    --font-chspace-p: 1px;
+    --font-chspace-h5: 1.2px;
+    --font-chspace-h4: 1.3px;
+    --font-chspace-h3: 1.3px;
+    --font-chspace-h2: 2px; /*0.2vw;*/
+    --font-chspace-h1: 2px; /*0.5vw;*/
 
     /* weight (bold) */
-    --font-weight-text: 500;
-    --font-weight-title: 700;
+    --font-weight-text: 400; /*500;*/ /*h5, h6, p*/
+    --font-weight-title: 400; /*700;*/ /*h1, h2, h3, h4*/
     --font-weight-title-l: 1000;
 }
 
-/* mobile */
-@media all and (max-width: 767px) {
+/* desktop */
+@media all and (min-width: 1024px) {
     :root {
+      /* text - title */
+      --font-size-h4: 18px; /*20px;*/
+      --font-size-h3: 20px; /*22px;*/
+
         /* large text - title */
-        --font-size-h2: 16px;
-        --font-size-h1: 22px;
+        --font-size-h2: 1.9vw;
+        --font-size-h1: 2.8vw;
 
         /* space between lines */
-        --font-lspace-title-l: 10vh;
+        --font-lspace-title-l: 14vh; /* uk - only for hero2 text */
 
         /* space between characters */
-        --font-chspace-h5: 1.2px;
-        --font-chspace-h3: 1.3px;
-        --font-chspace-h2: 0.2vw;
-        --font-chspace-h1: 0.5vw;
+        /*--font-chspace-h5: 1.3px;
+        --font-chspace-h3: 1.5px;
+        --font-chspace-h2: 0.3vw;
+        --font-chspace-h1: 0.6vw;*/
+
     }
 }
-
-
 
 /* default settings */
 h1, h2, h3, h4 {
@@ -67,7 +73,7 @@ h1, h2, h3, h4 {
     line-height: var(--font-lspace-title);
 }
 
-h5, p {
+h5, h6, p {
     font-family: var(--font-fam);
     color: var(--col-text);
     font-weight: var(--font-weight-text);
@@ -96,6 +102,7 @@ h3 {
 /* ------ h4 ------ */
 h4 {
     font-size: var(--font-size-h4);
+    letter-spacing: var(--font-chspace-h4);
 }
 
 /* ------ h5 ------ */
@@ -107,94 +114,16 @@ h5 {
 /* ------ h6 ------ */
 h6 {
     font-size: var(--font-size-h6);
+    letter-spacing: var(--font-chspace-h6);
 }
 
 /* ------ p ------ */
 p {
     font-size: var(--font-size-p);
+    letter-spacing: var(--font-chspace-p);
 }
 
-
-/* hero: text */
-#heroani2 {
-    display: flex;
-    overflow: hidden;
-    direction: rtl;
-    padding-top: calc(0.5 * (100vh - var(--height-header) - 2 * var(--marg-hero2-tb) - 3 * var(--font-lspace-title-l)));
-    padding-right: var(--marg-hero2-text-r);
-}
-#herotext2 h1, #herotext2 h2 {
-    text-transform: uppercase;
-    font-weight: var(--font-weight-title-l);
-    line-height: var(--font-lspace-title-l);
-    color: var(--col-text-hero);
-}
-
-
-/* "advantage" titles */
-.advtextall h3 {
-    text-align: center;
-    line-height: calc(1.25 * var(--font-size-h3));
-    color: var(--col-text-advani-title);
-
-    background: var(--col-text-advani-title-bg);
-
-    -moz-background-size: 100% 100%;
-    -ms-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-}
-/* "advantage" paragraph */
-.advtextall p {
-    text-align: justify;
-}
-
-
-/* footer: text */
-/* placeholder styling - different from actual input */
-::-moz-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-ms-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-o-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-webkit-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-/* title */
-#footer1 h5 {
-    text-transform: uppercase;
-    font-weight: var(--font-weight-title);
-    color: var(--col-footer-title);
-}
-/* button */
-#button1 h5 {
-    line-height: calc(1.5 * var(--font-size-h4));
-    color: var(--col-footer-button-text);
-}
-/* manual input - h5 */
-.input {
-    font: var(--font-weight-text) var(--font-size-h5) var(--font-fam);
-    letter-spacing: var(--font-chspace-h5);
-    color: var(--col-footer-text);
-}
-
-
-/* blog */
-.blogname h2 {
-    text-transform: uppercase;
-    color: var(--col-blog-title);
-    line-height: var(--font-lspace-title-blog);
-}
+/* menu text */
+/*.header h4 {
+    font-size: var(--font-size-menu);
+}*/
