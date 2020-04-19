@@ -136,27 +136,6 @@
 
 
 /* ========================================
-   Arrow (navigation)
-   ======================================== */
-.thearrow {
-    display: none;
-}
-/* desktop */
-@media screen and (min-width: 769px) {
-    .thearrow {
-        display: block;
-        font-size: 0px;
-        position: relative;
-        z-index: 4;
-        top: 89vh;
-        text-align: center;
-        margin-left: 50vw;
-        margin-right: 50vw;
-    }
-}
-
-
-/* ========================================
    Footer
    ======================================== */
    /* footer: text */
