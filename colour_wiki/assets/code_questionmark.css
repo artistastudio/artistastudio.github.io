@@ -1,0 +1,56 @@
+:root {
+    --helptip-width: 50vw;
+}
+
+/* desktop */
+@media all and (min-width: 768px) {
+    :root {
+        --helptip-width: 500px;
+    }
+}
+
+.help-tip {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background-color: var(--col-text);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: default;
+    vertical-align: super;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color: white;
+}
+
+.help-tip .tooltiptext {
+  visibility: hidden;
+  width: var(--helptip-width);
+  background-color: var(--col-text);
+  color: white;
+  text-align: center;
+  border: 1px solid var(--col-text);
+  border-radius: 6px;
+  padding: 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 3;
+  top: 200%;
+  left: 50%;
+  margin-left: calc(-1 * var(--helptip-width));
+}
+
+.help-tip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.help-tip:checked .tooltiptext {
+  visibility: visible;
+}

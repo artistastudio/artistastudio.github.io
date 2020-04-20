@@ -178,7 +178,11 @@
 
 
 /* table title */
-.title-desc h1 {
+.tab-title {
   text-align: center;
+}
+
+.title-desc h1 {
+  display: inline-block;
   line-height: var(--ln-space-hue-tab-title);
 }
