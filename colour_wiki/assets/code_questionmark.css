@@ -1,11 +1,13 @@
 :root {
     --helptip-width: 50vw;
+    --helptip-offset-top: 200%;
+    --helptip-offset-left: 50%;
 }
 
 /* desktop */
 @media all and (min-width: 768px) {
     :root {
-        --helptip-width: 500px;
+        --helptip-width: 40vw;
     }
 }
 
@@ -13,12 +15,13 @@
     display: inline-block;
     position: relative;
     text-align: center;
-    background-color: var(--col-text);
+    background-color: white;
+    border: 2px solid darkgrey;
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    font-size: 12px;
-    line-height: 18px;
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+    line-height: 14px;
     cursor: default;
     vertical-align: super;
 }
@@ -26,24 +29,24 @@
 .help-tip:before{
     content:'?';
     font-weight: bold;
-    color: white;
+    color: darkgrey;
 }
 
 .help-tip .tooltiptext {
   visibility: hidden;
   width: var(--helptip-width);
-  background-color: var(--col-text);
-  color: white;
+  background-color: white;
+  border: 1px solid var(--col-accent2);
+  color: darkslategrey;
   text-align: center;
-  border: 1px solid var(--col-text);
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 10px 10px;
 
   /* Position the tooltip */
   position: absolute;
   z-index: 3;
-  top: 200%;
-  left: 50%;
+  top: var(--helptip-offset-top);
+  left: var(--helptip-offset-left);
   margin-left: calc(-1 * var(--helptip-width));
 }
 
