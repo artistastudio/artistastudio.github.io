@@ -4,49 +4,49 @@
 }
 
 #card_shade_1 {
-  background: #111f13;
+  background: #111F13;
 }
 .card:hover #name_shade_1 p {
   color: #ffffff;
 }
 
 #card_shade_2 {
-  background: #233f27;
+  background: #233F27;
 }
 .card:hover #name_shade_2 p {
   color: #ffffff;
 }
 
 #card_shade_3 {
-  background: #345f3b;
+  background: #345F3B;
 }
 .card:hover #name_shade_3 p {
   color: #ffffff;
 }
 
 #card_shade_4 {
-  background: #467f4e;
+  background: #467F4E;
 }
 .card:hover #name_shade_4 p {
   color: #ffffff;
 }
 
 #card_shade_5 {
-  background: #579f62;
+  background: #579F62;
 }
 .card:hover #name_shade_5 p {
   color: #000000;
 }
 
 #card_shade_6 {
-  background: #69bf76;
+  background: #69BF76;
 }
 .card:hover #name_shade_6 p {
   color: #000000;
 }
 
 #card_shade_7 {
-  background: #7adf89;
+  background: #7ADF89;
 }
 .card:hover #name_shade_7 p {
   color: #000000;
@@ -60,49 +60,49 @@
 }
 
 #card_shade_9 {
-  background: #b2ffbd;
+  background: #B2FFBD;
 }
 .card:hover #name_shade_9 p {
   color: #000000;
 }
 
 #card_shade_10 {
-  background: #d8ffde;
+  background: #D8FFDE;
 }
 .card:hover #name_shade_10 p {
   color: #000000;
 }
 
 #card_tone_1 {
-  background: #808a82;
+  background: #808A82;
 }
 .card:hover #name_tone_1 p {
   color: #000000;
 }
 
 #card_tone_2 {
-  background: #89a28d;
+  background: #89A28D;
 }
 .card:hover #name_tone_2 p {
   color: #000000;
 }
 
 #card_tone_3 {
-  background: #8fb995;
+  background: #8FB995;
 }
 .card:hover #name_tone_3 p {
   color: #000000;
 }
 
 #card_tone_4 {
-  background: #92d09b;
+  background: #92D09B;
 }
 .card:hover #name_tone_4 p {
   color: #000000;
 }
 
 #card_tone_5 {
-  background: #90e79d;
+  background: #90E79D;
 }
 .card:hover #name_tone_5 p {
   color: #000000;
@@ -116,28 +116,28 @@
 }
 
 #card_tone_7 {
-  background: #70ff85;
+  background: #70FF85;
 }
 .card:hover #name_tone_7 p {
   color: #000000;
 }
 
 #card_tone_8 {
-  background: #54ff6d;
+  background: #54FF6D;
 }
 .card:hover #name_tone_8 p {
   color: #000000;
 }
 
 #card_tone_9 {
-  background: #38ff55;
+  background: #38FF55;
 }
 .card:hover #name_tone_9 p {
   color: #000000;
 }
 
 #card_tone_10 {
-  background: #1cff3e;
+  background: #1CFF3E;
 }
 .card:hover #name_tone_10 p {
   color: #000000;
@@ -178,14 +178,39 @@
   color: #000000;
 }
 
+#card_combo_1 {
+  background: linear-gradient(25deg, #8CFF9E 0%, #8CFF9E 50%, #82CBB2 50%, #82CBB2 100%);
+}
+.combo:hover #name_combo_1 p {
+  color: #000000;
+}
+
+#card_combo_2 {
+  background: linear-gradient(25deg, #8CFF9E 0%, #8CFF9E 50%, #FE6F5E 50%, #FE6F5E 100%);
+}
+.combo:hover #name_combo_2 p {
+  color: #000000;
+}
+
+#card_combo_3 {
+  background: linear-gradient(25deg, #8CFF9E 0%, #8CFF9E 50%, #354E8C 50%, #354E8C 100%);
+}
+.combo:hover #name_combo_3 p {
+  color: #ffffff;
+}
+
 #card_shade_8 {
-  outline: var(--outline-swatch);
-  outline-color: #8CFF9E;
-  outline-offset: var(--outline-swatch-offset);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
 }
 
 #card_tone_6 {
-  outline: var(--outline-swatch);
-  outline-color: #8CFF9E;
-  outline-offset: var(--outline-swatch-offset);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #8CFF9E;
 }

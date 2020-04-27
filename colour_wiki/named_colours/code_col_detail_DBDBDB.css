@@ -11,7 +11,7 @@
 }
 
 #card_shade_2 {
-  background: #2f2f2f;
+  background: #2F2F2F;
 }
 .card:hover #name_shade_2 p {
   color: #ffffff;
@@ -46,14 +46,14 @@
 }
 
 #card_shade_7 {
-  background: #aaaaaa;
+  background: #AAAAAA;
 }
 .card:hover #name_shade_7 p {
   color: #000000;
 }
 
 #card_shade_8 {
-  background: #c2c2c2;
+  background: #C2C2C2;
 }
 .card:hover #name_shade_8 p {
   color: #000000;
@@ -67,7 +67,7 @@
 }
 
 #card_shade_10 {
-  background: #ededed;
+  background: #EDEDED;
 }
 .card:hover #name_shade_10 p {
   color: #000000;
@@ -81,63 +81,63 @@
 }
 
 #card_tone_2 {
-  background: #ddc6c6;
+  background: #DDC6C6;
 }
 .card:hover #name_tone_2 p {
   color: #000000;
 }
 
 #card_tone_3 {
-  background: #deb2b2;
+  background: #DEB2B2;
 }
 .card:hover #name_tone_3 p {
   color: #000000;
 }
 
 #card_tone_4 {
-  background: #e09d9d;
+  background: #E09D9D;
 }
 .card:hover #name_tone_4 p {
   color: #000000;
 }
 
 #card_tone_5 {
-  background: #e28787;
+  background: #E28787;
 }
 .card:hover #name_tone_5 p {
   color: #000000;
 }
 
 #card_tone_6 {
-  background: #e47272;
+  background: #E47272;
 }
 .card:hover #name_tone_6 p {
   color: #000000;
 }
 
 #card_tone_7 {
-  background: #e65c5c;
+  background: #E65C5C;
 }
 .card:hover #name_tone_7 p {
   color: #000000;
 }
 
 #card_tone_8 {
-  background: #e74545;
+  background: #E74545;
 }
 .card:hover #name_tone_8 p {
   color: #000000;
 }
 
 #card_tone_9 {
-  background: #e92e2e;
+  background: #E92E2E;
 }
 .card:hover #name_tone_9 p {
   color: #ffffff;
 }
 
 #card_tone_10 {
-  background: #eb1717;
+  background: #EB1717;
 }
 .card:hover #name_tone_10 p {
   color: #ffffff;
@@ -178,14 +178,39 @@
   color: #000000;
 }
 
+#card_combo_1 {
+  background: linear-gradient(25deg, #DBDBDB 0%, #DBDBDB 50%, #C6C8BD 50%, #C6C8BD 100%);
+}
+.combo:hover #name_combo_1 p {
+  color: #000000;
+}
+
+#card_combo_2 {
+  background: linear-gradient(25deg, #DBDBDB 0%, #DBDBDB 50%, #ACBF69 50%, #ACBF69 100%);
+}
+.combo:hover #name_combo_2 p {
+  color: #000000;
+}
+
+#card_combo_3 {
+  background: linear-gradient(25deg, #DBDBDB 0%, #DBDBDB 50%, #9B5FC0 50%, #9B5FC0 100%);
+}
+.combo:hover #name_combo_3 p {
+  color: #ffffff;
+}
+
 #card_shade_9 {
-  outline: var(--outline-swatch);
-  outline-color: #DBDBDB;
-  outline-offset: var(--outline-swatch-offset);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
 }
 
 #card_tone_1 {
-  outline: var(--outline-swatch);
-  outline-color: #DBDBDB;
-  outline-offset: var(--outline-swatch-offset);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #DBDBDB;
 }

@@ -7,7 +7,7 @@
 /* mobile */
 :root {
     /* whole table */
-    --marg-hue-tab-lr: 1vw;
+    --marg-hue-tab-lr: 5vw;
     --marg-hue-tab-t: 5vh;
     --marg-hue-tab-b: 5vh;
 
@@ -16,16 +16,16 @@
     --width-main-img: 200px;
 
     /* each swatch */
-    --height-swatch: 50px;
+    --height-swatch: 40px;
     --marg-swatch: 1px;
     --radius-swatch: 5px;
     --shadow-swatch: 0 2px 5px rgba(0,0,0,.1);
-    --scale-swatch-hover: 2;
+    --scale-swatch-hover: 2.5;
     --border-swatch-hover: 2px solid #ffffff;
     --border-swatch-main: 5px solid var(--col-accent2);
 
     /* title of each swatch */
-    --fontsize-swatch-title: 7px;
+    --fontsize-swatch-title: 5.5px;
     --lnspace-swatch-title: 10px;
     --dist-swatch-text-top: 50%;
     --dist-swatch-text-left: 50%;
@@ -33,11 +33,25 @@
     --dist-swatch-text-left-trans: -50%;
 
     /* current swatch */
-    --outline-swatch: 2px solid #ffffff;
-    --outline-swatch-offset: 1px;
+    --underline-dist-inner: 1px;
+    --underline-dist-outer: 3px;
 
     /* circle */
     --circle-simcol-diam: 60px;
+    --scale-circle-hover: 1.8;
+
+    /* combo */
+    --combo-margin-lr: 0vw;
+    --height-combo: 50px;
+    --scale-combo-hover: 1.6;
+
+    /* titles - text */
+    --lspace-title-text: 40px;
+    --marg-title-text: 30px;
+
+    /* histogram */
+    --marg-hist-lr: 0vw;
+    --scale-hist-hover: 1.6;
 
 }
 /* desktop */
@@ -54,15 +68,29 @@
         --scale-swatch-hover: 1.3;
 
         /* title of each swatch */
-        --fontsize-swatch-title: 14px;
+        --fontsize-swatch-title: 12px;
         --lnspace-swatch-title: 20px;
 
         /* current swatch */
-        --outline-swatch: 3px solid #ffffff;
-        --outline-swatch-offset: 5px;
+        --underline-dist-inner: 3px;
+        --underline-dist-outer: 6px;
 
         /* circle */
         --circle-simcol-diam: 10vw;
+        --scale-circle-hover: 1.3;
+
+        /* combo */
+        --combo-margin-lr: 0vw;
+        --height-combo: 100px;
+        --scale-combo-hover: 1.3;
+
+        /* titles - text */
+        --lspace-title-text: 70px;
+        --marg-title-text: 40px;
+
+        /* histogram */
+        --marg-hist-lr: 8vw;
+        --scale-hist-hover: 1.3;
     }
 }
 
@@ -109,21 +137,18 @@
 /* table subtitle -description */
 .title-desc h3 {
   text-align: center;
-  line-height: 50px;
-  color: var(--col-text);
+  line-height: 60px;
 }
 /* table text - description */
 .title-desc h4 {
-  margin-left: var(--marg-hue-tab-lr);
-  margin-right: var(--marg-hue-tab-lr);
-  line-height: 50px;
+  text-align: center;
+  margin-top: var(--marg-title-text);
+  line-height: var(--lspace-title-text);
   color: var(--col-text);
 }
 /* table text - description */
 .title-desc p {
-  margin-left: var(--marg-hue-tab-lr);
-  margin-right: var(--marg-hue-tab-lr);
-  line-height: 50px;
+  text-align: center;
 }
 
 
@@ -190,14 +215,105 @@
       -ms-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
        -o-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
           transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+}
 
+
+/* colour combos */
+#colcombos-tab {
+  grid-template-columns: 33% 33% 33%;
+  margin-left: var(--combo-margin-lr);
+  margin-right: var(--combo-margin-lr);
+}
+
+.combo {
+  position: relative;
+  height: calc(1 * var(--height-combo));
+  width: calc(2 * var(--height-combo));
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--radius-swatch);
+
+  -webkit-box-shadow: var(--shadow-swatch);
+     -moz-box-shadow: var(--shadow-swatch);
+      -ms-box-shadow: var(--shadow-swatch);
+       -o-box-shadow: var(--shadow-swatch);
+          box-shadow: var(--shadow-swatch);
+
+  -webkit-transition: .5s;
+     -moz-transition: .5s;
+      -ms-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.combo:hover {
+  z-index: 3;
+  border: var(--border-swatch-hover);
+  -webkit-transform: scale(var(--scale-combo-hover));
+     -moz-transform: scale(var(--scale-combo-hover));
+      -ms-transform: scale(var(--scale-combo-hover));
+       -o-transform: scale(var(--scale-combo-hover));
+          transform: scale(var(--scale-combo-hover));
+}
+
+.combo p {
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-left: 30%;
+  text-align: right;
+
+  font-size: var(--fontsize-swatch-title);
+  line-height: var(--lnspace-swatch-title);
+
+  color: transparent;
+  z-index: 2;
+}
+
+
+/* histograms */
+#colcomposi-tab {
+  grid-template-columns: 50% 50%;
+  margin-left: var(--marg-hist-lr);
+  margin-right: var(--marg-hist-lr);
+}
+
+.composi {
+  position: relative;
+  height: auto;
+  width: calc(2.5 * var(--height-combo));
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-transition: .5s;
+     -moz-transition: .5s;
+      -ms-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.composi:hover {
+  z-index: 3;
+  -webkit-transform: scale(var(--scale-hist-hover));
+     -moz-transform: scale(var(--scale-hist-hover));
+      -ms-transform: scale(var(--scale-hist-hover));
+       -o-transform: scale(var(--scale-hist-hover));
+          transform: scale(var(--scale-hist-hover));
+}
+
+#myRGB {
+  width: 100%;
+}
+
+#myCMYK {
+  width: 100%;
 }
 
 
 
 /* similar colours */
 #simcol-tab {
-    grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  margin-bottom: 100px;
 }
 
 .circle{
@@ -208,7 +324,6 @@
   max-width: 120px;
   border-radius: 50%;
   margin: auto;
-  margin-bottom: 60px;
   text-align: center;
 
   -webkit-box-shadow: var(--shadow-swatch);
@@ -225,12 +340,12 @@
 }
 
 .circle:hover{
-    z-index: 3;
-    border: var(--border-swatch-hover);
+  z-index: 3;
+  border: var(--border-swatch-hover);
 
-  -webkit-transform: scale(var(--scale-swatch-hover));
-     -moz-transform: scale(var(--scale-swatch-hover));
-      -ms-transform: scale(var(--scale-swatch-hover));
-       -o-transform: scale(var(--scale-swatch-hover));
-          transform: scale(var(--scale-swatch-hover));
+  -webkit-transform: scale(var(--scale-circle-hover));
+     -moz-transform: scale(var(--scale-circle-hover));
+      -ms-transform: scale(var(--scale-circle-hover));
+       -o-transform: scale(var(--scale-circle-hover));
+          transform: scale(var(--scale-circle-hover));
 }

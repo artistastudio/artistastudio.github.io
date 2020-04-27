@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <title>Eagle</title>
-    <meta name="description" content="Detailed description of the colour Eagle corresponding to hex code #B6BAA4 with its shades, tints, tones and similar colours.">
+    <meta name="description" content="Detailed description of the color Eagle corresponding to hex code #B6BAA4 with its shades, tints, tones, similar colors and color combinations or duos.">
 
 	<link rel="icon" href="../logo/logo_colours_icon_tran_light.png">
 
@@ -35,7 +35,7 @@
 
   </head>
 
-  <body class="websitebody ukcnt" id="websitebody1">
+  <body class="websitebody ukcnt" id="websitebody1" onload="hist_RGB(); hist_CMYK();">
     <section class="websitewrapper ukcnt" id="websitewrapper1">
 
       <!--uk Header row -->
@@ -59,13 +59,17 @@
           <h3>#B6BAA4</h3>
         </div>
       </section>
-
-      <section>
+	  
+	  
+	  <!--
+	  <section>
         <div class="title-desc">
-          <h4>Colour Family</h4>
+          <h4>Color Family</h4>
           <p>Pastel Yellow</p>
         </div>
       </section>
+	  -->
+
 
       <section>
         <div class="title-desc">
@@ -86,21 +90,21 @@
             <section>
               <div class="card" id="card_shade_2">
                 <div class="title-hue" id="name_shade_2">
-                  <p>#2d2e29</p>
+                  <p>#2D2E29</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_shade_3">
                 <div class="title-hue" id="name_shade_3">
-                  <p>#44463d</p>
+                  <p>#44463D</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_shade_4">
                 <div class="title-hue" id="name_shade_4">
-                  <p>#5b5d52</p>
+                  <p>#5B5D52</p>
                 </div>
               </div>
             </section>
@@ -114,14 +118,14 @@
             <section>
               <div class="card" id="card_shade_6">
                 <div class="title-hue" id="name_shade_6">
-                  <p>#888b7a</p>
+                  <p>#888B7A</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_shade_7">
                 <div class="title-hue" id="name_shade_7">
-                  <p>#9fa28f</p>
+                  <p>#9FA28F</p>
                 </div>
               </div>
             </section>
@@ -135,14 +139,14 @@
             <section>
               <div class="card" id="card_shade_9">
                 <div class="title-hue" id="name_shade_9">
-                  <p>#ced1c0</p>
+                  <p>#CED1C0</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_shade_10">
                 <div class="title-hue" id="name_shade_10">
-                  <p>#1717140</p>
+                  <p>#E6E8DE</p>
                 </div>
               </div>
             </section>
@@ -163,7 +167,7 @@
             <section>
               <div class="card" id="card_tone_1">
                 <div class="title-hue" id="name_tone_1">
-                  <p>#6e6f6b</p>
+                  <p>#6E6F6B</p>
                 </div>
               </div>
             </section>
@@ -184,59 +188,132 @@
             <section>
               <div class="card" id="card_tone_4">
                 <div class="title-hue" id="name_tone_4">
-                  <p>#b6be92</p>
+                  <p>#B6BE92</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_5">
                 <div class="title-hue" id="name_tone_5">
-                  <p>#b7c380</p>
+                  <p>#B7C380</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_6">
                 <div class="title-hue" id="name_tone_6">
-                  <p>#b7c76d</p>
+                  <p>#B7C76D</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_7">
                 <div class="title-hue" id="name_tone_7">
-                  <p>#b7cc59</p>
+                  <p>#B7CC59</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_8">
                 <div class="title-hue" id="name_tone_8">
-                  <p>#b7d145</p>
+                  <p>#B7D145</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_9">
                 <div class="title-hue" id="name_tone_9">
-                  <p>#b7d52f</p>
+                  <p>#B7D52F</p>
                 </div>
               </div>
             </section>
             <section>
               <div class="card" id="card_tone_10">
                 <div class="title-hue" id="name_tone_10">
-                  <p>#6e6f6b0</p>
+                  <p>#B6DA18</p>
                 </div>
               </div>
             </section>
           </div>
         </div>
       </section>
-
-      <section>
+	  
+	  
+	  <section>
         <div class="title-desc">
-          <h4>Similar Colours</h4>
+          <h4>Color Composition</h4>
+        </div>
+      </section>
+	  
+	  <section>
+        <div class="table-hue-all">
+          <div class="subtable-hue-all" id="colcomposi-tab">
+            <section>
+              <div class="composi">
+                <canvas id="myRGB" width="500" height="400">
+                </canvas>
+              </div>
+            </section>
+
+            <section>
+              <div class="composi">
+                <canvas id="myCMYK" width="500" height="400">
+                </canvas>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+	   
+
+	  <section>
+        <div class="title-desc">
+          <h4>Artista Color Combinations</h4>
+        </div>
+      </section>
+	  
+	  <section>
+        <div class="table-hue-all">
+          <div class="subtable-hue-all" id="colcombos-tab">
+
+            <section>
+			  <a href="page_col_detail_A8989B.html">
+				<div class="combo" id="card_combo_1">
+				  <div id="name_combo_1">
+					<p>Dusty Grey</p>
+				  </div>
+				 </div>
+			  </a>
+            </section>
+
+            <section>
+			  <a href="page_col_detail_F9E4BC.html">
+				<div class="combo" id="card_combo_2">
+				  <div id="name_combo_2">
+					<p>Dairy Cream</p>
+				  </div>
+				</div>
+			  </a>
+            </section>
+
+            <section>
+			  <a href="page_col_detail_D1768F.html">
+                <div class="combo" id="card_combo_3">
+                  <div id="name_combo_3">
+                    <p>Muted Pink</p>
+                  </div>
+                </div>
+			  </a>
+            </section>
+
+          </div>
+        </div>
+      </section>
+	  	  
+	  
+	  <section>
+        <div class="title-desc">
+          <h4>Similar Colors</h4>
         </div>
       </section>
 
@@ -274,7 +351,7 @@
 				<a href="page_col_detail_B8C1B1.html">
 					<div class="circle" id="card_simcol_4">
 						<div class="title-hue" id="name_simcol_4">
-							<p>Green Spring</p>
+							<p>Spring Rain</p>
 						</div>
 					</div>
 				</a>
@@ -291,7 +368,7 @@
           </div>
         </div>
       </section>
-
+	  
 
       <!--uk footer here-->
       <div w3-include-html="../assets/footer.html"></div>
@@ -300,6 +377,25 @@
       <!--uk custom java scripts here-->
       <script src = "../../js/header.js"></script>
       <script>w3IncludeHTML();</script>
+
+
+      <script>
+        var ctx;
+        function hist_RGB() {
+            ctx = document.querySelector("#myRGB");
+            var data = [71, 73, 64];
+			var barcolor = ['#B6BAA4', '#B6BAA4', '#B6BAA4'];
+            drawHistogram(ctx, data, barcolor, 'rgb');
+        }
+
+        function hist_CMYK() {
+            ctx = document.querySelector("#myCMYK");
+            var data = [2, 0, 12, 27];
+			var barcolor = ['#B6BAA4', '#B6BAA4', '#B6BAA4', '#B6BAA4'];
+            drawHistogram(ctx, data, barcolor, 'cmyk');
+        }
+      </script>
+      <script src = "../assets/draw_histogram.js"></script>
 
     </section>
   </body>
