@@ -53,6 +53,10 @@
     --marg-hist-lr: 0vw;
     --scale-hist-hover: 1.6;
 
+    /* collapsible */
+    --lnspace-coll-title: 30px;
+    --shadow-coll: 0 4px 8px rgba(0,0,0,.1);
+
 }
 /* desktop */
 @media all and (min-width: 768px) {
@@ -91,6 +95,9 @@
         /* histogram */
         --marg-hist-lr: 8vw;
         --scale-hist-hover: 1.3;
+
+        /* collapsible */
+        --lnspace-coll-title: 50px;
     }
 }
 
@@ -273,14 +280,12 @@
 /* histograms */
 #colcomposi-tab {
   grid-template-columns: 50% 50%;
-  margin-left: var(--marg-hist-lr);
-  margin-right: var(--marg-hist-lr);
 }
 
 .composi {
   position: relative;
   height: auto;
-  width: calc(2.5 * var(--height-combo));
+  width: calc(2.7 * var(--height-combo));
   margin-left: auto;
   margin-right: auto;
 
@@ -302,10 +307,12 @@
 
 #myRGB {
   width: 100%;
+  padding-right: 10px;
 }
 
 #myCMYK {
   width: 100%;
+  padding-left: 10px;
 }
 
 
@@ -348,4 +355,61 @@
       -ms-transform: scale(var(--scale-circle-hover));
        -o-transform: scale(var(--scale-circle-hover));
           transform: scale(var(--scale-circle-hover));
+}
+
+
+/* collapsible content */
+.collapsible {
+  background-color: var(--col-grey-light);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: none;
+
+   -webkit-box-shadow: var(--shadow-coll);
+      -moz-box-shadow: var(--shadow-coll);
+       -ms-box-shadow: var(--shadow-coll);
+        -o-box-shadow: var(--shadow-coll);
+           box-shadow: var(--shadow-coll);
+}
+
+.active, .collapsible:hover {
+  background-color: var(--col-grey);
+}
+
+.collapsible:after {
+  content: '\2B9F';
+  color: var(--col-text);
+  font-weight: bold;
+  font-size: 15px;
+  float: right;
+  padding-right: 10px;
+}
+
+.coll_text {
+  font-family: var(--font-fam);
+  color: var(--col-text);
+  font-weight: var(--font-weight-title);
+  line-height: var(--lnspace-coll-title);
+  font-size: var(--font-size-h4);
+  padding-left: 35px;
+}
+
+.active:after {
+  content: "\2B9D";
+}
+
+.coll_content {
+  width: 100%;
+
+  padding: 0px 15px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+
+  -webkit-transition: max-height 0.2s ease-out;
+     -moz-transition: max-height 0.2s ease-out;
+      -ms-transition: max-height 0.2s ease-out;
+       -o-transition: max-height 0.2s ease-out;
+          transition: max-height 0.2s ease-out;
 }

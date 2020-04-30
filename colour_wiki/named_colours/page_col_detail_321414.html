@@ -61,14 +61,42 @@
       </section>
 	  
 	  
-	  <!--
 	  <section>
-        <div class="title-desc">
-          <h4>Color Family</h4>
-          <p>Dark Red</p>
+        <div class="table-hue-all">
+          <button class="collapsible coll_text">Color Composition</button>
+          <div class="coll_content">
+
+            <section>
+              <div class="table-hue-all">
+                <div class="subtable-hue-all" id="colcomposi-tab">
+                  <section>
+                    <div class="composi">
+                      <canvas id="myRGB" width="500" height="400">
+                      </canvas>
+                    </div>
+                  </section>
+
+                  <section>
+                    <div class="composi">
+                      <canvas id="myCMYK" width="500" height="400">
+                      </canvas>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <p>
+              Seal Brown belongs to the color family Dark Red. It is of a low brightness and a medium saturation.
+              <br>Seal Brown corresponds to the hex code #321414.
+              <br>In the additive (digital) color space RGB, it is composed of 20% red, 8% green and 8% blue components.
+              <br>In the alternative HSV representation, it is associated with a hue angle of 0° (out of 360°), 60% saturation and 20% value.
+              <br>In the subtractive (process) color space CMYK, it is composed of 0% cyan, 60% magenta, 60% yellow and 80% black pigments.
+            </p>
+
+          </div>
         </div>
       </section>
-	  -->
 
 
       <section>
@@ -237,34 +265,7 @@
           </div>
         </div>
       </section>
-	  
-	  
-	  <section>
-        <div class="title-desc">
-          <h4>Color Composition</h4>
-        </div>
-      </section>
-	  
-	  <section>
-        <div class="table-hue-all">
-          <div class="subtable-hue-all" id="colcomposi-tab">
-            <section>
-              <div class="composi">
-                <canvas id="myRGB" width="500" height="400">
-                </canvas>
-              </div>
-            </section>
-
-            <section>
-              <div class="composi">
-                <canvas id="myCMYK" width="500" height="400">
-                </canvas>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-	   
+	  	   
 
 	  <section>
         <div class="title-desc">
@@ -396,6 +397,23 @@
         }
       </script>
       <script src = "../assets/draw_histogram.js"></script>
+	  
+	  <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
 
     </section>
   </body>

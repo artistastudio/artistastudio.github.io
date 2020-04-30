@@ -61,14 +61,42 @@
       </section>
 	  
 	  
-	  <!--
 	  <section>
-        <div class="title-desc">
-          <h4>Color Family</h4>
-          <p>Pastel Orange</p>
+        <div class="table-hue-all">
+          <button class="collapsible coll_text">Color Composition</button>
+          <div class="coll_content">
+
+            <section>
+              <div class="table-hue-all">
+                <div class="subtable-hue-all" id="colcomposi-tab">
+                  <section>
+                    <div class="composi">
+                      <canvas id="myRGB" width="500" height="400">
+                      </canvas>
+                    </div>
+                  </section>
+
+                  <section>
+                    <div class="composi">
+                      <canvas id="myCMYK" width="500" height="400">
+                      </canvas>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <p>
+              Grandis belongs to the color family Pastel Orange. It is of a high brightness and a medium saturation.
+              <br>Grandis corresponds to the hex code #FFD38C.
+              <br>In the additive (digital) color space RGB, it is composed of 100% red, 83% green and 55% blue components.
+              <br>In the alternative HSV representation, it is associated with a hue angle of 37° (out of 360°), 45% saturation and 100% value.
+              <br>In the subtractive (process) color space CMYK, it is composed of 0% cyan, 17% magenta, 45% yellow and 0% black pigments.
+            </p>
+
+          </div>
         </div>
       </section>
-	  -->
 
 
       <section>
@@ -237,34 +265,7 @@
           </div>
         </div>
       </section>
-	  
-	  
-	  <section>
-        <div class="title-desc">
-          <h4>Color Composition</h4>
-        </div>
-      </section>
-	  
-	  <section>
-        <div class="table-hue-all">
-          <div class="subtable-hue-all" id="colcomposi-tab">
-            <section>
-              <div class="composi">
-                <canvas id="myRGB" width="500" height="400">
-                </canvas>
-              </div>
-            </section>
-
-            <section>
-              <div class="composi">
-                <canvas id="myCMYK" width="500" height="400">
-                </canvas>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-	   
+	  	   
 
 	  <section>
         <div class="title-desc">
@@ -396,6 +397,23 @@
         }
       </script>
       <script src = "../assets/draw_histogram.js"></script>
+	  
+	  <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
 
     </section>
   </body>
