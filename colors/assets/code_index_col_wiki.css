@@ -9,7 +9,7 @@
 
     /* all */
     --height-page: calc(100vh - var(--height-header));
-    --grid-ratio-hue-tab: 10% 5% 80% 5%; /* change --height-ratio-cards too; 5% at the end for navbar on mobile */
+    --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
     --marg-stand: 2vh;
     --marg-bound: 2vh;
 
@@ -89,7 +89,7 @@
 
         /* card titles */
         --text-swatch-opac-before: 0;
-        --text-swatch-dist-t: 80%;
+        --text-swatch-dist-t: 50%;
         --text-swatch-lspace: calc(2 * var(--marg-stand));
         --text-swatch-padding-b: 0px;
 
@@ -169,7 +169,7 @@
   background: var(--col-accent2);
   color : white;
 
-  z-index: 2;
+  z-index: 4;
   -webkit-transform: scale(var(--scale-swatch-hover));
      -moz-transform: scale(var(--scale-swatch-hover));
       -ms-transform: scale(var(--scale-swatch-hover));

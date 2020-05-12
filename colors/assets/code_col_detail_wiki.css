@@ -378,7 +378,7 @@
 }
 
 .collapsible:after {
-  content: '\2B9F';
+  content: "▼";
   color: var(--col-text);
   font-weight: bold;
   font-size: 15px;
@@ -396,7 +396,7 @@
 }
 
 .collapsible.active:after {
-  content: "\2B9D";
+  content: "▲";
 }
 
 .coll_content {

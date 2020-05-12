@@ -64,7 +64,7 @@
           <section>
             <div class="tab-search">
               <div class="searchBox">            
-                <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun()">
+                <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun()" autocomplete="off">
                 <a href="#" id="LinkSearchBotton">
                   <button class="searchButton" onclick="myNearSearchFun()" id="SearchBotton"><i class="fa fa-search"></i></button>
                 </a>
@@ -188,8 +188,8 @@
 
         // max number of results to show
         var nunhits_max = 10;
-        if (window.screen.width <= 768) {
-          nunhits_max = 7;
+        if ((window.screen.width < 500) || (window.screen.height < 500)) {
+          nunhits_max = 4;
         }
 
         FindMatchesInList(filter, li, nunhits_max);        
