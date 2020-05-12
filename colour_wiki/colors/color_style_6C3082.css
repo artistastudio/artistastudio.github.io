@@ -1,0 +1,223 @@
+
+:root {
+    --col-header-border: #6C3082;
+}
+
+#card_shade_1 {
+  background: #15091A;
+}
+.card:hover #name_shade_1 p {
+  color: #ffffff;
+}
+
+#card_shade_2 {
+  background: #2A1334;
+}
+.card:hover #name_shade_2 p {
+  color: #ffffff;
+}
+
+#card_shade_3 {
+  background: #401C4E;
+}
+.card:hover #name_shade_3 p {
+  color: #ffffff;
+}
+
+#card_shade_4 {
+  background: #552668;
+}
+.card:hover #name_shade_4 p {
+  color: #ffffff;
+}
+
+#card_shade_5 {
+  background: #6C3082;
+}
+.card:hover #name_shade_5 p {
+  color: #ffffff;
+}
+
+#card_shade_6 {
+  background: #804796;
+}
+.card:hover #name_shade_6 p {
+  color: #ffffff;
+}
+
+#card_shade_7 {
+  background: #9763AB;
+}
+.card:hover #name_shade_7 p {
+  color: #ffffff;
+}
+
+#card_shade_8 {
+  background: #AF84C0;
+}
+.card:hover #name_shade_8 p {
+  color: #000000;
+}
+
+#card_shade_9 {
+  background: #C8A8D5;
+}
+.card:hover #name_shade_9 p {
+  color: #000000;
+}
+
+#card_shade_10 {
+  background: #E3D1EA;
+}
+.card:hover #name_shade_10 p {
+  color: #000000;
+}
+
+#card_tone_1 {
+  background: #444046;
+}
+.card:hover #name_tone_1 p {
+  color: #ffffff;
+}
+
+#card_tone_2 {
+  background: #4C4150;
+}
+.card:hover #name_tone_2 p {
+  color: #ffffff;
+}
+
+#card_tone_3 {
+  background: #53415A;
+}
+.card:hover #name_tone_3 p {
+  color: #ffffff;
+}
+
+#card_tone_4 {
+  background: #594064;
+}
+.card:hover #name_tone_4 p {
+  color: #ffffff;
+}
+
+#card_tone_5 {
+  background: #603C6E;
+}
+.card:hover #name_tone_5 p {
+  color: #ffffff;
+}
+
+#card_tone_6 {
+  background: #653778;
+}
+.card:hover #name_tone_6 p {
+  color: #ffffff;
+}
+
+#card_tone_7 {
+  background: #6C3082;
+}
+.card:hover #name_tone_7 p {
+  color: #ffffff;
+}
+
+#card_tone_8 {
+  background: #752993;
+}
+.card:hover #name_tone_8 p {
+  color: #ffffff;
+}
+
+#card_tone_9 {
+  background: #7F1EA5;
+}
+.card:hover #name_tone_9 p {
+  color: #ffffff;
+}
+
+#card_tone_10 {
+  background: #8811B7;
+}
+.card:hover #name_tone_10 p {
+  color: #ffffff;
+}
+
+#card_simcol_1 {
+  background: #6A287E;
+}
+.circle:hover #name_simcol_1 p {
+  color: #ffffff;
+}
+
+#card_simcol_2 {
+  background: #4F1C70;
+}
+.circle:hover #name_simcol_2 p {
+  color: #ffffff;
+}
+
+#card_simcol_3 {
+  background: #571B7E;
+}
+.circle:hover #name_simcol_3 p {
+  color: #ffffff;
+}
+
+#card_simcol_4 {
+  background: #6B3FA0;
+}
+.circle:hover #name_simcol_4 p {
+  color: #ffffff;
+}
+
+#card_simcol_5 {
+  background: #7D1B7E;
+}
+.circle:hover #name_simcol_5 p {
+  color: #ffffff;
+}
+
+#card_combo_1 {
+  background: linear-gradient(30deg, #6C3082 0%, #6C3082 50%, #E66771 50%, #E66771 100%);
+}
+.combo:hover #name_combo_1 p {
+  color: #000000;
+}
+
+#card_combo_2 {
+  background: linear-gradient(30deg, #6C3082 0%, #6C3082 50%, #659EC7 50%, #659EC7 100%);
+}
+.combo:hover #name_combo_2 p {
+  color: #000000;
+}
+
+#card_combo_3 {
+  background: linear-gradient(30deg, #6C3082 0%, #6C3082 50%, #C25A7C 50%, #C25A7C 100%);
+}
+.combo:hover #name_combo_3 p {
+  color: #000000;
+}
+
+#card_combo_4 {
+  background: linear-gradient(30deg, #6C3082 0%, #6C3082 50%, #9EA91F 50%, #9EA91F 100%);
+}
+.combo:hover #name_combo_4 p {
+  color: #000000;
+}
+
+#card_shade_5 {
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+}
+
+#card_tone_7 {
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #6C3082;
+}

@@ -9,16 +9,15 @@
     --font-fam: "Montserrat"; /* Raleway */
 
     /* text - paragraph */
-    --font-size-h6: 13px;
+    --font-size-p: 13px;
+    --font-size-h6: 12px;
     --font-size-h5: 13px;
-    --font-size-p: 15px;
 
     /* text - title */
-    --font-size-menu: 15px;
-    --font-size-h4: 17px;
-    --font-size-h3: 20px;
-    --font-size-h2: 22px;
-    --font-size-h1: 26px;
+    --font-size-h4: 14px;
+    --font-size-h3: 16px;
+    --font-size-h2: 18px;
+    --font-size-h1: 20px;
 
     /* space between lines */
     --font-lspace-p: 25px;
@@ -31,16 +30,23 @@
     --font-chspace-h1: 1.3px;
 
     /* weight (bold) */
-    --font-weight-text: 500;
-    --font-weight-title: 700;
+    --font-weight-text: 400;
+    --font-weight-title: 500;
 }
 
 /* desktop */
 @media all and (min-width: 768px) {
     :root {
-        /* text - title */
+        /* text - paragraph */
+        --font-size-p: 14px;
+        --font-size-h6: 14px;
+        --font-size-h5: 16px;
+
+        /* text - title */        
+        --font-size-h4: 18px;
+        --font-size-h3: 22px;
         --font-size-h2: 26px;
-        --font-size-h1: 30px;
+        --font-size-h1: 32px;
 
         /* space between characters */
         --font-chspace-h5: 1.3px;
@@ -53,14 +59,14 @@
 
 
 /* default settings */
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-family: var(--font-fam);
     color: var(--col-text-title);
     font-weight: var(--font-weight-title);
     line-height: var(--font-lspace-title);
 }
 
-h5, p {
+h4, h5, p {
     font-family: var(--font-fam);
     color: var(--col-text);
     font-weight: var(--font-weight-text);
@@ -105,9 +111,4 @@ h6 {
 /* ------ p ------ */
 p {
     font-size: var(--font-size-p);
-}
-
-/* menu text */
-.header h4 {
-    font-size: var(--font-size-menu);
 }

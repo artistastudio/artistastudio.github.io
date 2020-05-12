@@ -6,90 +6,289 @@
 
 /* mobile */
 :root {
-    /* whole table */
-    --marg-hue-tab-lr: 1vh;
-    --marg-hue-tab-t: 1vh;
-    --marg-hue-tab-b: 5vh;
 
-    /* grid */
+    /* all */
+    --height-page: calc(100vh - var(--height-header));
+    --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
+    --marg-stand: 2vh;
+    --marg-bound: 2vh;
+
+    /* table title */
+
+    /* search box width */
+    --width-searchb-whole: 180px;
+    --height-searchb: 25px;  
+
+    /* hue table */
     --grid-tab-hue-groups: 50% 50%;
 
     /* each swatch */
-    --width-swatch-max: 350px;
-    --marg-swatch: 20px;
-    --padd-swatch-tb: 20px;
     --radius-swatch: 5px;
     --shadow-swatch: 0 5px 10px rgba(0,0,0,.1);
     --scale-swatch-hover: 1.05;
     --opac-swatch-hover: 1;
 
     /* card titles */
-    --opac-swatch-title-before: 1;
-    --opac-swatch-title-after: 1;
-    --pos-swatch-title-top: 0;
-    --col-swatch-text: var(--col-text);
-    --col-swatch-text-bg: transparent;
-    --dist-swatch-text-top: 100%;
-    --dist-swatch-text-left: 50%;
-    --dist-swatch-text-top-trans: -100%;
-    --dist-swatch-text-left-trans: -50%;
-    --width-swatch-text: auto;
-    --padd-swatch-text: 0px;
+    --text-swatch-opac-before: 1;
+    --text-swatch-opac-after: 1;
+    --text-swatch-col: var(--white);
+    --text-swatch-col-bg: var(--col-accent2-dark);
+    --text-swatch-w: 100%;
+    --text-swatch-dist-l: 0%;
+    --text-swatch-dist-t: 100%;
+    --text-swatch-lspace: var(--font-size-h5);
+    --text-swatch-padding-b: var(--text-swatch-lspace);
 
-    /* table title */
-    --ln-space-hue-tab-title: 80px;
+    --col-text-card1: red;
+    --col-text-card2: darkorange;
+    --col-text-card3: rgb(153, 153, 0);
+    --col-text-card4: rgb(53, 160, 99);
+    --col-text-card5: rgb(0, 196, 130);
+    --col-text-card6: rgb(10, 68, 255);
+    --col-text-card7: rgb(82, 0, 175);
+    --col-text-card8: fuchsia;   
+    --col-bg-card1: white;
+    --col-bg-card2: white;
+    --col-bg-card3: white;
+    --col-bg-card4: white;
+    --col-bg-card5: white;
+    --col-bg-card6: white;
+    --col-bg-card7: white;
+    --col-bg-card8: white; 
+
+    /* card max size */
+    --height-ratio-cards: 0.8; /* recommended: 5% less than in --grid-ratio-hue-tab */
+    --ratio-w2h-swatch-huegr: calc(400 / 260);
+    --width-swatch-huegr-pot4h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b)) / 4 * var(--ratio-w2h-swatch-huegr));
+    --width-swatch-huegr-pot4w: calc((100vw - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound)) / 2);
+    --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
+    --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b) - 4 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
+    --padd-swatch-huegr-w: calc((100vw - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound) - 2 * var(--width-swatch-huegr-actual)) / 2);    
 }
 
 /* desktop */
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px) and (orientation: landscape) {
     :root {
-        /* whole table */
-        --marg-hue-tab-lr: 5vw;
-        --marg-hue-tab-t: 0vh;
-        --marg-hue-tab-b: 10vh;
+        /* all */
+        --grid-ratio-hue-tab: 12% 8% 80%; /* change --height-ratio-cards too */
+        --marg-stand: 2vh;
+        --marg-bound: 6vh;
 
-        /* grid */
+        /* table title */
+
+        /* search box width */
+        --width-searchb-whole: 250px;
+        --height-searchb: 30px;
+
+        /* hue table */
         --grid-tab-hue-groups: 25% 25% 25% 25%;
 
         /* each swatch */
+        --radius-swatch: 10px;
         --opac-swatch-hover: 0.3;
 
         /* card titles */
-        --opac-swatch-title-before: 0;
-        --opac-swatch-title-after: 1;
-        --col-swatch-text: var(--white);
-        --col-swatch-text-bg: var(--col-accent2-dark);
-        --dist-swatch-text-top: 50%;
-        --dist-swatch-text-top-trans: -50%;
-        --width-swatch-text: 100%;
-        --padd-swatch-text: 5px;
+        --text-swatch-opac-before: 0;
+        --text-swatch-dist-t: 80%;
+        --text-swatch-lspace: calc(2 * var(--marg-stand));
+        --text-swatch-padding-b: 0px;
 
-        /* table title */
-        --ln-space-hue-tab-title: 130px;
+        --col-text-card1: white;
+        --col-text-card2: white;
+        --col-text-card3: var(--col-text);
+        --col-text-card4: white;
+        --col-text-card5: var(--col-text);
+        --col-text-card6: white;
+        --col-text-card7: white;
+        --col-text-card8: white;   
+        --col-bg-card1: red;
+        --col-bg-card2: darkorange;
+        --col-bg-card3: gold;
+        --col-bg-card4: rgb(53, 160, 99);
+        --col-bg-card5: aquamarine;
+        --col-bg-card6: rgb(10, 68, 255);
+        --col-bg-card7: rgb(82, 0, 175);
+        --col-bg-card8: fuchsia;
+
+        /* card size */
+        --height-ratio-cards: 0.75; /* recommended: 5% less than in --grid-ratio-hue-tab */
+        --width-swatch-huegr-pot4h: calc((var(--height-ratio-cards) * var(--height-page) - 4 * var(--marg-stand)) / 2 * var(--ratio-w2h-swatch-huegr));
+        --width-swatch-huegr-pot4w: calc((100vw - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound)) / 4);
+        --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
+        --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 4 * var(--marg-stand) - 2 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
+        --padd-swatch-huegr-w: calc((100vw - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound) - 4 * var(--width-swatch-huegr-actual)) / 2);
     }
 }
 
-/* whole table with cards */
-.table-hue-all {
-    margin-left: var(--marg-hue-tab-lr);
-    margin-right: var(--marg-hue-tab-lr);
-    margin-top: var(--marg-hue-tab-t);
-    margin-bottom: var(--marg-hue-tab-b);
+
+/* -------------- whole page -------------- */
+.col-overview-page {
+    display: grid;
+    grid-template-rows: var(--grid-ratio-hue-tab);
+    height: var(--height-page);
+    align-items: center;
 }
 
-/* grid */
-.subtable-hue-all {
+
+/* -------------- table title -------------- */
+.tab-title {
+    text-align: center;
+}
+
+.title-desc h1 {
+    display: inline-block;
+}
+
+
+/* -------------- search bar -------------- */
+.tab-search {
+    height: var(--height-searchb);
+}
+
+.searchBox {
+    z-index: 4;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: auto;
+    height: 100%;
+    width: var(--width-searchb-whole);
+
+-webkit-transform: translate(-50%,0%);
+   -moz-transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%);
+     -o-transform: translate(-50%,0%);
+        transform: translate(-50%,0%);
+    
+    border-radius: var(--height-searchb);
+    border-bottom: 1px solid lightgrey;
+    background: white;
+}
+
+.searchBox:hover .searchButton {
+  background: var(--col-accent2);
+  color : white;
+
+  z-index: 2;
+  -webkit-transform: scale(var(--scale-swatch-hover));
+     -moz-transform: scale(var(--scale-swatch-hover));
+      -ms-transform: scale(var(--scale-swatch-hover));
+       -o-transform: scale(var(--scale-swatch-hover));
+          transform: scale(var(--scale-swatch-hover));
+}
+
+.searchButton {
+    color: white;
+    background: darkgray;
+    float: right;
+    width: var(--height-searchb);
+    height: var(--height-searchb);
+    border-radius: 50%; 
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+-webkit-transition: .5s;
+   -moz-transition: .5s;
+    -ms-transition: .5s;
+     -o-transition: .5s;
+        transition: .5s;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: var(--height-searchb);
+    width: calc(var(--width-searchb-whole) - 1.1 * var(--height-searchb));
+    padding-left: calc(0.5 * var(--height-searchb));
+
+-webkit-transform: translate(0%,50%);
+   -moz-transform: translate(0%,50%);
+    -ms-transform: translate(0%,50%);
+     -o-transform: translate(0%,50%);
+        transform: translate(0%,50%);
+
+    font: var(--font-weight-text) var(--font-size-p) var(--font-fam);
+    letter-spacing: var(--font-chspace-p);
+    color: var(--col-text);
+
+ -webkit-transition: .5s;
+    -moz-transition: .5s;
+     -ms-transition: .5s;
+      -o-transition: .5s;
+         transition: .5s;
+}
+
+::-moz-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+    ;
+}
+::-ms-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+::-o-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+::-webkit-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+.searchBox ::placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+
+
+/* search results */
+.tab-searchlist {
+    margin-top: var(--height-searchb);
+    width: calc(var(--width-searchb-whole) - var(--height-searchb));
+}
+
+#ColNameList {
+    display: none;
+}
+
+#ColNameList li a {
+    background-color: white; /* Grey background color */
+    padding: calc(0.3 * var(--height-searchb)); /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    color: var(--col-text); /* Add a black text color */
+    display: block;
+  }
+
+#ColNameList li a:hover:not(.header) {
+    background-color: var(--col-accent2-ll); /* Add a hover effect to all links, except for headers */
+}
+
+
+/* -------------- whole table with cards -------------- */
+.table-hue-all {
+    align-items: center;
+    margin-left: calc(var(--marg-bound) + var(--padd-swatch-huegr-w));
+    margin-right: calc(var(--marg-bound) + var(--padd-swatch-huegr-w));
+    margin-top: var(--padd-swatch-huegr-h);
+    margin-bottom: var(--padd-swatch-huegr-h);
+
     display: grid;
     grid-template-columns: var(--grid-tab-hue-groups);
+    grid-template-rows: auto;
 }
 
 /* colour group container */
-.card{
+.card {
+    display: block;
+    width: var(--width-swatch-huegr-actual);
+    
     position: relative;
-    max-width: var(--width-swatch-max);
-    margin: var(--marg-swatch);
-    padding-top: var(--padd-swatch-tb);
-    padding-bottom: var(--padd-swatch-tb);
+    margin: var(--marg-stand);
     border-radius: var(--radius-swatch);
 
   -webkit-box-shadow: var(--shadow-swatch);
@@ -106,7 +305,7 @@
 }
 
 .card:hover {
-    z-index: 3;
+    z-index: 2;
   -webkit-transform: scale(var(--scale-swatch-hover));
      -moz-transform: scale(var(--scale-swatch-hover));
       -ms-transform: scale(var(--scale-swatch-hover));
@@ -114,75 +313,71 @@
           transform: scale(var(--scale-swatch-hover));
 }
 
-
 /* image */
 .card_img {
     width: 100%;
+    border-radius: var(--radius-swatch);
 }
+
 .card:hover .card_img {
     opacity: var(--opac-swatch-hover);
 }
 
 
 /* colour group name */
-.title-hue h4 {
-    z-index: 2;
+.title-hue h5 {
+    z-index: 3;
     position: absolute;
-    top: var(--dist-swatch-text-top);
-    left: var(--dist-swatch-text-left);
-    width: var(--width-swatch-text);
-    padding: var(--padd-swatch-text);
     text-align: center;
--webkit-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-   -moz-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-    -ms-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-     -o-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-        transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+    width: var(--text-swatch-w);    
+    line-height: var(--text-swatch-lspace);
+    top: var(--text-swatch-dist-t);
+    left: var(--text-swatch-dist-l);
 
-    color: var(--col-swatch-text);
-    background: var(--col-swatch-text-bg);
-    opacity: var(--opac-swatch-title-before);
-}
-.card:hover .title-hue h4 {
-   opacity: var(--opac-swatch-title-after);
-}
+    color: var(--text-swatch-col);
+    background: var(--text-swatch-col-bg);
+    opacity: var(--text-swatch-opac-before);
 
-@media all and (min-width: 768px) {
-    #huegr1 h4 {
-        background: red;
-    }
-    #huegr2 h4 {
-        background: darkorange;
-    }
-    #huegr3 h4 {
-        color: black;
-        background: gold;
-    }
-    #huegr4 h4 {
-        background: seagreen;
-    }
-    #huegr5 h4 {
-        color: black;
-        background: aquamarine;
-    }
-    #huegr6 h4 {
-        background: blue;
-    }
-    #huegr7 h4 {
-        background: purple;
-    }
-    #huegr8 h4 {
-        background: fuchsia;
-    }
+    -webkit-transform: translate(0%,-50%);
+   -moz-transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+     -o-transform: translate(0%,-50%);
+        transform: translate(0%,-50%);
 }
 
-
-/* table title */
-.tab-title {
-  text-align: center;
+.card:hover .title-hue h5 {
+   opacity: var(--text-swatch-opac-after);
 }
 
-.title-desc h1 {
-  display: inline-block;
-  line-height: var(--ln-space-hue-tab-title);
+#huegr1 h5 {
+    color: var(--col-text-card1);
+    background: var(--col-bg-card1);
+}
+#huegr2 h5 {
+    color: var(--col-text-card2);
+    background: var(--col-bg-card2);
+}
+#huegr3 h5 {
+    color: var(--col-text-card3);
+    background: var(--col-bg-card3);
+}
+#huegr4 h5 {
+    color: var(--col-text-card4);
+    background: var(--col-bg-card4);
+}
+#huegr5 h5 {
+    color: var(--col-text-card5);
+    background: var(--col-bg-card5);
+}
+#huegr6 h5 {
+    color: var(--col-text-card6);
+    background: var(--col-bg-card6);
+}
+#huegr7 h5 {
+    color: var(--col-text-card7);
+    background: var(--col-bg-card7);
+}
+#huegr8 h5 {
+    color: var(--col-text-card8);
+    background: var(--col-bg-card8);
 }

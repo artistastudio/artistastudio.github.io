@@ -42,7 +42,7 @@
 
     /* combo */
     --combo-margin-lr: 0vw;
-    --height-combo: 50px;
+    --height-combo: 45px;
     --scale-combo-hover: 1.6;
 
     /* titles - text */
@@ -227,7 +227,7 @@
 
 /* colour combos */
 #colcombos-tab {
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 25% 25% 25% 25%;
   margin-left: var(--combo-margin-lr);
   margin-right: var(--combo-margin-lr);
 }
@@ -235,7 +235,7 @@
 .combo {
   position: relative;
   height: calc(1 * var(--height-combo));
-  width: calc(2 * var(--height-combo));
+  width: calc(1.5 * var(--height-combo));
   margin-left: auto;
   margin-right: auto;
   border-radius: var(--radius-swatch);
@@ -373,7 +373,7 @@
            box-shadow: var(--shadow-coll);
 }
 
-.active, .collapsible:hover {
+.collapsible.active, .collapsible:hover {
   background-color: var(--col-grey);
 }
 
@@ -395,7 +395,7 @@
   padding-left: 35px;
 }
 
-.active:after {
+.collapsible.active:after {
   content: "\2B9D";
 }
 
@@ -407,9 +407,9 @@
   overflow: hidden;
   background-color: white;
 
-  -webkit-transition: max-height 0.2s ease-out;
-     -moz-transition: max-height 0.2s ease-out;
-      -ms-transition: max-height 0.2s ease-out;
-       -o-transition: max-height 0.2s ease-out;
-          transition: max-height 0.2s ease-out;
+  -webkit-transition: max-height 0.4s ease-out;
+     -moz-transition: max-height 0.4s ease-out;
+      -ms-transition: max-height 0.4s ease-out;
+       -o-transition: max-height 0.4s ease-out;
+          transition: max-height 0.4s ease-out;
 }

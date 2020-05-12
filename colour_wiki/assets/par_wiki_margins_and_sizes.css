@@ -13,24 +13,23 @@
     --padd-body: 0px;
 
     /* websitewrapper */
-    --width-webwrapper-max: 1920px;
-
+    /*--width-webwrapper-max: 1920px;*/
+    
+    /* sidebar menu */
+    --width-sidebar-perm: 0vw;
 
     /* logo */
-    --height-logo: 48px; /* width logo - mobile  */
+    --height-logo: 35px; /* width logo - mobile  */
 
     /* header */
-    --height-header: 70px; /* height header */
-    --width-header-bottomline: 2px; /* width of bottom line */
+    --height-header: 65px; /* height header */
+    --width-header-bottomline: 1.2px; /* width of bottom line */
     --marg-logo-t: calc(0.5 * (var(--height-header) - var(--height-logo))); /* margin top for logo  */
-    --marg-logo-l: calc(2 * var(--marg-logo-t)); /* margin left for logo */
-    --width-hamburger-bar: 35px;
+    --marg-logo-l: 8%; /* margin left for logo */
+    --width-hamburger-bar: 25px;
     --height-hamburger-bar: 3px;
-    --spacebw-hamburger-bar: 3px;
-    --padding-menu: 30px;
-    --padding-menu-items: 20px;
-    --width-menu-d: 300px;
-
+    --spacebw-hamburger-bar: 2px;
+    --padd-menu: 10px; /* vertical */
 
     /* footer */
     --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
@@ -45,6 +44,12 @@
 /* tablet and above */
 @media all and (min-width: 768px) {
     :root {
+        /* sidebar menu */
+        --width-sidebar-perm: 65px;
+
+        /* logo */
+        --height-logo: 42px; /* width logo - mobile  */
+        
         /* footer */
         --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
         --width-footer-col: 20% 60% 20%;

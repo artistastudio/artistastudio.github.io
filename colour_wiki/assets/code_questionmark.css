@@ -44,7 +44,7 @@
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: var(--helptip-offset-top);
   left: var(--helptip-offset-left);
   margin-left: calc(-1 * var(--helptip-width));

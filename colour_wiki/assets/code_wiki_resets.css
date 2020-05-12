@@ -124,5 +124,10 @@ body {
 #websitewrapper1 {
   width: 100vw;
   height: 100vh;
-  max-width: var(--width-webwrapper-max);
+  /*max-width: var(--width-webwrapper-max);*/
+}
+
+.sidebar-content {
+  display: grid;
+  grid-template-columns: var(--width-sidebar-perm) auto;
 }

@@ -25,7 +25,7 @@
 
 @media screen and (min-width: 768px) {
   #header1 {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;    
   }
 }
 
@@ -60,11 +60,11 @@
 }
 
 .change #bar1 {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-     -moz-transform: rotate(-45deg) translate(-6px, 6px);
-      -ms-transform: rotate(-45deg) translate(-6px, 6px);
-       -o-transform: rotate(-45deg) translate(-6px, 6px);
-          transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-3.5px, 3.5px);
+     -moz-transform: rotate(-45deg) translate(-3.5px, 3.5px);
+      -ms-transform: rotate(-45deg) translate(-3.5px, 3.5px);
+       -o-transform: rotate(-45deg) translate(-3.5px, 3.5px);
+          transform: rotate(-45deg) translate(-3.5px, 3.5px);
 }
 
 .change #bar2 {opacity: 0;}
@@ -105,32 +105,36 @@
   grid-column-end: 3;
   border-bottom: var(--width-header-bottomline) solid var(--col-header-border);
   transition: 0.2s;
-  padding: 50px;
+  margin-top: calc(0.3 * var(--height-header));
 }
 
 .menua {
-  padding: 20px;
+  padding: var(--padd-menu);
 }
 
 @media screen and (min-width: 768px) {
   #menu1 {
-    min-width: 400px;
     visibility: visible;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     background-color: unset;
     grid-column-start: unset;
     grid-column-end: unset;
     border-bottom: unset;
     transition: unset;
-    padding: unset;
   }
 
   .menua {
     padding: unset;
     border: unset;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .menua:nth-child(1){
+    border-right: 1.5px solid var(--col-accent2-dark);
   }
 }
 
@@ -180,6 +184,8 @@
 
 /* whole footer table */
 #footer1 {
+    position: relative;
+    z-index: 10;
     background: var(--col-footer-bg);
     text-align: center;
     padding: var(--padd-footer);
@@ -209,4 +215,93 @@
 #button1:hover {
     background: var(--col-footer-button-hover);
     border: solid var(--width-footer-form-field-border) var(--col-footer-button-border-hover);
+}
+
+
+/* sidebar */
+/* pop-out sidebar */
+.w3-sidebar{
+  height: 100%;
+  width: auto;
+  background-color: #F0F0F0;
+  position: fixed!important;
+  z-index: 5;
+  overflow: auto;
+
+-webkit-box-shadow: var(--shadow-swatch);
+  -moz-box-shadow: var(--shadow-swatch);
+   -ms-box-shadow: var(--shadow-swatch);
+    -o-box-shadow: var(--shadow-swatch);
+       box-shadow: var(--shadow-swatch);
+
+  animation: animateleft 0.3s;
+}
+@keyframes animateleft{
+  from{
+      left: calc(-1 * var(--width-sidebar-perm));
+      opacity:0
+  } 
+  to{
+      left: 0;
+      opacity:1
+  }
+}
+
+/* permanent sidebar - icons */
+.sidebar-perm {
+  z-index: 1;
+  width: var(--width-sidebar-perm);
+}
+
+/* each entry */
+.w3-button, .w3-button-list {
+  width: 100%;
+  display: block;
+  padding: 10px 30px;
+  text-align: right;
+  white-space: normal;
+  float: none;
+  outline: 0;
+  border: none;
+}
+/* each entry hover */
+.w3-button:hover, .w3-button-list:hover {
+  background-color: var(--col-accent2);
+}
+.w3-button:hover h5, .w3-button-list:hover p {
+  color:white;
+}
+/* list entries */
+.w3-button-list {
+  padding: 10px 45px;
+}
+.w3-button-list p {
+  line-height: var(--font-size-p);
+}
+/* each entry - permanent menu */
+.sidebar-perm .w3-button {
+  padding: 15px 0px;
+  text-align: center;
+}
+.sidebar-perm .w3-button-list {
+  padding: 0px 0px;
+  text-align: center;
+}
+
+/* main botton at the top */
+#menu-botton-close, #menu-botton-open {
+  background-color: #DCDCDC;
+}
+#menu-botton-close:hover, #menu-botton-open:hover {
+  background-color: silver;
+}
+
+/* Add an active class to the active dropdown button */
+.dropdown-btn.active {
+  background-color: silver;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
 }
