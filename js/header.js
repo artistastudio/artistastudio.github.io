@@ -45,7 +45,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-// expand menu
+// expand sidebar menu
 function expandMenuOnClick() { 
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;

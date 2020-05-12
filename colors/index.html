@@ -1,0 +1,223 @@
+<!DOCTYPE html lang="en">
+
+<html>
+  <head>
+    <!--uk regular stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Artista Color Dictionary</title>
+    <meta name="description" content="Artista comprehensive color dictionary containing 1,800 color names. Artista color guide with color meanings and application examples.">
+    <meta name="keywords" content="color,dictionary,overview,list,name,red,orange,yellow,green,aqua,blue,purple,magenta,pink,brown,olive,cyan,violet,pink">
+
+    <link rel="icon" href="logo/logo_colours_icon_tran_light.png">
+
+    <link href="assets/code_wiki_resets.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_colors.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_text.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_margins_and_sizes.css" rel="stylesheet" type="text/css">
+    <link href="assets/code_wiki_header_footer.css" rel="stylesheet" type="text/css">
+    <link href="assets/code_index_col_wiki.css" rel="stylesheet" type="text/css">
+    <link href="assets/code_questionmark.css" rel="stylesheet" type="text/css">
+
+    <!--uk for proper rendering on mobile and zoom off-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--uk import local jquery library-->
+    <script src="/js/vendor/jquery-3.4.1.min.js"></script>
+
+    <!--uk import google font Raleway-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  </head>
+
+  <body class="websitebody ukcnt">
+    <section class="websitewrapper ukcnt">
+
+      <!--uk Header row -->      
+      <div w3-include-html="/colors/assets/header.html"></div>
+
+      <div class="sidebar-content">
+
+        <section>
+        <div w3-include-html="/colors/assets/sidebar.html"></div>
+        </section>        
+
+        <section class="col-overview-page">
+
+          <section>
+            <div class="tab-title">
+              <div class="title-desc">
+                <h1>Artista Color Dictionary</h1>
+                <div class="help-tip">
+                  <p>
+                  <span class="tooltiptext">Artista Color Dictionary 🎨 comprises circa 1,800 defined color names collected from multiple sources and curated individually.
+                    The presented color space has been optimized for the overall color coverage and individual color perceptibility.
+                  </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="tab-search">
+              <div class="searchBox">            
+                <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun()">
+                <a href="#" id="LinkSearchBotton">
+                  <button class="searchButton" onclick="myNearSearchFun()" id="SearchBotton"><i class="fa fa-search"></i></button>
+                </a>
+
+                <div class="tab-searchlist">
+                  <ul id="ColNameList">   
+                      <div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+                  </ul>
+                </div>
+              </div> 
+            </div>
+          </section>
+
+          <section>
+            <div class="table-hue-all">
+                
+                <a href="color-dict/col_gr_wiki_red.html">
+                  <div class="card" id="card_huegr1">
+                    <img src="images/red_overview_icon.svg" alt="Red and Pink Colours" class="card_img">
+                    <div class="title-hue" id="huegr1">
+                      <h5>Red</h5>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- END Col one -->                
+                <a href="color-dict/col_gr_wiki_orange.html">
+                  <div class="card" id="card_huegr2">
+                    <img src="images/orange_overview_icon.svg" alt="Orange and Brown Colours" class="card_img">
+                    <div class="title-hue" id="huegr2">
+                      <h5>Orange</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col two -->
+                
+                <a href="color-dict/col_gr_wiki_yellow.html">
+                  <div class="card" id="card_huegr3">
+                    <img src="images/yellow_overview_icon.svg" alt="Yellow and Olive Colours" class="card_img">
+                    <div class="title-hue" id="huegr3">
+                      <h5>Yellow</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col three -->
+                
+                <a href="color-dict/col_gr_wiki_green.html">
+                  <div class="card" id="card_huegr4">
+                    <img src="images/green_overview_icon.svg" alt="Green Colours" class="card_img">
+                    <div class="title-hue" id="huegr4">
+                      <h5>Green</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col four -->
+                
+                <a href="color-dict/col_gr_wiki_aqua.html">
+                  <div class="card" id="card_huegr5">
+                    <img src="images/aqua_overview_icon.svg" alt="Aqua and Cyan Colours" class="card_img">
+                    <div class="title-hue" id="huegr5">
+                      <h5>Aqua</h5>
+                    </div>
+                  </div>
+                </a>                
+                <!-- END Col five -->
+                
+                <a href="color-dict/col_gr_wiki_blue.html">
+                  <div class="card" id="card_huegr6">
+                    <img src="images/blue_overview_icon.svg" alt="Blue Colours" class="card_img">
+                    <div class="title-hue" id="huegr6">
+                      <h5>Blue</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col six -->
+                
+                <a href="color-dict/col_gr_wiki_purple.html">
+                  <div class="card" id="card_huegr7">
+                    <img src="images/purple_overview_icon.svg" alt="Purple Colours" class="card_img">
+                    <div class="title-hue" id="huegr7">
+                      <h5>Purple</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col seven -->
+                
+                <a href="color-dict/col_gr_wiki_magenta.html">
+                  <div class="card" id="card_huegr8">
+                    <img src="images/magenta_overview_icon.svg" alt="Magenta Colours" class="card_img">
+                    <div class="title-hue" id="huegr8">
+                      <h5>Magenta</h5>
+                    </div>
+                  </div>
+                </a>
+                <!-- END Col eight -->
+            </div> 
+          </section>
+
+        </section>
+      </div>
+
+      <!--uk footer here-->
+      <script src = "/js/header.js"></script>
+      <div w3-include-html="/colors/assets/footer.html"></div>
+
+    </section>
+
+    <!-- add search bar -->
+    <script src = "functions/search_functions.js"></script>
+    <script>
+      // find names containing search characters
+      function mySearchFun() {
+
+        // Declare variables
+        var input = document.getElementById('StringToSearch');
+        var filter = input.value.toUpperCase();
+        var li = document.getElementById("ColNameList").getElementsByTagName('li');
+
+        // display hidden list entries
+        document.getElementById("ColNameList").style.display = "block";
+
+        // max number of results to show
+        var nunhits_max = 10;
+        if (window.screen.width <= 768) {
+          nunhits_max = 7;
+        }
+
+        FindMatchesInList(filter, li, nunhits_max);        
+
+        input.addEventListener("keyup", function(event) {
+          // "enter" key
+          if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("SearchBotton").click();
+          }
+        }); 
+      }
+    </script>
+
+    <script>
+      // find most similar name
+      function myNearSearchFun(){        
+        
+        var input = document.getElementById('StringToSearch').value.toUpperCase();
+        var li = document.getElementById("ColNameList").getElementsByTagName('li');
+
+        // find entry
+        var most_sim_entry = FindMostSimUsingTrigram(input, li);
+
+        // set href
+        document.getElementById("LinkSearchBotton").href = li[most_sim_entry[0]].getElementsByTagName("a")[0].href; 
+      }     
+    </script>
+
+  </body>
+</html>
