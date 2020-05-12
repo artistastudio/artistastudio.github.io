@@ -9,8 +9,7 @@
 
     /* all */
     --height-page: calc(100vh - var(--height-header));
-    --height-page: calc(var(--vh, 1vh) * 100 - var(--height-header));
-    --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
+    --grid-ratio-hue-tab: 10% 5% 80% 5%; /* change --height-ratio-cards too; 5% at the end for navbar on mobile */
     --marg-stand: 2vh;
     --marg-bound: 2vh;
 
@@ -68,7 +67,7 @@
 }
 
 /* desktop */
-@media all and (min-width: 768px) and (orientation: landscape) {
+@media all and (orientation: landscape) {
     :root {
         /* all */
         --grid-ratio-hue-tab: 12% 8% 80%; /* change --height-ratio-cards too */

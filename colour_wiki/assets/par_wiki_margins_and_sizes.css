@@ -44,9 +44,6 @@
 /* tablet and above */
 @media all and (min-width: 768px) {
     :root {
-        /* sidebar menu */
-        --width-sidebar-perm: 65px;
-
         /* logo */
         --height-logo: 42px; /* width logo - mobile  */
         
@@ -55,6 +52,13 @@
         --width-footer-col: 20% 60% 20%;
         --width-footer-form: 45%; /* width of the registration form (of the 1/3) */
     }
+}
+
+@media all and (min-width: 768px) and (min-height: 500px) {
+  :root {
+    /* sidebar menu */
+    --width-sidebar-perm: 65px;
+  }
 }
 
 @media all and (min-width: 1024px) {
