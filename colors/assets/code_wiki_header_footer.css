@@ -1,6 +1,4 @@
-/* ========================================
-   header
-   ======================================== */
+/* ---------------- header ---------------- */
 .header {
   width: 100%;
   max-width: var(--width-webwrapper-max);
@@ -139,48 +137,46 @@
 }
 
 
-/* ========================================
-   Footer
-   ======================================== */
-   /* footer: text */
-   /* placeholder styling - different from actual input */
-   ::-moz-input-placeholder {
-       font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-       color: var(--col-footer-text);
-   }
-   ::-ms-input-placeholder {
-       font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-       color: var(--col-footer-text);
-   }
-   ::-o-input-placeholder {
-       font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-       color: var(--col-footer-text);
-   }
-   ::-webkit-input-placeholder {
-       font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-       color: var(--col-footer-text);
-   }
-   ::placeholder {
-       font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-       color: var(--col-footer-text);
-   }
-   /* title */
-   #footer1 h5 {
-       text-transform: uppercase;
-       font-weight: var(--font-weight-title);
-       color: var(--col-footer-title);
-   }
-   /* button */
-   #button1 h5 {
-       line-height: calc(1.5 * var(--font-size-h4));
-       color: var(--col-footer-button-text);
-   }
-   /* manual input - h5 */
-   .input {
-       font: var(--font-weight-text) var(--font-size-h5) var(--font-fam);
-       letter-spacing: var(--font-chspace-h5);
-       color: var(--col-footer-text);
-   }
+/* ---------------- footer ---------------- */
+/* footer: text */
+/* placeholder styling - different from actual input */
+::-moz-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+    color: var(--col-footer-text);
+}
+::-ms-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+    color: var(--col-footer-text);
+}
+::-o-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+    color: var(--col-footer-text);
+}
+::-webkit-input-placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+    color: var(--col-footer-text);
+}
+::placeholder {
+    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
+    color: var(--col-footer-text);
+}
+/* title */
+#footer1 h5 {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-title);
+    color: var(--col-footer-title);
+}
+/* button */
+#button1 h5 {
+    line-height: calc(1.5 * var(--font-size-h4));
+    color: var(--col-footer-button-text);
+}
+/* manual input - h5 */
+.input {
+    font: var(--font-weight-text) var(--font-size-h5) var(--font-fam);
+    letter-spacing: var(--font-chspace-h5);
+    color: var(--col-footer-text);
+}
 
 /* whole footer table */
 #footer1 {
@@ -197,7 +193,7 @@
 }
 
 
-/* registration form */
+/* ---------------- registration form ---------------- */
 .input{
     width: var(--width-footer-form);
     height: var(--height-footer-form-field);
@@ -218,21 +214,29 @@
 }
 
 
-/* sidebar */
+/* ---------------- sidebar at the top ---------------- */
+/* splitting of page into columns / rows */
+.sidebar-content {
+  display: grid;
+  grid-template-rows: var(--height-sidebar-perm) auto;
+  grid-template-columns: auto;
+}
+
 /* pop-out sidebar */
 .w3-sidebar{
-  height: 100%;
-  width: auto;
-  background-color: #F0F0F0;
+  z-index: 6;
   position: fixed!important;
-  z-index: 5;
-  overflow: auto;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F0F0F0;
 
 -webkit-box-shadow: var(--shadow-swatch);
   -moz-box-shadow: var(--shadow-swatch);
-   -ms-box-shadow: var(--shadow-swatch);
+  -ms-box-shadow: var(--shadow-swatch);
     -o-box-shadow: var(--shadow-swatch);
-       box-shadow: var(--shadow-swatch);
+      box-shadow: var(--shadow-swatch);
 
   animation: animateleft 0.3s;
 }
@@ -247,21 +251,23 @@
   }
 }
 
-/* permanent sidebar - icons */
+/* permanent sidebar for icons */
 .sidebar-perm {
-  z-index: 1;
-  width: var(--width-sidebar-perm);
+  z-index: 5;
+  width: 100vw;
+  height: var(--height-sidebar-perm);
+  padding-left: 0px;
+  padding-right: 15px;
 }
 
 /* each entry */
 .w3-button, .w3-button-list {
-  width: 100%;
+  width: auto;
   display: block;
-  padding: 10px 30px;
+  padding: 5px 10px;
   text-align: right;
-  white-space: normal;
   float: none;
-  outline: 0;
+  outline: none;
   border: none;
 }
 /* each entry hover */
@@ -273,17 +279,14 @@
 }
 /* list entries */
 .w3-button-list {
-  padding: 10px 45px;
+  padding: 3px 15px;
 }
 .w3-button-list p {
   line-height: var(--font-size-p);
 }
 /* each entry - permanent menu */
-.sidebar-perm .w3-button {
-  padding: 15px 0px;
-  text-align: center;
-}
-.sidebar-perm .w3-button-list {
+.sidebar-perm .w3-button, .sidebar-perm .w3-button-list {
+  display: inline-block;
   padding: 0px 0px;
   text-align: center;
 }
@@ -291,17 +294,124 @@
 /* main botton at the top */
 #menu-botton-close, #menu-botton-open {
   background-color: #DCDCDC;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
 }
 #menu-botton-close:hover, #menu-botton-open:hover {
   background-color: silver;
 }
-
-/* Add an active class to the active dropdown button */
-.dropdown-btn.active {
-  background-color: silver;
-  color: white;
+#menu-botton-close {
+  width: 100%;
 }
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
+
+#logo_icon_as, #logo_icon_ac {
+  width: 20px;
+}
+
+/* ---------------- sidebar on the left for desktops ---------------- */
+@media all and (min-width: 768px) and (min-height: 500px) {
+
+  /* splitting of page into columns / rows */
+  .sidebar-content {
+    display: grid;
+    grid-template-columns: var(--width-sidebar-perm) auto;
+    grid-template-rows: auto;
+  }
+
+  /* pop-out sidebar */
+  .w3-sidebar{
+    z-index: 6;
+    position: fixed!important;
+    height: 100%;
+    width: auto;
+    display: block;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    background-color: #F0F0F0; 
+
+  -webkit-box-shadow: var(--shadow-swatch);
+    -moz-box-shadow: var(--shadow-swatch);
+    -ms-box-shadow: var(--shadow-swatch);
+      -o-box-shadow: var(--shadow-swatch);
+        box-shadow: var(--shadow-swatch);
+
+    animation: animateleft 0.3s;
+  }
+  @keyframes animateleft{
+    from{
+        left: calc(-1 * var(--width-sidebar-perm));
+        opacity:0
+    } 
+    to{
+        left: 0;
+        opacity:1
+    }
+  }
+
+  /* permanent sidebar for icons */
+  .sidebar-perm {
+    z-index: 5;
+    width: var(--width-sidebar-perm);
+    height: 100vh;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* each entry */
+  .w3-button, .w3-button-list {
+    width: 100%;
+    display: block;
+    padding: 10px 30px;
+    text-align: right;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    border: none;
+  }
+  /* each entry hover */
+  .w3-button:hover, .w3-button-list:hover {
+    background-color: var(--col-accent2);
+  }
+  .w3-button:hover h5, .w3-button-list:hover p {
+    color:white;
+  }
+  /* list entries */
+  .w3-button-list {
+    padding: 10px 45px;
+  }
+  .w3-button-list p {
+    line-height: var(--font-size-p);
+  }
+  /* each entry - permanent menu */
+  .sidebar-perm .w3-button {
+    padding: 15px 0px;
+    text-align: center;
+  }
+  .sidebar-perm .w3-button-list {
+    padding: 0px 0px;
+    text-align: center;
+  }
+
+  /* main botton at the top */
+  #menu-botton-close, #menu-botton-open {
+    background-color: #DCDCDC;
+  }
+  #menu-botton-close:hover, #menu-botton-open:hover {
+    background-color: silver;
+  }
+
+  /* Add an active class to the active dropdown button */
+  .dropdown-btn.active {
+    background-color: silver;
+    color: white;
+  }
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+  }
+
+  #logo_icon_as, #logo_icon_ac {
+    width: 30px;
+  }
 }

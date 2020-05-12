@@ -8,10 +8,10 @@
 :root {
 
     /* all */
-    --height-page: calc(100vh - var(--height-header));
+    --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
     --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
-    --marg-stand: 2vh;
-    --marg-bound: 2vh;
+    --marg-stand: 1vh;
+    --marg-bound: 1vh;
 
     /* table title */
 
@@ -57,7 +57,7 @@
     --col-bg-card8: white; 
 
     /* card max size */
-    --height-ratio-cards: 0.8; /* recommended: 5% less than in --grid-ratio-hue-tab */
+    --height-ratio-cards: 0.85; /* recommended: 5% less than in --grid-ratio-hue-tab */
     --ratio-w2h-swatch-huegr: calc(400 / 260);
     --width-swatch-huegr-pot4h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b)) / 4 * var(--ratio-w2h-swatch-huegr));
     --width-swatch-huegr-pot4w: calc((100vw - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound)) / 2);

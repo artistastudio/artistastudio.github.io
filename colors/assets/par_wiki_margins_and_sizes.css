@@ -16,10 +16,11 @@
     /*--width-webwrapper-max: 1920px;*/
     
     /* sidebar menu */
-    --width-sidebar-perm: 0vw;
+    --width-sidebar-perm: 0px;
+    --height-sidebar-perm: 30px;
 
     /* logo */
-    --height-logo: 35px; /* width logo - mobile  */
+    --height-logo: 30px; /* width logo - mobile  */
 
     /* header */
     --height-header: 65px; /* height header */
@@ -57,7 +58,8 @@
 @media all and (min-width: 768px) and (min-height: 500px) {
   :root {
     /* sidebar menu */
-    --width-sidebar-perm: 65px;
+    --width-sidebar-perm: 60px;
+    --height-sidebar-perm: 0px;
   }
 }
 

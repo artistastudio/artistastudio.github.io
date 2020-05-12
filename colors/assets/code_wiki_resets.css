@@ -126,8 +126,3 @@ body {
   height: 100vh;
   /*max-width: var(--width-webwrapper-max);*/
 }
-
-.sidebar-content {
-  display: grid;
-  grid-template-columns: var(--width-sidebar-perm) auto;
-}
