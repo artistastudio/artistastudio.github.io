@@ -1,3 +1,16 @@
+/*
+  ========================================
+  header
+  ========================================
+*/
+
+
+@media screen and (min-width: 768px) {
+  #homea {
+      border-top: var(--width-header-bottomline) solid var(--col-header-border);
+  }
+}
+
 /* ========================================
    Arrow (navigation)
    ======================================== */
@@ -15,20 +28,6 @@
         text-align: center;
         margin-left: var(--marg-arrow-lr);
         margin-right: var(--marg-arrow-lr);
-
-        /*uk - removing arrow animation, I am sorry but it looks so 90s
-        -webkit-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-           -moz-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-            -ms-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-             -o-animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-                animation: arrow-ani var(--time-arrow-ani) ease-in-out;
-
-        -webkit-animation-delay: var(--time-hero3);
-           -moz-animation-delay: var(--time-hero3);
-            -ms-animation-delay: var(--time-hero3);
-             -o-animation-delay: var(--time-hero3);
-                animation-delay: var(--time-hero3);
-        */
     }
     /* link display */
     a {
@@ -44,33 +43,6 @@
       margin-left: var(--max-marg-arrow-lr);
     }
 }
-/* define transition */
-/*
-@-moz-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}
-@-ms-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}
-@-o-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}
-@-webkit-keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}
-@keyframes arrow-ani{
-    0% { transform: scale(1); }
-    50% { transform: scale(var(--scale-arrow-50perc)); }
-    100% { transform: scale(1); }
-}*/
 
 /*
   ========================================
