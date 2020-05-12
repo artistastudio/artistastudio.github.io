@@ -179,31 +179,38 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(30deg, #96DED1 0%, #96DED1 50%, #2A7E19 50%, #2A7E19 100%);
+  background: linear-gradient(45deg, #96DED1 0%, #96DED1 50%, #39AD48 50%, #39AD48 100%);
 }
 .combo:hover #name_combo_1 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_2 {
-  background: linear-gradient(30deg, #96DED1 0%, #96DED1 50%, #9457EB 50%, #9457EB 100%);
+  background: linear-gradient(45deg, #96DED1 0%, #96DED1 50%, #63A950 50%, #63A950 100%);
 }
 .combo:hover #name_combo_2 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_3 {
-  background: linear-gradient(30deg, #96DED1 0%, #96DED1 50%, #836539 50%, #836539 100%);
+  background: linear-gradient(45deg, #96DED1 0%, #96DED1 50%, #C25283 50%, #C25283 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #ffffff;
 }
 
 #card_combo_4 {
-  background: linear-gradient(30deg, #96DED1 0%, #96DED1 50%, #952E8F 50%, #952E8F 100%);
+  background: linear-gradient(45deg, #96DED1 0%, #96DED1 50%, #9E5B40 50%, #9E5B40 100%);
 }
 .combo:hover #name_combo_4 p {
   color: #ffffff;
+}
+
+#card_combo_5 {
+  background: linear-gradient(45deg, #96DED1 0%, #96DED1 50%, #C154C1 50%, #C154C1 100%);
+}
+.combo:hover #name_combo_5 p {
+  color: #000000;
 }
 
 #card_shade_8 {

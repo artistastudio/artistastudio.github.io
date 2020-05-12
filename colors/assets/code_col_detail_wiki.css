@@ -8,7 +8,7 @@
 :root {
     /* whole table */
     --marg-hue-tab-lr: 5vw;
-    --marg-hue-tab-t: 5vh;
+    --marg-hue-tab-t: 3vh;
     --marg-hue-tab-b: 5vh;
 
     /* main image */
@@ -29,25 +29,25 @@
     --lnspace-swatch-title: 10px;
     --dist-swatch-text-top: 50%;
     --dist-swatch-text-left: 50%;
-    --dist-swatch-text-top-trans: -50%;
-    --dist-swatch-text-left-trans: -50%;
 
     /* current swatch */
     --underline-dist-inner: 1px;
     --underline-dist-outer: 3px;
 
     /* circle */
-    --circle-simcol-diam: 60px;
+    --circle-simcol-diam: 12vw;
+    --circle-simcol-diam-max: 120px;
     --scale-circle-hover: 1.8;
 
     /* combo */
     --combo-margin-lr: 0vw;
-    --height-combo: 45px;
+    --height-combo: 12vw;
+    --height-combo-max: 120px;
     --scale-combo-hover: 1.6;
 
     /* titles - text */
-    --lspace-title-text: 40px;
-    --marg-title-text: 30px;
+    --lspace-title-text: 0px;
+    --marg-title-text: 10px;
 
     /* histogram */
     --marg-hist-lr: 0vw;
@@ -63,8 +63,6 @@
     :root {
         /* whole table */
         --marg-hue-tab-lr: 7vw;
-        --marg-hue-tab-t: 3vh;
-        --marg-hue-tab-b: 5vh;
 
         /* each swatch */
         --height-swatch: 70px;
@@ -80,17 +78,15 @@
         --underline-dist-outer: 6px;
 
         /* circle */
-        --circle-simcol-diam: 10vw;
         --scale-circle-hover: 1.3;
 
         /* combo */
         --combo-margin-lr: 0vw;
-        --height-combo: 100px;
         --scale-combo-hover: 1.3;
 
         /* titles - text */
-        --lspace-title-text: 70px;
-        --marg-title-text: 40px;
+        --lspace-title-text: 40px;
+        --marg-title-text: 20px;
 
         /* histogram */
         --marg-hist-lr: 8vw;
@@ -139,12 +135,12 @@
 /* table title - description */
 .title-desc h2 {
   text-align: center;
-  line-height: 100px;
+  line-height: 80px;
 }
 /* table subtitle -description */
 .title-desc h3 {
   text-align: center;
-  line-height: 60px;
+  line-height: 40px;
 }
 /* table text - description */
 .title-desc h4 {
@@ -157,7 +153,6 @@
 .title-desc p {
   text-align: center;
 }
-
 
 
 /* whole table with cards (shades / tints) */
@@ -217,25 +212,27 @@
   top: var(--dist-swatch-text-top);
   left: var(--dist-swatch-text-left);
   text-align: center;
-  -webkit-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-     -moz-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-      -ms-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-       -o-transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
-          transform: translate(var(--dist-swatch-text-left-trans), var(--dist-swatch-text-top-trans));
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 
-/* colour combos */
+/* colour combos - rectangles */
 #colcombos-tab {
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   margin-left: var(--combo-margin-lr);
   margin-right: var(--combo-margin-lr);
 }
 
 .combo {
   position: relative;
-  height: calc(1 * var(--height-combo));
-  width: calc(1.5 * var(--height-combo));
+  height: var(--height-combo);
+  width: var(--height-combo);
+  max-height: var(--height-combo-max);
+  max-width: var(--height-combo-max);
   margin-left: auto;
   margin-right: auto;
   border-radius: var(--radius-swatch);
@@ -327,8 +324,8 @@
   position: relative;
   height: var(--circle-simcol-diam);
   width: var(--circle-simcol-diam);
-  max-height: 120px;
-  max-width: 120px;
+  max-height: var(--circle-simcol-diam-max);
+  max-width:  var(--circle-simcol-diam-max);
   border-radius: 50%;
   margin: auto;
   text-align: center;
