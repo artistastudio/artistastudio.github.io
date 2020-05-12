@@ -9,6 +9,7 @@
 
     /* all */
     --height-page: calc(100vh - var(--height-header));
+    --height-page: calc(var(--vh, 1vh) * 100 - var(--height-header));
     --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
     --marg-stand: 2vh;
     --marg-bound: 2vh;
