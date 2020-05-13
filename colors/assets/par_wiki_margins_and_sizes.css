@@ -13,6 +13,7 @@
     --padd-body: 0px;
 
     /* websitewrapper */
+    --width-screen: 100vw;
     /*--width-webwrapper-max: 1920px;*/
     
     /* sidebar menu */
@@ -33,7 +34,7 @@
     --padd-menu: 10px; /* vertical */
 
     /* footer */
-    --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
+    --padd-footer: 1vw;/* padding top */
     --width-footer-col: 30% 40% 30%;
     --marg-footer-m: 80px;/*margin between footers in mobile form*/
     --width-footer-form: 80%; /* width of the registration form (of the 1/3) */
@@ -45,11 +46,14 @@
 /* tablet and above */
 @media all and (min-width: 768px) {
     :root {
+        /* whole */
+        --width-screen: 98.5vw;
+
         /* logo */
         --height-logo: 43px; /* width logo - mobile  */
         
         /* footer */
-        --padd-footer: calc(0.5 * var(--padd-advani-each-tb));/* padding top */
+        --padd-footer: 1.5vw;/* padding top */
         --width-footer-col: 20% 60% 20%;
         --width-footer-form: 45%; /* width of the registration form (of the 1/3) */
     }

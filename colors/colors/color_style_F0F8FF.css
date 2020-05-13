@@ -1,4 +1,8 @@
 
+:root {
+    --col-header-border: #F0F8FF;
+}
+
 #card_shade_1 {
   background: #171819;
 }
@@ -175,48 +179,52 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #D5869D 50%, #D5869D 100%);
+  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #A74AC7 50%, #A74AC7 100%);
 }
 .combo:hover #name_combo_1 p {
-  color: #000000;
-}
-
-#card_combo_2 {
-  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #1B1035 50%, #1B1035 100%);
-}
-.combo:hover #name_combo_2 p {
   color: #ffffff;
 }
 
-#card_combo_3 {
-  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #BDDA57 50%, #BDDA57 100%);
+#card_combo_2 {
+  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #64E986 50%, #64E986 100%);
 }
-.combo:hover #name_combo_3 p {
+.combo:hover #name_combo_2 p {
   color: #000000;
 }
 
+#card_combo_3 {
+  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #734F96 50%, #734F96 100%);
+}
+.combo:hover #name_combo_3 p {
+  color: #ffffff;
+}
+
 #card_combo_4 {
-  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #E66771 50%, #E66771 100%);
+  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #A8E3BD 50%, #A8E3BD 100%);
 }
 .combo:hover #name_combo_4 p {
   color: #000000;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #6FC276 50%, #6FC276 100%);
+  background: linear-gradient(45deg, #F0F8FF 0%, #F0F8FF 50%, #B5B35C 50%, #B5B35C 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #000000;
 }
 
 #card_shade_10 {
-  border-color: var(--col-accent2);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
 }
 
 #card_tone_2 {
-  border-color: var(--col-accent2);
-}
-
-:root {
-  --shadow-swatch: 0 3px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F0F8FF;
 }

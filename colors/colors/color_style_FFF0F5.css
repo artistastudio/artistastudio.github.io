@@ -1,4 +1,8 @@
 
+:root {
+    --col-header-border: #FFF0F5;
+}
+
 #card_shade_1 {
   background: #191718;
 }
@@ -175,48 +179,52 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #C38EC7 50%, #C38EC7 100%);
+  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #C27E79 50%, #C27E79 100%);
 }
 .combo:hover #name_combo_1 p {
   color: #000000;
 }
 
 #card_combo_2 {
-  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #A2653E 50%, #A2653E 100%);
+  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #B666D2 50%, #B666D2 100%);
 }
 .combo:hover #name_combo_2 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_3 {
-  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #F984EF 50%, #F984EF 100%);
+  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #B2C248 50%, #B2C248 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #000000;
 }
 
 #card_combo_4 {
-  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #DEC196 50%, #DEC196 100%);
+  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #436BAD 50%, #436BAD 100%);
 }
 .combo:hover #name_combo_4 p {
-  color: #000000;
+  color: #ffffff;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #E2725B 50%, #E2725B 100%);
+  background: linear-gradient(45deg, #FFF0F5 0%, #FFF0F5 50%, #7AF9AB 50%, #7AF9AB 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #000000;
 }
 
 #card_shade_10 {
-  border-color: var(--col-accent2);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
 }
 
 #card_tone_2 {
-  border-color: var(--col-accent2);
-}
-
-:root {
-  --shadow-swatch: 0 3px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFF0F5;
 }

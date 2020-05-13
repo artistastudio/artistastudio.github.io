@@ -144,70 +144,70 @@
 }
 
 #card_simcol_1 {
-  background: #DA5B38;
+  background: #CD5B45;
 }
 .circle:hover #name_simcol_1 p {
   color: #000000;
 }
 
 #card_simcol_2 {
-  background: #C47451;
+  background: #DA5B38;
 }
 .circle:hover #name_simcol_2 p {
   color: #000000;
 }
 
 #card_simcol_3 {
-  background: #E55B3C;
+  background: #C47451;
 }
 .circle:hover #name_simcol_3 p {
   color: #000000;
 }
 
 #card_simcol_4 {
-  background: #C34A2C;
+  background: #E55B3C;
 }
 .circle:hover #name_simcol_4 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_simcol_5 {
-  background: #B2713D;
+  background: #C34A2C;
 }
 .circle:hover #name_simcol_5 p {
-  color: #000000;
-}
-
-#card_combo_1 {
-  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #5729CE 50%, #5729CE 100%);
-}
-.combo:hover #name_combo_1 p {
   color: #ffffff;
 }
 
-#card_combo_2 {
-  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #F6A4C9 50%, #F6A4C9 100%);
+#card_combo_1 {
+  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #FBB117 50%, #FBB117 100%);
 }
-.combo:hover #name_combo_2 p {
+.combo:hover #name_combo_1 p {
   color: #000000;
 }
 
+#card_combo_2 {
+  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #5729CE 50%, #5729CE 100%);
+}
+.combo:hover #name_combo_2 p {
+  color: #ffffff;
+}
+
 #card_combo_3 {
-  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #EED794 50%, #EED794 100%);
+  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #ED989E 50%, #ED989E 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #000000;
 }
 
 #card_combo_4 {
-  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #F9A7B0 50%, #F9A7B0 100%);
+  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #FBA0E3 50%, #FBA0E3 100%);
 }
 .combo:hover #name_combo_4 p {
   color: #000000;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #57FEFF 50%, #57FEFF 100%);
+  background: linear-gradient(45deg, #CA6641 0%, #CA6641 50%, #C8E3D7 50%, #C8E3D7 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #000000;

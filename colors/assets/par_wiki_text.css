@@ -9,6 +9,7 @@
     --font-fam: "Montserrat"; /* Raleway */
 
     /* text - paragraph */
+    --font-size-p-small: 11.5px;
     --font-size-p: 13px;
     --font-size-h6: 12px;
     --font-size-h5: 13px;
@@ -38,8 +39,9 @@
 @media all and (min-width: 768px) {
     :root {
         /* text - paragraph */
+        --font-size-p-small: 12.5px;
         --font-size-p: 14px;
-        --font-size-h6: 14px;
+        --font-size-h6: 13px;
         --font-size-h5: 16px;
 
         /* text - title */        
@@ -66,7 +68,7 @@ h1, h2, h3 {
     line-height: var(--font-lspace-title);
 }
 
-h4, h5, p {
+h4, h5, h6, p {
     font-family: var(--font-fam);
     color: var(--col-text);
     font-weight: var(--font-weight-text);

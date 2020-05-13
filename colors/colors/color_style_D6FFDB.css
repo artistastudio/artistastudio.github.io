@@ -1,4 +1,8 @@
 
+:root {
+    --col-header-border: #D6FFDB;
+}
+
 #card_shade_1 {
   background: #171C18;
 }
@@ -175,48 +179,52 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #C77986 50%, #C77986 100%);
+  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #B57EDC 50%, #B57EDC 100%);
 }
 .combo:hover #name_combo_1 p {
   color: #000000;
 }
 
 #card_combo_2 {
-  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #A6C875 50%, #A6C875 100%);
+  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #7CB7BB 50%, #7CB7BB 100%);
 }
 .combo:hover #name_combo_2 p {
   color: #000000;
 }
 
 #card_combo_3 {
-  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #63F7B4 50%, #63F7B4 100%);
+  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #B2C248 50%, #B2C248 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #000000;
 }
 
 #card_combo_4 {
-  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #CABB48 50%, #CABB48 100%);
+  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #78D1B6 50%, #78D1B6 100%);
 }
 .combo:hover #name_combo_4 p {
   color: #000000;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #4863A0 50%, #4863A0 100%);
+  background: linear-gradient(45deg, #D6FFDB 0%, #D6FFDB 50%, #214761 50%, #214761 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #ffffff;
 }
 
 #card_shade_9 {
-  border-color: var(--col-accent2);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
 }
 
 #card_tone_3 {
-  border-color: var(--col-accent2);
-}
-
-:root {
-  --shadow-swatch: 0 3px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #D6FFDB;
 }

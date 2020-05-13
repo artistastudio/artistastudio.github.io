@@ -1,4 +1,8 @@
 
+:root {
+    --col-header-border: #F5EDEF;
+}
+
 #card_shade_1 {
   background: #181717;
 }
@@ -175,48 +179,52 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #9D5783 50%, #9D5783 100%);
+  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #7AF9AB 50%, #7AF9AB 100%);
 }
 .combo:hover #name_combo_1 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_2 {
-  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #50EBEC 50%, #50EBEC 100%);
+  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #54C571 50%, #54C571 100%);
 }
 .combo:hover #name_combo_2 p {
   color: #000000;
 }
 
 #card_combo_3 {
-  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #B17261 50%, #B17261 100%);
+  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #89C35C 50%, #89C35C 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #000000;
 }
 
 #card_combo_4 {
-  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #54AC68 50%, #54AC68 100%);
+  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #FF9E2C 50%, #FF9E2C 100%);
 }
 .combo:hover #name_combo_4 p {
   color: #000000;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #CCAD60 50%, #CCAD60 100%);
+  background: linear-gradient(45deg, #F5EDEF 0%, #F5EDEF 50%, #E78A61 50%, #E78A61 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #000000;
 }
 
 #card_shade_10 {
-  border-color: var(--col-accent2);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
 }
 
 #card_tone_2 {
-  border-color: var(--col-accent2);
-}
-
-:root {
-  --shadow-swatch: 0 3px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #F5EDEF;
 }

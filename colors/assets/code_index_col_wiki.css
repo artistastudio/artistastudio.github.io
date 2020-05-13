@@ -60,10 +60,10 @@
     --height-ratio-cards: 0.85; /* recommended: 5% less than in --grid-ratio-hue-tab */
     --ratio-w2h-swatch-huegr: calc(400 / 260);
     --width-swatch-huegr-pot4h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b)) / 4 * var(--ratio-w2h-swatch-huegr));
-    --width-swatch-huegr-pot4w: calc((100vw - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound)) / 2);
+    --width-swatch-huegr-pot4w: calc((var(--width-screen) - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound)) / 2);
     --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
     --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b) - 4 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
-    --padd-swatch-huegr-w: calc((100vw - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound) - 2 * var(--width-swatch-huegr-actual)) / 2);    
+    --padd-swatch-huegr-w: calc((var(--width-screen) - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound) - 2 * var(--width-swatch-huegr-actual)) / 2);    
 }
 
 /* desktop */
@@ -113,10 +113,10 @@
         /* card size */
         --height-ratio-cards: 0.75; /* recommended: 5% less than in --grid-ratio-hue-tab */
         --width-swatch-huegr-pot4h: calc((var(--height-ratio-cards) * var(--height-page) - 4 * var(--marg-stand)) / 2 * var(--ratio-w2h-swatch-huegr));
-        --width-swatch-huegr-pot4w: calc((100vw - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound)) / 4);
+        --width-swatch-huegr-pot4w: calc((var(--width-screen) - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound)) / 4);
         --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
         --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 4 * var(--marg-stand) - 2 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
-        --padd-swatch-huegr-w: calc((100vw - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound) - 4 * var(--width-swatch-huegr-actual)) / 2);
+        --padd-swatch-huegr-w: calc((var(--width-screen) - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound) - 4 * var(--width-swatch-huegr-actual)) / 2);
     }
 }
 

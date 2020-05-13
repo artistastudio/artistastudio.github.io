@@ -2,7 +2,7 @@
     --helptip-width: 70vw;
     --helptip-offset-top: 250%;
     --helptip-offset-left: 50%;
-    --shadow-helptip: 0 2px 5px rgba(0,0,0,.1);
+    --shadow-helptip: var(--col-shadow-helptip);
 }
 
 /* desktop */

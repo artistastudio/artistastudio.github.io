@@ -140,77 +140,101 @@
 /* ---------------- footer ---------------- */
 /* footer: text */
 /* placeholder styling - different from actual input */
-::-moz-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-ms-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-o-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::-webkit-input-placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-::placeholder {
-    font: var(--font-weight-text) var(--font-size-h6) var(--font-fam);
-    color: var(--col-footer-text);
-}
-/* title */
-#footer1 h5 {
-    text-transform: uppercase;
-    font-weight: var(--font-weight-title);
-    color: var(--col-footer-title);
-}
-/* button */
-#button1 h5 {
-    line-height: calc(1.5 * var(--font-size-h4));
-    color: var(--col-footer-button-text);
-}
-/* manual input - h5 */
-.input {
-    font: var(--font-weight-text) var(--font-size-h5) var(--font-fam);
-    letter-spacing: var(--font-chspace-h5);
-    color: var(--col-footer-text);
-}
-
 /* whole footer table */
 #footer1 {
-    position: relative;
-    z-index: 10;
-    background: var(--col-footer-bg);
-    text-align: center;
-    padding: var(--padd-footer);
-    display: grid;
-    grid-template-columns: var(--width-footer-col);
+  position: relative;
+  z-index: 10;
+  background: var(--col-footer-bg);
+  text-align: center;
+  padding: var(--padd-footer);
 }
 
 .subfooter {
 }
 
+#leftfooter1 {
+  margin-bottom: var(--marg-footer-m);
+}
 
-/* ---------------- registration form ---------------- */
+#rightfooter1 {
+  margin-top: var(--marg-footer-m);
+}
+
 .input{
-    width: var(--width-footer-form);
-    height: var(--height-footer-form-field);
-    border: none;
-    border-bottom: solid var(--width-footer-form-field-border) var(--col-footer-text);
-    background: var(--col-footer-bg);
+  width: var(--width-footer-form);
+  height: var(--height-footer-form-field);
+  border: none;
+  border-bottom: solid var(--width-footer-form-field-border) var(--col-footer-text);
+  background: var(--col-footer-bg);
 }
 
 /* submit button */
 #button1 {
-    background: var(--col-footer-button);
-    border: solid var(--width-footer-form-field-border) var(--col-footer-button-border);
-    border-radius: var(--radius-footer-form-button);
+  background: var(--col-accent2);
+  border: solid var(--width-footer-form-field-border) var(--col-accent2-dark);
+  border-radius: var(--radius-footer-form-button);
 }
 #button1:hover {
-    background: var(--col-footer-button-hover);
-    border: solid var(--width-footer-form-field-border) var(--col-footer-button-border-hover);
+  background: var(--col-accent1);
+  border: solid var(--width-footer-form-field-border) var(--col-footer-button-border-hover);
+}
+
+@media screen and (min-width: 768px) {
+  #footer1 {
+    display: grid;
+    grid-template-columns: var(--width-footer-col);
+  }
+
+  #leftfooter1 {
+    margin-bottom: unset;
+    text-align: left;
+  }
+
+  #rightfooter1 {
+    margin-top: unset;
+    text-align: right;
+  }
+}
+
+/* title */
+#footer1 h6 {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-title);
+  color: var(--col-footer-title);
+}
+/* button */
+#button1 h6 {
+  line-height: calc(1.5 * var(--font-size-h6));
+  color: var(--col-footer-button-text);
+  font-weight: 600;
+}
+/* manual input - p */
+.input {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  letter-spacing: var(--font-chspace-p);
+  color: var(--col-footer-text);
+}
+
+/* registration form */
+::-webkit-input-placeholder {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  color: var(--col-footer-text);
+}
+::-moz-input-placeholder {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  color: var(--col-footer-text);
+}
+::-ms-input-placeholder {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  color: var(--col-footer-text);
+}
+::-o-input-placeholder {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  color: var(--col-footer-text);
+}
+::placeholder {
+  font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
+  color: var(--col-footer-text);
 }
 
 
@@ -308,6 +332,38 @@
   width: 20px;
 }
 
+.tooltip-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-menu .tooltip-menu-desc {
+  visibility: hidden;
+  width: auto;
+  background-color: white;
+  color: var(--col-text);
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 5px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 6;
+  top: 0%;
+  left: 100%;
+
+  -webkit-box-shadow: var(--col-shadow-helptip);
+     -moz-box-shadow: var(--col-shadow-helptip);
+      -ms-box-shadow: var(--col-shadow-helptip);
+       -o-box-shadow: var(--col-shadow-helptip);
+          box-shadow: var(--col-shadow-helptip);
+}
+
+.tooltip-menu:hover .tooltip-menu-desc {
+  visibility: hidden;
+}
+
+
 /* ---------------- sidebar on the left for desktops ---------------- */
 @media all and (min-width: 768px) and (min-height: 500px) {
 
@@ -325,7 +381,7 @@
     height: 100%;
     width: auto;
     display: block;
-    overflow: hidden;
+    overflow: visible;
     justify-content: center;
     text-align: center;
     background-color: #F0F0F0; 
@@ -411,7 +467,18 @@
     display: none;
   }
 
+  /* width of logo icons */
   #logo_icon_as, #logo_icon_ac {
     width: 30px;
+  }
+
+  /* tooltip explanations */
+  .tooltip-menu:hover .tooltip-menu-desc {
+    visibility: visible;
+ -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+     -ms-transition-delay: 1s;
+      -o-transition-delay: 1s;
+         transition-delay: 1s;
   }
 }

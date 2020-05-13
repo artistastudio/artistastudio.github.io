@@ -1,4 +1,8 @@
 
+:root {
+    --col-header-border: #FFEFC1;
+}
+
 #card_shade_1 {
   background: #1C1A15;
 }
@@ -175,48 +179,52 @@
 }
 
 #card_combo_1 {
-  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #B53389 50%, #B53389 100%);
+  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #80B3AE 50%, #80B3AE 100%);
 }
 .combo:hover #name_combo_1 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_2 {
-  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #DB9690 50%, #DB9690 100%);
+  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #74C365 50%, #74C365 100%);
 }
 .combo:hover #name_combo_2 p {
   color: #000000;
 }
 
 #card_combo_3 {
-  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #C87F89 50%, #C87F89 100%);
+  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #CD5B45 50%, #CD5B45 100%);
 }
 .combo:hover #name_combo_3 p {
   color: #000000;
 }
 
 #card_combo_4 {
-  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #C25283 50%, #C25283 100%);
+  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #C154C1 50%, #C154C1 100%);
 }
 .combo:hover #name_combo_4 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 #card_combo_5 {
-  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #E03FD8 50%, #E03FD8 100%);
+  background: linear-gradient(45deg, #FFEFC1 0%, #FFEFC1 50%, #B1D27B 50%, #B1D27B 100%);
 }
 .combo:hover #name_combo_5 p {
   color: #000000;
 }
 
 #card_shade_9 {
-  border-color: var(--col-accent2);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
 }
 
 #card_tone_4 {
-  border-color: var(--col-accent2);
-}
-
-:root {
-  --shadow-swatch: 0 3px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+      -ms-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+       -o-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #FFEFC1;
 }
