@@ -108,8 +108,7 @@ function FindMostSimUsingTrigram(input, li) {
         var trigram = TrigramIndex([input]);
 
         // get color name entries
-        var a, i, txtValue, score_class, t_score, t_ind;        
-
+        var a, i, txtValue, score_class;
 
         // compute similarity to each entry
         for (i = 0; i < li.length; i++) {

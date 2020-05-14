@@ -46,7 +46,7 @@
 
         <section class="col-overview-page">
 
-          <section>
+          <section class="huegr-title">
             <div class="tab-title">
               <div class="title-desc">
                 <h1>Artista Color Dictionary</h1>
@@ -61,7 +61,7 @@
             </div>
           </section>
 
-          <section>
+          <section class="huegr-search">
             <div class="tab-search">
               <div class="searchBox">            
                 <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun()" autocomplete="off">
@@ -78,7 +78,9 @@
             </div>
           </section>
 
-          <section>
+          <section class="huegr-empty"></section>
+
+          <section class="huegr-overview">
             <div class="table-hue-all">
                 
                 <a href="color-dict/col_gr_wiki_red.html">
@@ -194,14 +196,19 @@
 
         FindMatchesInList(filter, li, nunhits_max);        
 
-        input.addEventListener("keyup", function(event) {
-          // "enter" key
-          if (event.keyCode === 13) {
-            event.preventDefault();
-            document.getElementById("SearchBotton").click();
-          }
-        }); 
       }
+    </script>
+
+    <script>
+      // check for enter key
+      document.getElementById('StringToSearch').addEventListener("keyup", function(event) {
+
+        if (event.keyCode === 13) {
+
+          event.preventDefault();
+          document.getElementById("SearchBotton").click();
+        }
+      }); 
     </script>
 
     <script>
@@ -218,10 +225,6 @@
         document.getElementById("LinkSearchBotton").href = li[most_sim_entry[0]].getElementsByTagName("a")[0].href; 
       }     
     </script>
-
-    <script>
-      console.log(window.navigator.userAgent);
-    </script>
-
+    
   </body>
 </html>

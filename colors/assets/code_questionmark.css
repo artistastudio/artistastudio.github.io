@@ -16,8 +16,8 @@
     display: inline-block;
     position: relative;
     text-align: center;
-    background-color: white;
-    border: 1px solid darkgrey;
+    background-color: none;
+    border: 1px solid var(--col-text-grey-d);
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -30,14 +30,14 @@
 .help-tip:before{
     content:'?';
     font-weight: bold;
-    color: darkgrey;
+    color: var(--col-text-grey-d);
 }
 
 .help-tip .tooltiptext {
   visibility: hidden;
   width: var(--helptip-width);
   background-color: white;
-  color: darkslategrey;
+  color: var(--col-text-grey-d);
   text-align: center;
   border-radius: 5px;
   padding: 10px 10px;

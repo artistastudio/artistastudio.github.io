@@ -1,0 +1,380 @@
+/*
+  ========================================
+  Overview Colour Hues
+  ========================================
+*/
+
+/* mobile */
+:root {
+
+    /* all */
+    --height-overlap-bg: 10%;
+    --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
+    --grid-ratio-hue-tab: 10% 8% 8% var(--height-overlap-bg) calc(74% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
+    --marg-stand: 1.5vh;
+    --marg-bound: 1.5vh;
+
+    /* table title */
+
+    /* search box width */
+    --width-searchb-whole: 120px;
+    --height-searchb: 25px;  
+    --scale-colpick: 1.5;
+    --grid-search-tabs: 2% 48% 48% 2%;
+    --scale-searcb-hover: 1.05;
+    
+    /* color picker */
+    --height-colpicker: 30px;
+    --scale-colpick-hover: 1.3;
+
+    /* hue table */
+    --grid-tab-hue-groups: 50% 50%;
+    --grid-tab-hue-gr-rows: 20% 50% 30%;
+    --grid-tab-hue-gr-names: 'resgr-name resgr-name'
+                             'resgr-orcard resgr-arcard'
+                             'resgr-orhex resgr-arhex';
+    --vis-resgr-desc: none;
+    --line-h-match: 15px;
+
+    /* each swatch */
+    --radius-swatch: 5px;
+    --shadow-swatch: 0 5px 10px rgba(0,0,0,.1);
+}
+
+/* desktop */
+@media all and (orientation: landscape) {
+    :root {
+        /* all */
+        --grid-ratio-hue-tab: 12% 8% 8% var(--height-overlap-bg) calc(72% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
+        --marg-stand: 2vh;
+        --marg-bound: 6vh;
+
+        /* table title */
+
+        /* search box width */
+        --width-searchb-whole: 200px;
+        --height-searchb: 30px;
+        --grid-search-tabs: 25% 25% 25% 25%;
+
+        /* color picker */
+        --height-colpicker: 45px;
+
+        /* hue table */
+        --grid-tab-hue-groups: 33.3% 33.3% 33.3%;
+        --grid-tab-hue-gr-rows: 85% 15%;
+        --grid-tab-hue-gr-names: 'resgr-orcard resgr-arcard resgr-name'
+                                 'resgr-orhex resgr-arhex resgr-desc';
+        --vis-resgr-desc: block;
+        --line-h-match: 50px;
+
+        /* each swatch */
+        --radius-swatch: 10px;
+    }
+}
+
+
+/* -------------- whole page -------------- */
+.col-overview-page {
+    height: var(--height-page);
+    display: grid;
+    grid-template-rows: var(--grid-ratio-hue-tab);
+    grid-template-areas: 'huegr-title' 'huegr-search-title' 'huegr-search' 'empty' 'huegr-overview';
+    align-items: center;
+    background: whitesmoke;
+}
+.huegr-title {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+    grid-area: huegr-title;
+}
+.huegr-search-title {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+    grid-area: huegr-search-title;
+}
+.huegr-search {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+    grid-area: huegr-search;
+}
+.huegr-empty {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+}
+.huegr-overview {
+    height: 100%;
+    grid-area: huegr-overview;
+}
+
+
+
+/* -------------- table title -------------- */
+.huegr-title {
+    display: flex;
+    text-align: center;  
+}
+.huegr-title > * {
+    margin: auto;
+}
+.title-desc h1 {
+    display: inline-block;
+}
+
+
+/* -------------- search bar -------------- */
+.huegr-search-title {
+    display: grid;
+    grid-template-columns: var(--grid-search-tabs);
+    text-align: center;
+}
+.huegr-search-title > * {
+    display: flex;
+    margin: auto;
+    text-align: center;
+  }
+
+.huegr-search {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: var(--grid-search-tabs);   
+}
+
+.huegr-search > * {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.tab-search {
+    height: var(--height-searchb);
+}
+
+.searchBox {
+    width: var(--width-searchb-whole);    
+    border-radius: var(--height-searchb);
+    border-bottom: 1px solid var(--col-text-grey-d);
+    background: var(--col-bg-grey-ll);
+}
+
+.searchBox:hover .searchButton {
+    z-index: 2;
+    background: var(--col-accent2);
+    color : white;
+  
+  -webkit-transform: scale(var(--scale-searcb-hover));
+     -moz-transform: scale(var(--scale-searcb-hover));
+      -ms-transform: scale(var(--scale-searcb-hover));
+       -o-transform: scale(var(--scale-searcb-hover));
+          transform: scale(var(--scale-searcb-hover));
+}
+
+.searchButton {
+    color: white;
+    background: var(--col-text-grey);
+    float: right;
+    width: var(--height-searchb);
+    height: var(--height-searchb);
+    border-radius: 50%; 
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+-webkit-transition: .5s;
+   -moz-transition: .5s;
+    -ms-transition: .5s;
+     -o-transition: .5s;
+        transition: .5s;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: var(--height-searchb);
+    width: calc(var(--width-searchb-whole) - 1.1 * var(--height-searchb));
+    padding-left: calc(0.5 * var(--height-searchb));
+
+-webkit-transform: translate(0%,50%);
+   -moz-transform: translate(0%,50%);
+    -ms-transform: translate(0%,50%);
+     -o-transform: translate(0%,50%);
+        transform: translate(0%,50%);
+
+    font: var(--font-weight-text) var(--font-size-p) var(--font-fam);
+    letter-spacing: var(--font-chspace-p);
+    color: var(--col-text);
+
+ -webkit-transition: .5s;
+    -moz-transition: .5s;
+     -ms-transition: .5s;
+      -o-transition: .5s;
+         transition: .5s;
+}
+
+::-moz-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+    ;
+}
+::-ms-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+::-o-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+::-webkit-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+.searchBox ::placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+
+
+.colopick-cont{
+    position: relative;
+}
+.color-picker, .color-picker-cover {
+    border-radius: 50%;
+    z-index: 2;
+
+    width: var(--height-colpicker);
+    height: var(--height-colpicker);
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+
+    border: none;
+    padding: 0px;
+    width: var(--height-colpicker);
+    height: var(--height-colpicker);
+    cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%; 
+}
+input[type="color"]::-moz-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%; 
+}
+input[type="color"]::-ms-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-ms-color-swatch {
+    border: none;
+    border-radius: 50%; 
+}
+input[type="color"]::-o-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-o-color-swatch {
+    border: none;
+    border-radius: 50%; 
+}
+input[type="color"]::color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::color-swatch {
+    border: none;
+    border-radius: 50%; 
+}
+
+
+/* -------------- empty space -------------- */
+
+
+/* -------------- whole table with cards -------------- */
+.table-hue-all {
+    height: 100%;
+    align-items: center;
+    margin-left: var(--marg-bound);
+    margin-right: var(--marg-bound);
+
+    display: grid;
+    grid-template-columns: var(--grid-tab-hue-groups);
+    grid-template-rows: var(--grid-tab-hue-gr-rows);
+    grid-template-areas: var(--grid-tab-hue-gr-names);
+
+    background: white;
+    border-radius: var(--radius-swatch);
+
+    position: relative;
+    top: calc(-1 * var(--height-overlap-bg));
+}
+.table-hue-all > * {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.resgr-orcard {
+    grid-area: resgr-orcard;
+}
+.resgr-arcard {
+    grid-area: resgr-arcard;
+}
+.resgr-name {
+    grid-area: resgr-name;
+}
+.resgr-orhex {
+    grid-area: resgr-orhex;
+}
+.resgr-arhex {
+    grid-area: resgr-arhex;
+}
+.resgr-desc {
+    grid-area: resgr-desc;
+    display: var(--vis-resgr-desc);
+}
+
+/* colour group container */
+.card {
+    display: flex;
+    height: calc(100% - 2 * var(--marg-stand));
+    
+    margin: var(--marg-stand);
+
+    position: relative;
+    border-radius: var(--radius-swatch);
+
+  -webkit-box-shadow: var(--shadow-swatch);
+     -moz-box-shadow: var(--shadow-swatch);
+      -ms-box-shadow: var(--shadow-swatch);
+       -o-box-shadow: var(--shadow-swatch);
+          box-shadow: var(--shadow-swatch);
+
+  -webkit-transition: .8s;
+     -moz-transition: .8s;
+      -ms-transition: .8s;
+       -o-transition: .8s;
+          transition: .8s;
+}
+#card_my_color {
+    background: #00BFFF;
+}
+
+#card_artista_color {
+    background: #00BFFF;
+}
+
+#perc_match {
+    line-height: var(--line-h-match);
+}

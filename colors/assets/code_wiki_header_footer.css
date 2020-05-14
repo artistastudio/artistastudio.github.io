@@ -10,6 +10,7 @@
   position: fixed;
   z-index: 10;
   background-color: var(--col-body-bg);
+
   border-bottom: var(--width-header-bottomline) solid var(--col-header-border);
   display: grid;
   grid-template-columns: auto auto;
@@ -197,10 +198,15 @@
 }
 
 /* title */
-#footer1 h6 {
+#leftfooter1 h6, #rightfooter1 h6 {
   text-transform: uppercase;
   font-weight: var(--font-weight-title);
-  color: var(--col-footer-title);
+  color: white;
+}
+#midfooter1 h6 {
+  font-size: calc(1.1 * var(--font-size-h6));
+  font-weight: var(--font-weight-title);
+  color: white;
 }
 /* button */
 #button1 h6 {
@@ -328,7 +334,7 @@
   width: 100%;
 }
 
-#logo_icon_as, #logo_icon_ac {
+#logo_icon_as, #logo_icon_ac, #icon_name_my_col {
   width: 20px;
 }
 
@@ -341,10 +347,12 @@
   visibility: hidden;
   width: auto;
   background-color: white;
-  color: var(--col-text);
+  color: var(--col-text-grey-d);
   text-align: center;
   border-radius: 5px;
-  padding: 5px 5px;
+  padding: 5px 10px;
+  line-height: 20px;
+  font-size: var(--font-size-p-small);
   
   /* Position the tooltip */
   position: absolute;
@@ -384,7 +392,7 @@
     overflow: visible;
     justify-content: center;
     text-align: center;
-    background-color: #F0F0F0; 
+    background-color: var(--col-bg-grey-light); 
 
   -webkit-box-shadow: var(--shadow-swatch);
     -moz-box-shadow: var(--shadow-swatch);
@@ -451,7 +459,7 @@
 
   /* main botton at the top */
   #menu-botton-close, #menu-botton-open {
-    background-color: #DCDCDC;
+    background-color: var(--col-bg-grey-title);
   }
   #menu-botton-close:hover, #menu-botton-open:hover {
     background-color: silver;
@@ -468,7 +476,7 @@
   }
 
   /* width of logo icons */
-  #logo_icon_as, #logo_icon_ac {
+  #logo_icon_as, #logo_icon_ac, #icon_name_my_col {
     width: 30px;
   }
 

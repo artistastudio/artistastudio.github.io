@@ -1,0 +1,223 @@
+<!DOCTYPE html lang="en">
+
+<html>
+  <head>
+    <!--uk regular stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Artista Color Dictionary</title>
+    <meta name="description" content="Artista comprehensive color dictionary containing 1,800 color names. Artista color guide with color meanings and application examples.">
+    <meta name="keywords" content="color,dictionary,overview,list,name,red,orange,yellow,green,aqua,blue,purple,magenta,pink,brown,olive,cyan,violet,pink">
+
+    <link rel="icon" href="logo/logo_colours_icon_tran_light.png">
+
+    <link href="assets/code_wiki_resets.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_colors.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_text.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_margins_and_sizes.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_wiki_header_footer.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_questionmark.css" rel="stylesheet" type="text/css">
+    <link href="assets/code_index_name_my_color.css" rel="stylesheet" type="text/css">
+    
+
+    <!--uk for proper rendering on mobile and zoom off-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--uk import local jquery library-->
+    <script src="/js/vendor/jquery-3.4.1.min.js"></script>
+
+    <!--uk import google font Raleway-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  </head>
+
+  <body class="websitebody ukcnt">
+    <section class="websitewrapper ukcnt">
+
+      <!--uk Header row -->      
+      <div w3-include-html="/colors/assets/header.html"></div>
+
+      <div class="sidebar-content">
+
+        <section>
+        	<div w3-include-html="/colors/assets/sidebar.html"></div>
+        </section>        
+
+        <section class="col-overview-page">
+
+			<section class="huegr-title">
+				<div class="title-desc">
+					<h1>Name My Color</h1>
+					<div class="help-tip">
+						<p>
+						<span class="tooltiptext">That moment, when you want to describe a color and all that comes to your mind is "a little dark" or "very light". 
+							The "Name My Color" feature eliminates such moments. 
+							<br>Provide the hex code of your color or use the color picker, and Artista will find the best match from the dictionary of 1,800 color names. 
+						</span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="huegr-search-title">
+
+				<div></div>
+
+				<div>
+					<h3>Enter HEX:</h3>
+				</div>
+
+				<div>
+					<h3>Or, Pick a Color:</h3>
+				</div>
+				
+				<div></div>
+			</section>
+
+			<section class="huegr-search">
+
+				<div></div>				
+				<div class="tab-search">
+					<div class="searchBox">            
+						<input class="searchInput" placeholder="#00BFFF" id="StringToSearch" autocomplete="off">
+						<button class="searchButton" onclick="findForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+					</div>
+				</div>	  
+
+				<div class="colopick-cont">
+					<img src="images/icon_color_wheel.png" class="color-picker-cover" style="position: absolute; top:0; left:0;">
+					<input type="color" id="myColor" class="color-picker" value="#00BFFF" style="opacity: 0;">
+				</div>
+				<div></div>
+
+			</section>
+
+			<section class="huegr-empty"></section>
+
+			<section class="huegr-overview">
+				<div class="table-hue-all">
+					
+					<div class="resgr-orcard card" id="card_my_color">
+					</div>
+
+					<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
+					</a>
+
+					<div class="resgr-name">
+						<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
+							<h2 id="name_artista_color">Artista Sky Blue</h2>
+							<h4 id="perc_match">100% match</h4>
+						</a>
+					</div>
+
+					<div class="resgr-orhex">
+						<h4 id="desc_my_color">My Color: #00BFFF</h4>
+					</div>
+
+					<div class="resgr-arhex">
+						<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
+					</div>
+
+					<div class="resgr-desc">
+						<h4>Color Name</h4>
+					</div>
+
+				</div> 
+			</section>
+
+        </section>
+	  </div>
+
+      <!--uk footer here-->
+      <script src = "/js/header.js"></script>
+      <div w3-include-html="/colors/assets/footer.html"></div>
+
+	</section>
+	
+	<ul id="ColNameList" style="display: none;">   
+		<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+	</ul>
+
+    <!-- add search bar -->
+    <script src = "functions/name_color.js"></script>
+
+	<script>
+		// on lick for hex code
+		function findForMyHex() {
+			
+			let input = document.getElementById('StringToSearch').value.replace(/^\s+|\s+$/g, '');
+			if (input.charAt(0) != '#') {
+				input = '#' + input;
+			}
+			findAndReplaceCol(input);
+		}
+	</script>
+
+	<script>
+		// listen to enter key
+		document.getElementById('StringToSearch').addEventListener("keyup", function(event) {
+
+			// "enter" key
+			if (event.keyCode === 13) {
+				event.preventDefault();					
+				document.getElementById("SearchBotton").click();
+			}
+		});	
+	</script>
+
+	<script>
+		// on selection for color picker
+		document.getElementById("myColor").onchange = function() {
+
+			let my_col = this.value;
+			findAndReplaceCol(my_col);
+		}
+	</script>
+
+	<script>
+		// replace elements for display
+		function findAndReplaceCol(my_col) {
+
+			my_col = my_col.toUpperCase();
+
+			// Declare variables
+        	let li = document.getElementById("ColNameList").getElementsByTagName('li');
+			artistaColor = findClosestColor(my_col, li);
+
+			if (artistaColor == null) {
+
+				alert('Please provide a valid hex color code');
+
+			} else {
+
+				// get artista name
+				let new_name = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('<p>')[1].split(' <span ')[0];
+				let new_hex = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('color:')[1].split(';')[0];
+				let match_perc = (1 - Math.sqrt(artistaColor[1]) / Math.sqrt(3 * 255 * 255));
+
+				// change name
+				document.getElementById("desc_my_color").innerHTML = "My Color: " + my_col;
+				document.getElementById("desc_artista_color").innerHTML = "Artista Color: " + new_hex;	
+				document.getElementById("name_artista_color").innerHTML = new_name;				
+
+				// change background color
+				document.getElementById("card_my_color").style.background = my_col;
+				document.getElementById("card_artista_color").style.background = new_hex;
+				
+				// change links
+				document.getElementById("link_name_artista_color").href = li[artistaColor[0]].getElementsByTagName('a')[0].href;
+				document.getElementById("card_artista_color").href = li[artistaColor[0]].getElementsByTagName('a')[0].href;
+				
+				// add match
+				document.getElementById("perc_match").innerHTML = (Math.round(match_perc * 1000) / 10).toString() + '% match'
+			}
+		}
+	</script>
+
+  </body>
+</html>
+
+
+

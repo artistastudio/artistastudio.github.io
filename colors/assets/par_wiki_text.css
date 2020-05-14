@@ -16,9 +16,9 @@
 
     /* text - title */
     --font-size-h4: 14px;
-    --font-size-h3: 16px;
-    --font-size-h2: 18px;
-    --font-size-h1: 20px;
+    --font-size-h3: 15.5px;
+    --font-size-h2: 5.5vw;
+    --font-size-h1: 6.5vw;
 
     /* space between lines */
     --font-lspace-p: 25px;
@@ -63,7 +63,7 @@
 /* default settings */
 h1, h2, h3 {
     font-family: var(--font-fam);
-    color: var(--col-text-title);
+    color: var(--col-text);
     font-weight: var(--font-weight-title);
     line-height: var(--font-lspace-title);
 }

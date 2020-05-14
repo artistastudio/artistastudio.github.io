@@ -8,10 +8,11 @@
 :root {
 
     /* all */
+    --height-overlap-bg: 10%;
     --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
-    --grid-ratio-hue-tab: 10% 5% 85%; /* change --height-ratio-cards too */
+    --grid-ratio-hue-tab: 10% 5% var(--height-overlap-bg) calc(85% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
     --marg-stand: 1vh;
-    --marg-bound: 1vh;
+    --marg-bound: 1vh;    
 
     /* table title */
 
@@ -70,7 +71,7 @@
 @media all and (orientation: landscape) {
     :root {
         /* all */
-        --grid-ratio-hue-tab: 12% 8% 80%; /* change --height-ratio-cards too */
+        --grid-ratio-hue-tab: 12% 8% var(--height-overlap-bg) calc(80% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
         --marg-stand: 2vh;
         --marg-bound: 6vh;
 
@@ -123,18 +124,40 @@
 
 /* -------------- whole page -------------- */
 .col-overview-page {
+    height: var(--height-page);
     display: grid;
     grid-template-rows: var(--grid-ratio-hue-tab);
-    height: var(--height-page);
+    grid-template-areas: 'huegr-title' 'huegr-search' 'empty' 'huegr-overview';
     align-items: center;
+    background: whitesmoke;
+}
+.huegr-title {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+    grid-area: huegr-title;
+}
+.huegr-search {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+    grid-area: huegr-search;
+}
+.huegr-empty {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+}
+.huegr-overview {
+    height: 100%;
+    grid-area: huegr-overview;
 }
 
 
 /* -------------- table title -------------- */
-.tab-title {
-    text-align: center;
+.huegr-title {
+    display: flex;
 }
-
+.tab-title {
+    margin: auto;
+}
 .title-desc h1 {
     display: inline-block;
 }
@@ -161,8 +184,8 @@
         transform: translate(-50%,0%);
     
     border-radius: var(--height-searchb);
-    border-bottom: 1px solid lightgrey;
-    background: white;
+    border-bottom: 1px solid var(--col-text-grey-d);
+    background: var(--col-bg-grey-ll);
 }
 
 .searchBox:hover .searchButton {
@@ -179,7 +202,7 @@
 
 .searchButton {
     color: white;
-    background: darkgray;
+    background: var(--col-text-grey);
     float: right;
     width: var(--height-searchb);
     height: var(--height-searchb);
@@ -269,6 +292,9 @@
 }
 
 
+/* -------------- empty space -------------- */
+
+
 /* -------------- whole table with cards -------------- */
 .table-hue-all {
     align-items: center;
@@ -280,6 +306,11 @@
     display: grid;
     grid-template-columns: var(--grid-tab-hue-groups);
     grid-template-rows: auto;
+    background: white;
+    border-radius: var(--radius-swatch);
+
+    position: relative;
+    top: calc(-1 * var(--height-overlap-bg));
 }
 
 /* colour group container */
