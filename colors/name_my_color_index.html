@@ -52,9 +52,10 @@
 					<h1>Name My Color</h1>
 					<div class="help-tip">
 						<p>
-						<span class="tooltiptext">That moment, when you want to describe a color and all that comes to your mind is "a little dark" or "very light". 
+						<span class="tooltiptext">We are all familiar with those moment when we are to describe a color and all that comes to our mind is "a little dark" or "very light". 
 							The "Name My Color" feature eliminates such moments. 
-							<br>Provide the hex code of your color or use the color picker, and Artista will find the best match from the dictionary of 1,800 color names. 
+							<br><br>Use the color picker or provide a hex code of your color, and Artista will find the best match from the dictionary of 1,800 color names.
+							<br><br>Alternatively, upload your image to get the names of colors in your banner or a dress. Is it blue or green? Let Artista assist. 
 						</span>
 						</p>
 					</div>
@@ -64,32 +65,45 @@
 			<section class="huegr-search-title">
 
 				<div></div>
-
+				
 				<div>
-					<h3>Enter HEX:</h3>
-				</div>
-
-				<div>
-					<h3>Or, Pick a Color:</h3>
+					<h4>Color Picker:</h4>
 				</div>
 				
+				<div>
+					<h4>Color Code:</h4>
+				</div>				
+				
+				<div>
+					<h4>Upload File:</h4>
+				</div>
+
 				<div></div>
 			</section>
 
 			<section class="huegr-search">
 
 				<div></div>				
-				<div class="tab-search">
-					<div class="searchBox">            
-						<input class="searchInput" placeholder="#00BFFF" id="StringToSearch" autocomplete="off">
-						<button class="searchButton" onclick="findForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
-					</div>
-				</div>	  
 
 				<div class="colopick-cont">
 					<img src="images/icon_color_wheel.png" class="color-picker-cover" style="position: absolute; top:0; left:0;">
 					<input type="color" id="myColor" class="color-picker" value="#00BFFF" style="opacity: 0;">
 				</div>
+				
+				<div class="tab-search">
+					<div class="searchBox">            
+						<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
+						<button class="searchButton" onclick="findForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+					</div>
+				</div>
+
+				<div class="colopick-cont">					
+					<input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none">
+					<label for="file" style="cursor: pointer;">
+						<img src="images/icon_image.svg" class="color-picker-cover">
+					</label>
+				</div>
+				
 				<div></div>
 
 			</section>
@@ -100,6 +114,7 @@
 				<div class="table-hue-all">
 					
 					<div class="resgr-orcard card" id="card_my_color">
+						<img id="uploaded_image" onclick="showColCoords(event)"/>
 					</div>
 
 					<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
@@ -130,15 +145,61 @@
         </section>
 	  </div>
 
+	  <ul id="ColNameList" style="display: none;">   
+		<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+	  </ul>  
+
       <!--uk footer here-->
       <script src = "/js/header.js"></script>
       <div w3-include-html="/colors/assets/footer.html"></div>
 
 	</section>
-	
-	<ul id="ColNameList" style="display: none;">   
-		<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
-	</ul>
+
+
+	<script>
+		let loadFile = function(event) {
+			let image = document.getElementById('uploaded_image');
+			image.src = URL.createObjectURL(event.target.files[0]);
+			document.getElementById('uploaded_image').style.visibility = 'visible';
+		};
+	</script>
+
+	<script>
+		function showColCoords(event) {
+
+			// initialise
+			let image = document.getElementById('uploaded_image');
+
+			// image heigth and width
+			let w_card = image.width;
+			let h_card = image.height;
+			let w_orig = image.naturalWidth;
+			let h_orig = image.naturalHeight;
+			let w_show = Math.min((w_orig / h_orig) * h_card, w_card);
+			let h_show = Math.min((h_orig / w_orig) * w_card, h_card);
+			let h_offset = (h_card - h_show) / 2;
+			let w_offset = (w_card - w_show) / 2;
+
+			// transform mouse pos (img size adjustment)
+			let x_pos = event.offsetX;
+			let y_pos = event.offsetY;
+			x_pos = x_pos - w_offset;
+			y_pos = y_pos - h_offset;
+
+			// add image to canvas
+			let canvas = document.createElement('canvas');
+			canvas.width = w_show;
+			canvas.height = h_show;
+			let context = canvas.getContext('2d');
+			context.drawImage(image, 0, 0, width=w_show, height=h_show);
+
+			let data = context.getImageData(x_pos, y_pos, 1, 1).data;
+			let rgb = [data[0], data[1], data[2]];
+
+			input = 'RGB(' + data[0] + ',' + data[1] + ',' + data[2] + ')';
+			findAndReplaceCol(input);
+		}
+	</script>
 
     <!-- add search bar -->
     <script src = "functions/name_color.js"></script>
@@ -147,11 +208,9 @@
 		// on lick for hex code
 		function findForMyHex() {
 			
-			let input = document.getElementById('StringToSearch').value.replace(/^\s+|\s+$/g, '');
-			if (input.charAt(0) != '#') {
-				input = '#' + input;
-			}
+			let input = document.getElementById('StringToSearch').value;
 			findAndReplaceCol(input);
+			document.getElementById('uploaded_image').style.visibility = 'hidden';
 		}
 	</script>
 
@@ -161,7 +220,8 @@
 
 			// "enter" key
 			if (event.keyCode === 13) {
-				event.preventDefault();					
+				event.preventDefault();			
+				// calls function "findForMyHex"
 				document.getElementById("SearchBotton").click();
 			}
 		});	
@@ -173,6 +233,7 @@
 
 			let my_col = this.value;
 			findAndReplaceCol(my_col);
+			document.getElementById('uploaded_image').style.visibility = 'hidden';
 		}
 	</script>
 
@@ -180,30 +241,28 @@
 		// replace elements for display
 		function findAndReplaceCol(my_col) {
 
-			my_col = my_col.toUpperCase();
-
 			// Declare variables
         	let li = document.getElementById("ColNameList").getElementsByTagName('li');
 			artistaColor = findClosestColor(my_col, li);
 
 			if (artistaColor == null) {
 
-				alert('Please provide a valid hex color code');
+				alert('Please provide a valid hex or RGB (decimal, values ranging between 0 and 255) code.');
 
 			} else {
 
 				// get artista name
 				let new_name = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('<p>')[1].split(' <span ')[0];
 				let new_hex = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('color:')[1].split(';')[0];
-				let match_perc = (1 - Math.sqrt(artistaColor[1]) / Math.sqrt(3 * 255 * 255));
+				let match_perc = artistaColor[1];
 
 				// change name
-				document.getElementById("desc_my_color").innerHTML = "My Color: " + my_col;
+				document.getElementById("desc_my_color").innerHTML = "My Color: " + artistaColor[2];
 				document.getElementById("desc_artista_color").innerHTML = "Artista Color: " + new_hex;	
 				document.getElementById("name_artista_color").innerHTML = new_name;				
 
-				// change background color
-				document.getElementById("card_my_color").style.background = my_col;
+				// change background color				
+				document.getElementById("card_my_color").style.background = artistaColor[2];
 				document.getElementById("card_artista_color").style.background = new_hex;
 				
 				// change links

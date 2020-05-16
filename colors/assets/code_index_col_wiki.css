@@ -30,8 +30,8 @@
     --opac-swatch-hover: 1;
 
     /* card titles */
-    --text-swatch-opac-before: 1;
-    --text-swatch-opac-after: 1;
+    --text-swatch-opac-before: 0;
+    --text-swatch-opac-after: 0;
     --text-swatch-col: var(--white);
     --text-swatch-col-bg: var(--col-accent2-dark);
     --text-swatch-w: 100%;
@@ -90,6 +90,7 @@
 
         /* card titles */
         --text-swatch-opac-before: 0;
+        --text-swatch-opac-after: 1;
         --text-swatch-dist-t: 50%;
         --text-swatch-lspace: calc(2 * var(--marg-stand));
         --text-swatch-padding-b: 0px;

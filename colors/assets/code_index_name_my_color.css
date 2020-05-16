@@ -10,7 +10,7 @@
     /* all */
     --height-overlap-bg: 10%;
     --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
-    --grid-ratio-hue-tab: 10% 8% 8% var(--height-overlap-bg) calc(74% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
+    --grid-ratio-hue-tab: 10% 0% 10% var(--height-overlap-bg) calc(80% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
     --marg-stand: 1.5vh;
     --marg-bound: 1.5vh;
 
@@ -20,7 +20,7 @@
     --width-searchb-whole: 120px;
     --height-searchb: 25px;  
     --scale-colpick: 1.5;
-    --grid-search-tabs: 2% 48% 48% 2%;
+    --grid-search-tabs: 5% 25% 40% 25% 5%;
     --scale-searcb-hover: 1.05;
     
     /* color picker */
@@ -31,8 +31,8 @@
     --grid-tab-hue-groups: 50% 50%;
     --grid-tab-hue-gr-rows: 20% 50% 30%;
     --grid-tab-hue-gr-names: 'resgr-name resgr-name'
-                             'resgr-orcard resgr-arcard'
-                             'resgr-orhex resgr-arhex';
+                             'resgr-arcard resgr-orcard'
+                             'resgr-arhex resgr-orhex';
     --vis-resgr-desc: none;
     --line-h-match: 15px;
 
@@ -52,9 +52,9 @@
         /* table title */
 
         /* search box width */
-        --width-searchb-whole: 200px;
+        --width-searchb-whole: 250px;
         --height-searchb: 30px;
-        --grid-search-tabs: 25% 25% 25% 25%;
+        --grid-search-tabs: 25% 10% 30% 10% 25%;
 
         /* color picker */
         --height-colpicker: 45px;
@@ -62,8 +62,8 @@
         /* hue table */
         --grid-tab-hue-groups: 33.3% 33.3% 33.3%;
         --grid-tab-hue-gr-rows: 85% 15%;
-        --grid-tab-hue-gr-names: 'resgr-orcard resgr-arcard resgr-name'
-                                 'resgr-orhex resgr-arhex resgr-desc';
+        --grid-tab-hue-gr-names: 'resgr-name resgr-arcard resgr-orcard'
+                                 'resgr-desc resgr-arhex resgr-orhex ';
         --vis-resgr-desc: block;
         --line-h-match: 50px;
 
@@ -361,11 +361,11 @@ input[type="color"]::color-swatch {
        -o-box-shadow: var(--shadow-swatch);
           box-shadow: var(--shadow-swatch);
 
-  -webkit-transition: .8s;
-     -moz-transition: .8s;
-      -ms-transition: .8s;
-       -o-transition: .8s;
-          transition: .8s;
+  -webkit-transition: .6s;
+     -moz-transition: .6s;
+      -ms-transition: .6s;
+       -o-transition: .6s;
+          transition: .6s;
 }
 #card_my_color {
     background: #00BFFF;
@@ -377,4 +377,12 @@ input[type="color"]::color-swatch {
 
 #perc_match {
     line-height: var(--line-h-match);
+}
+
+#uploaded_image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-swatch);
+    visibility: hidden;
 }
