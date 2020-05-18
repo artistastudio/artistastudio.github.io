@@ -64,9 +64,9 @@
           <section class="huegr-search">
             <div class="tab-search">
               <div class="searchBox">            
-                <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun()" autocomplete="off">
+                <input class="searchInput" placeholder="Search color name" id="StringToSearch" onkeyup="mySearchFun1()" autocomplete="off">
                 <a href="#" id="LinkSearchBotton">
-                  <button class="searchButton" onclick="myNearSearchFun()" id="SearchBotton"><i class="fa fa-search"></i></button>
+                  <button class="searchButton" onclick="mySearchFun2()" id="SearchBotton"><i class="fa fa-search"></i></button>
                 </a>
 
                 <div class="tab-searchlist">
@@ -175,56 +175,7 @@
     </section>
 
     <!-- add search bar -->
-    <script src = "functions/search_functions.js"></script>
-    <script>
-      // find names containing search characters
-      function mySearchFun() {
-
-        // Declare variables
-        var input = document.getElementById('StringToSearch');
-        var filter = input.value.toUpperCase();
-        var li = document.getElementById("ColNameList").getElementsByTagName('li');
-
-        // display hidden list entries
-        document.getElementById("ColNameList").style.display = "block";
-
-        // max number of results to show
-        var nunhits_max = 10;
-        if ((window.screen.width < 500) || (window.screen.height < 500)) {
-          nunhits_max = 4;
-        }
-
-        FindMatchesInList(filter, li, nunhits_max);        
-
-      }
-    </script>
-
-    <script>
-      // check for enter key
-      document.getElementById('StringToSearch').addEventListener("keyup", function(event) {
-
-        if (event.keyCode === 13) {
-
-          event.preventDefault();
-          document.getElementById("SearchBotton").click();
-        }
-      }); 
-    </script>
-
-    <script>
-      // find most similar name
-      function myNearSearchFun(){        
-        
-        var input = document.getElementById('StringToSearch').value.toUpperCase();
-        var li = document.getElementById("ColNameList").getElementsByTagName('li');
-
-        // find entry
-        var most_sim_entry = FindMostSimUsingTrigram(input, li);
-
-        // set href
-        document.getElementById("LinkSearchBotton").href = li[most_sim_entry[0]].getElementsByTagName("a")[0].href; 
-      }     
-    </script>
+    <script src = "functions/search_functions.min.js"></script>
     
   </body>
 </html>

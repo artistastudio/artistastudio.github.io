@@ -93,12 +93,12 @@
 				<div class="tab-search">
 					<div class="searchBox">            
 						<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
-						<button class="searchButton" onclick="findForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+						<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
 					</div>
 				</div>
 
 				<div class="colopick-cont">					
-					<input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none">
+					<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
 					<label for="file" style="cursor: pointer;">
 						<img src="images/icon_image.svg" class="color-picker-cover">
 					</label>
@@ -114,7 +114,8 @@
 				<div class="table-hue-all">
 					
 					<div class="resgr-orcard card" id="card_my_color">
-						<img id="uploaded_image" onclick="showColCoords(event)"/>
+						<img id="uploaded_image" onclick="fctShowCoor(event)"/>
+						<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
 					</div>
 
 					<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
@@ -155,125 +156,8 @@
 
 	</section>
 
-
-	<script>
-		let loadFile = function(event) {
-			let image = document.getElementById('uploaded_image');
-			image.src = URL.createObjectURL(event.target.files[0]);
-			document.getElementById('uploaded_image').style.visibility = 'visible';
-		};
-	</script>
-
-	<script>
-		function showColCoords(event) {
-
-			// initialise
-			let image = document.getElementById('uploaded_image');
-
-			// image heigth and width
-			let w_card = image.width;
-			let h_card = image.height;
-			let w_orig = image.naturalWidth;
-			let h_orig = image.naturalHeight;
-			let w_show = Math.min((w_orig / h_orig) * h_card, w_card);
-			let h_show = Math.min((h_orig / w_orig) * w_card, h_card);
-			let h_offset = (h_card - h_show) / 2;
-			let w_offset = (w_card - w_show) / 2;
-
-			// transform mouse pos (img size adjustment)
-			let x_pos = event.offsetX;
-			let y_pos = event.offsetY;
-			x_pos = x_pos - w_offset;
-			y_pos = y_pos - h_offset;
-
-			// add image to canvas
-			let canvas = document.createElement('canvas');
-			canvas.width = w_show;
-			canvas.height = h_show;
-			let context = canvas.getContext('2d');
-			context.drawImage(image, 0, 0, width=w_show, height=h_show);
-
-			let data = context.getImageData(x_pos, y_pos, 1, 1).data;
-			let rgb = [data[0], data[1], data[2]];
-
-			input = 'RGB(' + data[0] + ',' + data[1] + ',' + data[2] + ')';
-			findAndReplaceCol(input);
-		}
-	</script>
-
     <!-- add search bar -->
-    <script src = "functions/name_color.js"></script>
-
-	<script>
-		// on lick for hex code
-		function findForMyHex() {
-			
-			let input = document.getElementById('StringToSearch').value;
-			findAndReplaceCol(input);
-			document.getElementById('uploaded_image').style.visibility = 'hidden';
-		}
-	</script>
-
-	<script>
-		// listen to enter key
-		document.getElementById('StringToSearch').addEventListener("keyup", function(event) {
-
-			// "enter" key
-			if (event.keyCode === 13) {
-				event.preventDefault();			
-				// calls function "findForMyHex"
-				document.getElementById("SearchBotton").click();
-			}
-		});	
-	</script>
-
-	<script>
-		// on selection for color picker
-		document.getElementById("myColor").onchange = function() {
-
-			let my_col = this.value;
-			findAndReplaceCol(my_col);
-			document.getElementById('uploaded_image').style.visibility = 'hidden';
-		}
-	</script>
-
-	<script>
-		// replace elements for display
-		function findAndReplaceCol(my_col) {
-
-			// Declare variables
-        	let li = document.getElementById("ColNameList").getElementsByTagName('li');
-			artistaColor = findClosestColor(my_col, li);
-
-			if (artistaColor == null) {
-
-				alert('Please provide a valid hex or RGB (decimal, values ranging between 0 and 255) code.');
-
-			} else {
-
-				// get artista name
-				let new_name = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('<p>')[1].split(' <span ')[0];
-				let new_hex = li[artistaColor[0]].getElementsByTagName('a')[0].innerHTML.split('color:')[1].split(';')[0];
-				let match_perc = artistaColor[1];
-
-				// change name
-				document.getElementById("desc_my_color").innerHTML = "My Color: " + artistaColor[2];
-				document.getElementById("desc_artista_color").innerHTML = "Artista Color: " + new_hex;	
-				document.getElementById("name_artista_color").innerHTML = new_name;				
-
-				// change background color				
-				document.getElementById("card_my_color").style.background = artistaColor[2];
-				document.getElementById("card_artista_color").style.background = new_hex;
-				
-				// change links
-				document.getElementById("link_name_artista_color").href = li[artistaColor[0]].getElementsByTagName('a')[0].href;
-				document.getElementById("card_artista_color").href = li[artistaColor[0]].getElementsByTagName('a')[0].href;
-				
-				// add match
-				document.getElementById("perc_match").innerHTML = (Math.round(match_perc * 1000) / 10).toString() + '% match'
-			}
-		}
-	</script>
+    <script src = "functions/name_color.min.js"></script>
 
   </body>
 </html>

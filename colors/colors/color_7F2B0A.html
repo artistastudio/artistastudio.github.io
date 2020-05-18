@@ -233,38 +233,21 @@
 		<script>
 			var ctx;
 			function hist_RGB() {
-			ctx = document.querySelector("#myRGB");
-			var data = [50, 17, 4];
-			var barcolor = ['#7F2B0A', '#7F2B0A', '#7F2B0A'];
-			drawHistogram(ctx, data, barcolor, 'rgb');
+				ctx = document.querySelector("#myRGB");
+				var data = [50, 17, 4];
+				var barcolor = ['#7F2B0A', '#7F2B0A', '#7F2B0A'];
+				fctDrawHist(ctx, data, barcolor, 'rgb');
 			}
 
 			function hist_CMYK() {
-			ctx = document.querySelector("#myCMYK");
-			var data = [0, 66, 92, 50];
-			var barcolor = ['#7F2B0A', '#7F2B0A', '#7F2B0A', '#7F2B0A'];
-			drawHistogram(ctx, data, barcolor, 'cmyk');
+				ctx = document.querySelector("#myCMYK");
+				var data = [0, 66, 92, 50];
+				var barcolor = ['#7F2B0A', '#7F2B0A', '#7F2B0A', '#7F2B0A'];
+				fctDrawHist(ctx, data, barcolor, 'cmyk');
 			}
 		</script>
 		
-		<script src = "/colors/functions/draw_histogram.js"></script>
-
-		<script>
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-					coll[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.maxHeight){
-					content.style.maxHeight = null;
-					} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-					}
-					});
-					}
-		</script>
+		<script src = "/colors/functions/draw_histogram.min.js"></script>
 		
 	</body>
 </html>

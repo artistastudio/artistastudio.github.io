@@ -380,9 +380,23 @@ input[type="color"]::color-swatch {
 }
 
 #uploaded_image {
+    z-index: 3;
     height: 100%;
     width: 100%;
     object-fit: contain;
     border-radius: var(--radius-swatch);
     visibility: hidden;
+}
+
+#mouse_pos {
+    z-index: 4;
+    position: absolute; 
+    left: 0px; 
+    top: 0px;
+    visibility: hidden;
+
+    width: 14px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
 }
