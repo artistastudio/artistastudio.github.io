@@ -2,7 +2,6 @@
 
 <html>
   <head>
-    <!--uk regular stuff-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -18,145 +17,136 @@
     <link href="assets/par_wiki_margins_and_sizes.css" rel="stylesheet" type="text/css">
 	<link href="assets/code_wiki_header_footer.css" rel="stylesheet" type="text/css">
 	<link href="assets/code_questionmark.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_index_col_wiki.css" rel="stylesheet" type="text/css">
     <link href="assets/code_index_name_my_color.css" rel="stylesheet" type="text/css">
     
-
-    <!--uk for proper rendering on mobile and zoom off-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!--uk import local jquery library-->
     <script src="/js/vendor/jquery-3.4.1.min.js"></script>
 
-    <!--uk import google font Raleway-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   </head>
 
-  <body class="websitebody ukcnt">
-    <section class="websitewrapper ukcnt">
+  <body class="websitebody">
+   
+	<div w3-include-html="/colors/assets/header.html"></div>
 
-      <!--uk Header row -->      
-      <div w3-include-html="/colors/assets/header.html"></div>
+	<div class="sidebar-content">
 
-      <div class="sidebar-content">
+	<section>
+		<div w3-include-html="/colors/assets/sidebar.html"></div>
+	</section>        
 
-        <section>
-        	<div w3-include-html="/colors/assets/sidebar.html"></div>
-        </section>        
+	<section class="col-overview-page">
 
-        <section class="col-overview-page">
-
-			<section class="huegr-title">
-				<div class="title-desc">
-					<h1>Name My Color</h1>
-					<div class="help-tip">
-						<p>
-						<span class="tooltiptext">We are all familiar with those moment when we are to describe a color and all that comes to our mind is "a little dark" or "very light". 
-							The "Name My Color" feature eliminates such moments. 
-							<br><br>Use the color picker or provide a hex code of your color, and Artista will find the best match from the dictionary of 1,800 color names.
-							<br><br>Alternatively, upload your image to get the names of colors in your banner or a dress. Is it blue or green? Let Artista assist. 
-						</span>
-						</p>
-					</div>
+		<section class="huegr-title">
+			<div class="title-desc">
+				<h1>Name My Color</h1>
+				<div class="help-tip">
+					<p>
+					<span class="tooltiptext">We are all familiar with those moment when we are to describe a color and all that comes to our mind is "a little dark" or "very light". 
+						The "Name My Color" feature eliminates such moments. 
+						<br><br>Use the color picker or provide a hex code of your color, and Artista will find the best match from the dictionary of 1,800 color names.
+						<br><br>Alternatively, upload your image to get the names of colors in your banner or a dress. Is it blue or green? Let Artista assist. 
+					</span>
+					</p>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section class="huegr-search-title">
+		<section class="huegr-search-title">
 
-				<div></div>
+			<div></div>
+			
+			<div>
+				<h4>Color Picker:</h4>
+			</div>
+			
+			<div>
+				<h4>Color Code:</h4>
+			</div>				
+			
+			<div>
+				<h4>Upload File:</h4>
+			</div>
+
+			<div></div>
+		</section>
+
+		<section class="huegr-search">
+
+			<div></div>				
+
+			<div class="colopick-cont">
+				<img src="images/icon_color_wheel.png" class="color-picker-cover" style="position: absolute; top:0; left:0;">
+				<input type="color" id="myColor" class="color-picker" value="#00BFFF" style="opacity: 0;">
+			</div>
+			
+			<div class="tab-search">
+				<div class="searchBox">            
+					<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
+					<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+				</div>
+			</div>
+
+			<div class="colopick-cont">					
+				<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
+				<label for="file" style="cursor: pointer;">
+					<img src="images/icon_image.svg" class="color-picker-cover">
+				</label>
+			</div>
+			
+			<div></div>
+
+		</section>
+
+		<section class="huegr-empty"></section>
+
+		<section class="huegr-overview">
+			<div class="table-hue-all">
 				
-				<div>
-					<h4>Color Picker:</h4>
-				</div>
-				
-				<div>
-					<h4>Color Code:</h4>
-				</div>				
-				
-				<div>
-					<h4>Upload File:</h4>
+				<div class="resgr-orcard card" id="card_my_color">
+					<img id="uploaded_image" onclick="fctShowCoor(event)"/>
+					<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
 				</div>
 
-				<div></div>
-			</section>
+				<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
+				</a>
 
-			<section class="huegr-search">
-
-				<div></div>				
-
-				<div class="colopick-cont">
-					<img src="images/icon_color_wheel.png" class="color-picker-cover" style="position: absolute; top:0; left:0;">
-					<input type="color" id="myColor" class="color-picker" value="#00BFFF" style="opacity: 0;">
-				</div>
-				
-				<div class="tab-search">
-					<div class="searchBox">            
-						<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
-						<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
-					</div>
-				</div>
-
-				<div class="colopick-cont">					
-					<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
-					<label for="file" style="cursor: pointer;">
-						<img src="images/icon_image.svg" class="color-picker-cover">
-					</label>
-				</div>
-				
-				<div></div>
-
-			</section>
-
-			<section class="huegr-empty"></section>
-
-			<section class="huegr-overview">
-				<div class="table-hue-all">
-					
-					<div class="resgr-orcard card" id="card_my_color">
-						<img id="uploaded_image" onclick="fctShowCoor(event)"/>
-						<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
-					</div>
-
-					<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
+				<div class="resgr-name">
+					<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
+						<h2 id="name_artista_color">Artista Sky Blue</h2>
+						<h4 id="perc_match">100% match</h4>
 					</a>
+				</div>
 
-					<div class="resgr-name">
-						<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
-							<h2 id="name_artista_color">Artista Sky Blue</h2>
-							<h4 id="perc_match">100% match</h4>
-						</a>
-					</div>
+				<div class="resgr-orhex">
+					<h4 id="desc_my_color">My Color: #00BFFF</h4>
+				</div>
 
-					<div class="resgr-orhex">
-						<h4 id="desc_my_color">My Color: #00BFFF</h4>
-					</div>
+				<div class="resgr-arhex">
+					<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
+				</div>
 
-					<div class="resgr-arhex">
-						<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
-					</div>
+				<div class="resgr-desc">
+					<h4>Color Name</h4>
+				</div>
 
-					<div class="resgr-desc">
-						<h4>Color Name</h4>
-					</div>
-
-				</div> 
-			</section>
-
-        </section>
-	  </div>
-
-	  <ul id="ColNameList" style="display: none;">   
-		<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
-	  </ul>  
-
-      <!--uk footer here-->
-      <script src = "/js/header.js"></script>
-      <div w3-include-html="/colors/assets/footer.html"></div>
+			</div> 
+		</section>
 
 	</section>
+	</div>
 
-    <!-- add search bar -->
+	<ul id="ColNameList" style="display: none;">   
+	<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+	</ul>  
+
+	<script src = "/js/header.js"></script>
+	<div w3-include-html="/colors/assets/footer.html"></div>
+
     <script src = "functions/name_color.min.js"></script>
 
   </body>

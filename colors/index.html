@@ -2,7 +2,6 @@
 
 <html>
   <head>
-    <!--uk regular stuff-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -20,31 +19,28 @@
     <link href="assets/code_index_col_wiki.css" rel="stylesheet" type="text/css">
     <link href="assets/code_questionmark.css" rel="stylesheet" type="text/css">
 
-    <!--uk for proper rendering on mobile and zoom off-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!--uk import local jquery library-->
     <script src="/js/vendor/jquery-3.4.1.min.js"></script>
 
-    <!--uk import google font Raleway-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   </head>
 
-  <body class="websitebody ukcnt">
-    <section class="websitewrapper ukcnt">
+  <body class="websitebody">
+ 
+    <div w3-include-html="/colors/assets/header.html"></div>
 
-      <!--uk Header row -->      
-      <div w3-include-html="/colors/assets/header.html"></div>
+    <div class="sidebar-content">
 
-      <div class="sidebar-content">
+      <section>
+      <div w3-include-html="/colors/assets/sidebar.html"></div>
+      </section>        
 
-        <section>
-        <div w3-include-html="/colors/assets/sidebar.html"></div>
-        </section>        
+      <section id="all-content">
 
-        <section class="col-overview-page">
+        <div class="col-overview-page">
 
           <section class="huegr-title">
             <div class="tab-title">
@@ -70,7 +66,7 @@
                 </a>
 
                 <div class="tab-searchlist">
-                  <ul id="ColNameList">   
+                  <ul id="ColNameList">
                       <div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
                   </ul>
                 </div>
@@ -91,8 +87,7 @@
                     </div>
                   </div>
                 </a>
-                
-                <!-- END Col one -->                
+                                
                 <a href="color-dict/col_gr_wiki_orange.html">
                   <div class="card" id="card_huegr2">
                     <img src="images/orange_overview_icon.svg" alt="Orange and Brown Colours" class="card_img">
@@ -101,7 +96,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col two -->
                 
                 <a href="color-dict/col_gr_wiki_yellow.html">
                   <div class="card" id="card_huegr3">
@@ -111,7 +105,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col three -->
                 
                 <a href="color-dict/col_gr_wiki_green.html">
                   <div class="card" id="card_huegr4">
@@ -121,7 +114,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col four -->
                 
                 <a href="color-dict/col_gr_wiki_aqua.html">
                   <div class="card" id="card_huegr5">
@@ -131,7 +123,6 @@
                     </div>
                   </div>
                 </a>                
-                <!-- END Col five -->
                 
                 <a href="color-dict/col_gr_wiki_blue.html">
                   <div class="card" id="card_huegr6">
@@ -141,7 +132,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col six -->
                 
                 <a href="color-dict/col_gr_wiki_purple.html">
                   <div class="card" id="card_huegr7">
@@ -151,7 +141,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col seven -->
                 
                 <a href="color-dict/col_gr_wiki_magenta.html">
                   <div class="card" id="card_huegr8">
@@ -161,21 +150,62 @@
                     </div>
                   </div>
                 </a>
-                <!-- END Col eight -->
-            </div> 
+            </div>
           </section>
 
-        </section>
-      </div>
+        </div>
 
-      <!--uk footer here-->
-      <script src = "/js/header.js"></script>
-      <div w3-include-html="/colors/assets/footer.html"></div>
+        <div class="desc-cont">
+            <div>
+              <h2>Welcome to Artista's world of colors!</h2>
+              <p style="font-weight: 1000">A Collection of Colors with Identity</p>
+              <p>                
+                Artista understands it can be frustrating to name and describe colors. Often, the same color description can bear a completely different meaning to different people and reference points are necessary to eliminate ambiguities. 
+                <br>With the goal to create a high-quality color reference point, Artista has studied and collected data from multiple sources to narrow it down to a concise dictionary of 1,800 distinctly unique colors associated with a maximum overall color space coverage.
+              </p>
+              <br>
+              <p style="font-weight: 1000">A Drop in the Ocean?</p>
+              <p>                
+                Although 1,800 may appear like a big number, it comprises only 1% of all colors that can be defined in the 24-bit RGB (red, green, blue) web space - namely nearly 16.78 million colors.
+                Human eyes are able to distinguish up to 10 million colors, but naming and remembering all is a task not for an average mind.
+                For instance, most people employ just 11 color words: red, pink, orange, brown, yellow, green, blue, purple, grey, white and black.
+                Artists and designers frequently utilise between 50 and 100 color names, including terms such as taupe or turquoise. 
+                Considering the immense difference between the number of colors we perceive and the number of words we use to describe them, the dictionary size of 1,800 appears like a fair compromise between the practicability and completeness. 
+              </p>
+              <br>
+              <p style="font-weight: 1000">Artista Color Dictionary</p>
+              <p>                
+                The presented color space is split into 8 color groups: red, orange, yellow, green, aqua (or cyan), blue, purple and magenta. 
+                In each group, there are 4 categories related to color brightness and saturation. 
+                Vivid colors are of a high saturation and a high brightness, and dark vivid colors are of a low brightness. 
+                Pastel colors are of a low saturation and a high brightness, and dark pale colors are of a low saturation and a low brightness.
+                <br>In the Artista Color Dictionary, each color is provided with its respective shades (adding black), tints (adding white) and tones (varying saturation).
+                These color variations are commonly used in design to create depth and extend color palettes.
+                Artista also gives recommendations on color combinations using an in-house algorithm, which is based on an extensive literature research and designers' color recommendations data.
+                Similar colors are listed to encourage a color exploration.
+              </p>
+              <br>
+              <p style="font-weight: 1000">Colors Matter</p>
+              <p>                
+                Research has repeatedly shown that colors matter a great deal as they evoke associations and can trigger strong emotions.
+                Most colors are actually named after objects, such as tomato, lime, orange, coral, gold or zircon.
+                An interesting piece of research uncovered that our vocabulary is much richer and communication is much easier when it comes to describing warm colors (red, orange, yellow) as compared to cool colors (green, blue).
+                A plausible explanation is that cool colors usually constitute the background (blue sky, green grass, blue water) and warm colors naturally appear more often as objects in the foreground.
+                Thus, an object in a warm color placed on a cool background will naturally stand out to us.
+                This is one of many insights that can be employed in digital design to create appealing contents using color perception-enhanced elements.
+              </p>
+            </div>
+        </div>
 
-    </section>
+      </section>
 
-    <!-- add search bar -->
+    </div>
+
+    <div w3-include-html="/colors/assets/footer.html"></div>
+
+    <script src = "/js/header.js"></script>
     <script src = "functions/search_functions.min.js"></script>
     
   </body>
 </html>
+ 

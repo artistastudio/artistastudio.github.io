@@ -8,16 +8,16 @@
 :root {
 
     /* all */
-    --height-overlap-bg: 10%;
+    --height-overlap-bg: 8%;
     --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
     --grid-ratio-hue-tab: 10% 5% var(--height-overlap-bg) calc(85% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
-    --marg-stand: 1vh;
-    --marg-bound: 1vh;    
+    --marg-stand: 1.5vh;
+    --marg-bound: 1.5vh;
 
     /* table title */
 
     /* search box width */
-    --width-searchb-whole: 180px;
+    --width-searchb-whole: 200px;
     --height-searchb: 25px;  
 
     /* hue table */
@@ -65,6 +65,9 @@
     --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
     --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 8 * var(--marg-stand) - 4 * var(--text-swatch-padding-b) - 4 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
     --padd-swatch-huegr-w: calc((var(--width-screen) - var(--width-sidebar-perm) - 4 * var(--marg-stand) - 2 * var(--marg-bound) - 2 * var(--width-swatch-huegr-actual)) / 2);    
+
+    /* description - text */
+    --desc-num-col: 1;
 }
 
 /* desktop */
@@ -119,6 +122,9 @@
         --width-swatch-huegr-actual: min(var(--width-swatch-huegr-pot4h), var(--width-swatch-huegr-pot4w));
         --padd-swatch-huegr-h: calc((var(--height-ratio-cards) * var(--height-page) - 4 * var(--marg-stand) - 2 * var(--width-swatch-huegr-actual) / var(--ratio-w2h-swatch-huegr)) / 2);
         --padd-swatch-huegr-w: calc((var(--width-screen) - var(--width-sidebar-perm) - 8 * var(--marg-stand) - 2 * var(--marg-bound) - 4 * var(--width-swatch-huegr-actual)) / 2);
+
+        /* description - text */
+        --desc-num-col: 3;
     }
 }
 
@@ -130,7 +136,7 @@
     grid-template-rows: var(--grid-ratio-hue-tab);
     grid-template-areas: 'huegr-title' 'huegr-search' 'empty' 'huegr-overview';
     align-items: center;
-    background: whitesmoke;
+    background: var(--col-bg-grey-ll);
 }
 .huegr-title {
     height: 100%;
@@ -226,15 +232,9 @@
     outline: none;
     float: left;
     padding: 0;
-    line-height: var(--height-searchb);
+    height: var(--height-searchb);
     width: calc(var(--width-searchb-whole) - 1.1 * var(--height-searchb));
     padding-left: calc(0.5 * var(--height-searchb));
-
--webkit-transform: translate(0%,50%);
-   -moz-transform: translate(0%,50%);
-    -ms-transform: translate(0%,50%);
-     -o-transform: translate(0%,50%);
-        transform: translate(0%,50%);
 
     font: var(--font-weight-text) var(--font-size-p) var(--font-fam);
     letter-spacing: var(--font-chspace-p);
@@ -247,20 +247,19 @@
          transition: .5s;
 }
 
-::-moz-input-placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-    ;
-}
-::-ms-input-placeholder {
+.searchBox ::-moz-input-placeholder {
     font: var(--font-size-p) var(--font-fam);
     color: darkgray;
 }
-::-o-input-placeholder {
+.searchBox ::-ms-input-placeholder {
     font: var(--font-size-p) var(--font-fam);
     color: darkgray;
 }
-::-webkit-input-placeholder {
+.searchBox ::-o-input-placeholder {
+    font: var(--font-size-p) var(--font-fam);
+    color: darkgray;
+}
+.searchBox ::-webkit-input-placeholder {
     font: var(--font-size-p) var(--font-fam);
     color: darkgray;
 }
@@ -268,7 +267,6 @@
     font: var(--font-size-p) var(--font-fam);
     color: darkgray;
 }
-
 
 /* search results */
 .tab-searchlist {
@@ -412,4 +410,36 @@
 #huegr8 h5 {
     color: var(--col-text-card8);
     background: var(--col-bg-card8);
+}
+
+
+/* -------------- text - description -------------- */
+.desc-cont {
+    align-items: center;
+    display: inline-block;
+    background: var(--col-bg-grey-ll);
+}
+.desc-cont > *{
+
+    column-count: var(--desc-num-col);
+    column-gap: 5vw;
+    text-align: justify;
+    
+    margin-left: var(--marg-bound);
+    margin-right: var(--marg-bound);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    padding: 2vw;
+
+    background: white;
+    border-radius: var(--radius-swatch);
+
+    position: relative;
+    top: calc(-1 * var(--height-overlap-bg));   
+}
+
+.desc-cont h2 {
+    column-span: all;
+    margin-bottom: 1vw;
 }

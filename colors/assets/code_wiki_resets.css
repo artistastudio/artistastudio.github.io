@@ -74,18 +74,7 @@ a:active {
 }
 
 
-/* ==========================================================================
-   Start of custom CSS
-   ========================================================================== */
-/* prefixes meaning:
-moz: Firefox
-ms: IE / Edge
-o: Opera
-webkit: Chrome, Safari */
-
-/* ========================================
-   body
-   ======================================== */
+/* -------- body -------- */
 *,
 *:before,
 *:after {
@@ -102,27 +91,4 @@ body {
     padding: var(--padd-body);
     font: var(--weight-p) var(--text-p) var(--font-fam);
     color: var(--col-text);
-}
-
-/*all containers*/
-.ukcnt {
-    /*border: 2px solid black;*/
-}
-
-
-/*******************/
-/* Website wrapper */
-/*******************/
-
-#websitebody1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#websitewrapper1 {
-  width: var(--width-screen);
-  height: 100vh;
-  /*max-width: var(--width-webwrapper-max);*/
 }

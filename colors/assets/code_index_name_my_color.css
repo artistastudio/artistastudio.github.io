@@ -8,17 +8,14 @@
 :root {
 
     /* all */
-    --height-overlap-bg: 10%;
     --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
-    --grid-ratio-hue-tab: 10% 0% 10% var(--height-overlap-bg) calc(80% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
-    --marg-stand: 1.5vh;
-    --marg-bound: 1.5vh;
+    --grid-ratio-hue-tab: 10% 0% 10% var(--height-overlap-bg) calc(80% - var(--height-overlap-bg));
 
     /* table title */
 
     /* search box width */
-    --width-searchb-whole: 120px;
-    --height-searchb: 25px;  
+    --width-searchb-whole: 150px;
+    --height-searchb: 25px;
     --scale-colpick: 1.5;
     --grid-search-tabs: 5% 25% 40% 25% 5%;
     --scale-searcb-hover: 1.05;
@@ -34,7 +31,7 @@
                              'resgr-arcard resgr-orcard'
                              'resgr-arhex resgr-orhex';
     --vis-resgr-desc: none;
-    --line-h-match: 15px;
+    --line-h-match: 20px;
 
     /* each swatch */
     --radius-swatch: 5px;
@@ -45,9 +42,7 @@
 @media all and (orientation: landscape) {
     :root {
         /* all */
-        --grid-ratio-hue-tab: 12% 8% 8% var(--height-overlap-bg) calc(72% - var(--height-overlap-bg)); /* change --height-ratio-cards too */
-        --marg-stand: 2vh;
-        --marg-bound: 6vh;
+        --grid-ratio-hue-tab: 12% 8% 8% var(--height-overlap-bg) calc(72% - var(--height-overlap-bg));
 
         /* table title */
 
@@ -61,7 +56,7 @@
 
         /* hue table */
         --grid-tab-hue-groups: 33.3% 33.3% 33.3%;
-        --grid-tab-hue-gr-rows: 85% 15%;
+        --grid-tab-hue-gr-rows: 87% 13%;
         --grid-tab-hue-gr-names: 'resgr-name resgr-arcard resgr-orcard'
                                  'resgr-desc resgr-arhex resgr-orhex ';
         --vis-resgr-desc: block;
@@ -109,15 +104,8 @@
 
 
 /* -------------- table title -------------- */
-.huegr-title {
-    display: flex;
-    text-align: center;  
-}
 .huegr-title > * {
     margin: auto;
-}
-.title-desc h1 {
-    display: inline-block;
 }
 
 
@@ -145,98 +133,8 @@
     text-align: center;
 }
 
-.tab-search {
-    height: var(--height-searchb);
-}
 
-.searchBox {
-    width: var(--width-searchb-whole);    
-    border-radius: var(--height-searchb);
-    border-bottom: 1px solid var(--col-text-grey-d);
-    background: var(--col-bg-grey-ll);
-}
-
-.searchBox:hover .searchButton {
-    z-index: 2;
-    background: var(--col-accent2);
-    color : white;
-  
-  -webkit-transform: scale(var(--scale-searcb-hover));
-     -moz-transform: scale(var(--scale-searcb-hover));
-      -ms-transform: scale(var(--scale-searcb-hover));
-       -o-transform: scale(var(--scale-searcb-hover));
-          transform: scale(var(--scale-searcb-hover));
-}
-
-.searchButton {
-    color: white;
-    background: var(--col-text-grey);
-    float: right;
-    width: var(--height-searchb);
-    height: var(--height-searchb);
-    border-radius: 50%; 
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
--webkit-transition: .5s;
-   -moz-transition: .5s;
-    -ms-transition: .5s;
-     -o-transition: .5s;
-        transition: .5s;
-}
-
-.searchInput {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    line-height: var(--height-searchb);
-    width: calc(var(--width-searchb-whole) - 1.1 * var(--height-searchb));
-    padding-left: calc(0.5 * var(--height-searchb));
-
--webkit-transform: translate(0%,50%);
-   -moz-transform: translate(0%,50%);
-    -ms-transform: translate(0%,50%);
-     -o-transform: translate(0%,50%);
-        transform: translate(0%,50%);
-
-    font: var(--font-weight-text) var(--font-size-p) var(--font-fam);
-    letter-spacing: var(--font-chspace-p);
-    color: var(--col-text);
-
- -webkit-transition: .5s;
-    -moz-transition: .5s;
-     -ms-transition: .5s;
-      -o-transition: .5s;
-         transition: .5s;
-}
-
-::-moz-input-placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-    ;
-}
-::-ms-input-placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-}
-::-o-input-placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-}
-::-webkit-input-placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-}
-.searchBox ::placeholder {
-    font: var(--font-size-p) var(--font-fam);
-    color: darkgray;
-}
-
-
+/* color-picker */ 
 .colopick-cont{
     position: relative;
 }
@@ -261,41 +159,6 @@ input[type="color"] {
     height: var(--height-colpicker);
     cursor: pointer;
 }
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 50%; 
-}
-input[type="color"]::-moz-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-moz-color-swatch {
-    border: none;
-    border-radius: 50%; 
-}
-input[type="color"]::-ms-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-ms-color-swatch {
-    border: none;
-    border-radius: 50%; 
-}
-input[type="color"]::-o-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-o-color-swatch {
-    border: none;
-    border-radius: 50%; 
-}
-input[type="color"]::color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::color-swatch {
-    border: none;
-    border-radius: 50%; 
-}
 
 
 /* -------------- empty space -------------- */
@@ -305,6 +168,7 @@ input[type="color"]::color-swatch {
 .table-hue-all {
     height: 100%;
     align-items: center;
+    margin: auto;
     margin-left: var(--marg-bound);
     margin-right: var(--marg-bound);
 
@@ -312,12 +176,6 @@ input[type="color"]::color-swatch {
     grid-template-columns: var(--grid-tab-hue-groups);
     grid-template-rows: var(--grid-tab-hue-gr-rows);
     grid-template-areas: var(--grid-tab-hue-gr-names);
-
-    background: white;
-    border-radius: var(--radius-swatch);
-
-    position: relative;
-    top: calc(-1 * var(--height-overlap-bg));
 }
 .table-hue-all > * {
     display: flex;
@@ -349,23 +207,8 @@ input[type="color"]::color-swatch {
 .card {
     display: flex;
     height: calc(100% - 2 * var(--marg-stand));
-    
+    width: auto;  
     margin: var(--marg-stand);
-
-    position: relative;
-    border-radius: var(--radius-swatch);
-
-  -webkit-box-shadow: var(--shadow-swatch);
-     -moz-box-shadow: var(--shadow-swatch);
-      -ms-box-shadow: var(--shadow-swatch);
-       -o-box-shadow: var(--shadow-swatch);
-          box-shadow: var(--shadow-swatch);
-
-  -webkit-transition: .6s;
-     -moz-transition: .6s;
-      -ms-transition: .6s;
-       -o-transition: .6s;
-          transition: .6s;
 }
 #card_my_color {
     background: #00BFFF;

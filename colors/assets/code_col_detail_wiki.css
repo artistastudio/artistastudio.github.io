@@ -51,7 +51,8 @@
 
     /* histogram */
     --marg-hist-lr: 0vw;
-    --scale-hist-hover: 1.6;
+    --scale-hist-hover: 1.3;
+    --width-histo: 100%;
 
     /* collapsible */
     --lnspace-coll-title: 30px;
@@ -91,6 +92,7 @@
         /* histogram */
         --marg-hist-lr: 8vw;
         --scale-hist-hover: 1.3;
+        --width-histo: 20vw;
 
         /* collapsible */
         --lnspace-coll-title: 50px;
@@ -282,7 +284,8 @@
 .composi {
   position: relative;
   height: auto;
-  width: calc(1.8 * var(--height-combo));
+  width: var(--width-histo);
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 

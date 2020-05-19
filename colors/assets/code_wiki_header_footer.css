@@ -225,22 +225,27 @@
 ::-webkit-input-placeholder {
   font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
   color: var(--col-footer-text);
+  opacity: 0.5;
 }
 ::-moz-input-placeholder {
   font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
   color: var(--col-footer-text);
+  opacity: 0.5;
 }
 ::-ms-input-placeholder {
   font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
   color: var(--col-footer-text);
+  opacity: 0.5;
 }
 ::-o-input-placeholder {
   font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
   color: var(--col-footer-text);
+  opacity: 0.5;
 }
 ::placeholder {
   font: var(--font-weight-text) var(--font-size-p-small) var(--font-fam);
   color: var(--col-footer-text);
+  opacity: 0.5;
 }
 
 
