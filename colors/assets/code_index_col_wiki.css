@@ -284,6 +284,7 @@
     text-decoration: none; /* Remove default text underline */
     color: var(--col-text); /* Add a black text color */
     display: block;
+    list-style-type: none;
   }
 
 #ColNameList li a:hover:not(.header) {
@@ -433,13 +434,19 @@
     padding: 2vw;
 
     background: white;
-    border-radius: var(--radius-swatch);
-
-    position: relative;
-    top: calc(-1 * var(--height-overlap-bg));   
+    border-radius: var(--radius-swatch); 
 }
 
 .desc-cont h2 {
     column-span: all;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
+}
+
+.desc-text-title {
+    font-weight: 1000;
+}
+
+.desc-list {
+    padding-left: 2vw;
+    list-style-type: disc;
 }

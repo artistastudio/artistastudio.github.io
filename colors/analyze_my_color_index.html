@@ -1,0 +1,223 @@
+<!DOCTYPE html lang="en">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Artista Color Dictionary</title>
+    <meta name="description" content="Artista comprehensive color dictionary containing 1,800 color names. Artista color guide with color meanings and application examples.">
+    <meta name="keywords" content="color,dictionary,overview,list,name,red,orange,yellow,green,aqua,blue,purple,magenta,pink,brown,olive,cyan,violet,pink">
+
+    <link rel="icon" href="logo/logo_colours_icon_tran_light.png">
+
+    <link href="assets/code_wiki_resets.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_colors.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_text.css" rel="stylesheet" type="text/css">
+    <link href="assets/par_wiki_margins_and_sizes.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_wiki_header_footer.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_questionmark.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_index_col_wiki.css" rel="stylesheet" type="text/css">
+	<link href="assets/code_index_name_my_color.css" rel="stylesheet" type="text/css">
+    <link href="assets/code_index_color_analysis.css" rel="stylesheet" type="text/css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="/js/vendor/jquery-3.4.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  </head>
+
+  <body class="websitebody">
+   
+	<div w3-include-html="/colors/assets/header.html"></div>
+
+	<div class="sidebar-content">
+
+		<section>
+			<div w3-include-html="/colors/assets/sidebar.html"></div>
+		</section>        
+
+		<section id="all-content">
+			<div class="cola-whole-page">
+
+				<section class="cola-page-title">
+					<h1>Analyze My Color</h1>
+				</section>
+
+				<section class="cola-search-sec">
+
+					<div class="tab-search">
+						<div class="searchBox">
+							<img src="images/icon_color_wheel.png" id="colaPickerCover" class="color-picker-cover">
+							<input type="color" id="colaMyColor" class="color-picker" value="#00BFFF">
+							<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
+							<button class="searchButton" onclick="fctAnalyseMyHex()" id="SearchBotton"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+
+				</section>
+
+				<section class="cola-page-empty">					
+				</section>
+
+				<section class="cola-whole-page-part3">
+					<div class="col-ana-page">
+
+						<div class="cola-part1">
+
+							<div class="cola-title">
+								<h1 id="cola-hex-name">#00BFFF</h1>
+							</div>
+
+							<div class="cola-swatch">
+								<div class="cola-swatch-sub" id="cola-main-swatch"></div>
+							</div>
+
+							<div class="cola-name">
+								<a href="/colors/colors/color_00BFFF.html" id="cola-link-artista-col">
+									<h2 class="cola-name-sub" id="cola-artista-name">Artista Sky Blue</h2>
+									<h4 class="cola-name-sub" id="cola-perc-match">(Match: 100%)</h4>
+								</a>
+							</div>
+
+							<div class="cola-hue">
+								<div class="cola-hue-swatch" id="cola-hue-swatch"></div>
+								<h4>Hue</h4>
+							</div>
+						</div>
+
+						<div class="cola-part2">
+
+							<div class="cola-combo-title">
+								<h4>Artista's Recommendations</h4>
+							</div>	
+							<div class="cola-combo">					
+								<div class="cola-combo-groups">
+									<div class="cola-combo-card" id="combo1"><p id="text-combo1">#20F986</p></div>
+									<div class="cola-combo-card" id="combo2"><p id="text-combo2">#003FFF</p></div>
+									<div class="cola-combo-card" id="combo3"><p id="text-combo3">#FF9999</p></div>
+									<div class="cola-combo-card" id="combo4"><p id="text-combo4">#BFF128</p></div>
+									<div class="cola-combo-card" id="combo5"><p id="text-combo5">#EEDC82</p></div>
+									<div class="cola-combo-card" id="combo6"><p id="text-combo6">#E1E6D6</p></div>
+								</div>
+							</div>
+							
+							<div class="cola-compo-title">
+								<h4>Color Composition</h4>
+							</div>
+							<div class="cola-compo">
+								<table class="compo-table">
+									<tr>
+										<th><h5>System</h5></th>
+										<th><h5>Original Units</h5></th>
+										<th><h5>Percentage</h5></th>
+									</tr>
+									<tr>
+										<td><p>RGB</p></td>
+										<td><p id="text-rgb-norm">(0,191,255)</p></td>
+										<td><p id="text-rgb-perc">(0%,75%,100%)</p></td>
+									</tr>
+									<tr>
+										<td><p>HSL</p></td>
+										<td><p id="text-hsl-norm">(195,100,50)</p></td>
+										<td><p id="text-hsl-perc">(54%,100%,50%)</p></td>
+									</tr>
+									<tr>
+										<td><p>HSV</p></td>
+										<td><p id="text-hsv-norm">(195,100,100)</p></td>
+										<td><p id="text-hsv-perc">(54%,100%,100%)</p></td>
+									</tr>
+									<tr>
+										<td><p>CMYK</p></td>
+										<td><p id="text-cmyk-norm">(100,25,0,0)</p></td>
+										<td><p id="text-cmyk-perc">(100%,25%,0%,0%)</p></td>
+									</tr>
+									</table>			
+							</div>	
+						</div>
+
+						<div class="cola-list">
+							<ul id="xyzComb">
+								<div w3-include-html="color-dict/color-groups/xyz_items.html"></div>
+							</ul>
+						</div>
+
+						<div class="cola-part3">
+							<div class="cola-tint-title">
+								<h4>Tints</h4>
+							</div>				
+							<div class="cola-tint-groups">
+								<div class="cola-tint-card" id="tint1"><p id="text-tint1">#00bfff</p></div>
+								<div class="cola-tint-card" id="tint2"><p id="text-tint2">#1ac6ff</p></div>
+								<div class="cola-tint-card" id="tint3"><p id="text-tint3">#33ccff</p></div>
+								<div class="cola-tint-card" id="tint4"><p id="text-tint4">#4dd2ff</p></div>
+								<div class="cola-tint-card" id="tint5"><p id="text-tint5">#66d9ff</p></div>
+								<div class="cola-tint-card" id="tint6"><p id="text-tint6">#80dfff</p></div>
+								<div class="cola-tint-card" id="tint7"><p id="text-tint7">#99e6ff</p></div>
+								<div class="cola-tint-card" id="tint8"><p id="text-tint8">#b3ecff</p></div>
+								<div class="cola-tint-card" id="tint9"><p id="text-tint9">#ccf2ff</p></div>
+								<div class="cola-tint-card" id="tint10"><p id="text-tint10">#e5f9ff</p></div>
+							</div>				
+						</div>
+
+						<div class="cola-part4">
+							<div class="cola-tint-title">
+								<h4>Shades</h4>
+							</div>		
+							<div class="cola-tint-groups">
+								<div class="cola-tint-card" id="shade1"><p id="text-shade1">#00bfff</p></div>
+								<div class="cola-tint-card" id="shade2"><p id="text-shade2">#00ace6</p></div>
+								<div class="cola-tint-card" id="shade3"><p id="text-shade3">#0099cc</p></div>
+								<div class="cola-tint-card" id="shade4"><p id="text-shade4">#0086b3</p></div>
+								<div class="cola-tint-card" id="shade5"><p id="text-shade5">#007399</p></div>
+								<div class="cola-tint-card" id="shade6"><p id="text-shade6">#006080</p></div>
+								<div class="cola-tint-card" id="shade7"><p id="text-shade7">#004d66</p></div>
+								<div class="cola-tint-card" id="shade8"><p id="text-shade8">#00394d</p></div>
+								<div class="cola-tint-card" id="shade9"><p id="text-shade9">#002633</p></div>
+								<div class="cola-tint-card" id="shade10"><p id="text-shade10">#001319</p></div>
+							</div>				
+						</div>
+
+						<div class="cola-part5">
+							<div class="cola-tint-title">
+								<h4>Tones</h4>
+							</div>					
+							<div class="cola-tint-groups">
+								<div class="cola-tint-card" id="tone1"><p id="text-tone1">#00bfff</p></div>
+								<div class="cola-tint-card" id="tone2"><p id="text-tone2">#18bcf2</p></div>
+								<div class="cola-tint-card" id="tone3"><p id="text-tone3">#2eb8e6</p></div>
+								<div class="cola-tint-card" id="tone4"><p id="text-tone4">#41b3d9</p></div>
+								<div class="cola-tint-card" id="tone5"><p id="text-tone5">#52adcc</p></div>
+								<div class="cola-tint-card" id="tone6"><p id="text-tone6">#60a7bf</p></div>
+								<div class="cola-tint-card" id="tone7"><p id="text-tone7">#6ba1b3</p></div>
+								<div class="cola-tint-card" id="tone8"><p id="text-tone8">#7499a6</p></div>
+								<div class="cola-tint-card" id="tone9"><p id="text-tone9">#7a9199</p></div>
+								<div class="cola-tint-card" id="tone10"><p id="text-tone10">#7e898c</p></div>
+							</div>				
+						</div>
+
+						<div class="cola-list">
+							<ul id="ColNameList">
+								<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+							</ul>
+						</div>
+
+					</div>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<script src = "/js/header.js"></script>
+	<div w3-include-html="/colors/assets/footer.html"></div>	
+
+	<script src="/colors/functions/name_color.min.js"></script>
+
+  </body>
+</html>
+
+
+

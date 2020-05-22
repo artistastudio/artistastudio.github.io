@@ -1,0 +1,553 @@
+/* mobile */
+:root {
+    /* all */
+    --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
+    --height-overlap-bg: 4vh;
+
+    /* swatch */
+    --cola-height-swatch: 10vh;
+    --cola-width-swatch: calc(100vw - 2 * var(--marg-bound) - 2 * var(--cola-marg));
+    --cola-swatch-radius: var(--radius-swatch);
+    --cola-swatch-shadow: 0 5px 10px rgba(0,0,0,.1);
+    --cola-swatch-text-size: var(--font-size-p-small);
+
+    /* search */
+    --width-searchb-whole: 70vw;
+    --cola-search-marg-lr: 10vw;
+
+    /* tints */
+    --cola-marg: 1.5vw;
+    --cola-tint-card-marg: 1px;
+
+    /* combos */
+
+    /* layout mobile */
+    --cola-grid-rows-whole-page: max(8vh, 40px) max(8vh, 40px) var(--height-overlap-bg) auto;
+    --cola-height-whole-page: auto;
+
+    --cola-grid-cols-ana-page: 33.3% 33.3% 33.3%;
+    --cola-grid-rows-ana-page: repeat(3, auto);
+    --cola-grid-cols-ana-names: 'cola-part1 cola-part1 cola-part1'
+                                'cola-part3 cola-part4 cola-part5'
+                                'cola-part2 cola-part2 cola-part2';
+
+    --cola-grid-rows-part1: max(6vh, 30px) max(var(--cola-height-swatch), 50px) max(10vh, 50px) 0vh;
+    --cola-hue-part-display: none;
+
+    --cola-grid-rows-part2: max(10vh, 50px) max(30vh, 150px) max(10vh, 50px) max(30vh, 150px);
+
+    --cola-grid-rows-part3: 10% 90%;
+
+    --cola-grid-rows-shades: repeat(10, 10%);
+    --cola-grid-cols-shades: auto;
+}
+
+/* desktop - landscape */
+@media all and (min-width: 768px) {
+    :root {
+        /* whole page */
+        --height-overlap-bg: 5%;
+
+        /* swatch */
+        --t-meas1: calc(var(--height-page) * 0.76 * 0.5);
+        --t-meas2: calc((var(--width-screen) - var(--width-sidebar-perm) - 2 * var(--marg-bound)) * 0.3);
+        --cola-height-swatch: min(var(--t-meas1), var(--t-meas2));
+        --cola-width-swatch: var(--cola-height-swatch);
+        --cola-height-swatch-hue: calc(var(--height-page) * 0.76 * 0.1 * 0.8);
+        --cola-swatch-radius: 50%;
+        --cola-swatch-text-size: var(--font-size-p);
+
+        /* search */
+        --width-searchb-whole: 280px;
+        --cola-search-marg-lr: 25vw;
+
+        /* tints */
+        --cola-tint-card-marg: 2px;
+
+        /* layout desktop */
+        --cola-grid-rows-whole-page: 8% 8% var(--height-overlap-bg) calc(84% - var(--height-overlap-bg));
+        --cola-height-whole-page: var(--height-page);
+
+        --cola-grid-cols-ana-page: 30% 36% 11.3% 11.3% 11.3%;
+        --cola-grid-rows-ana-page: auto;
+        --cola-grid-cols-ana-names: 'cola-part1 cola-part2 cola-part3 cola-part4 cola-part5';
+
+        --cola-grid-rows-part1: 20% 50% 20% 10%;
+        --cola-hue-part-display: grid;
+
+        --cola-grid-rows-part2: 10% 40% 10% 40%;
+    }
+
+    /* desktop - portrait */
+    @media all and (orientation: portrait) {
+
+        :root {
+            /* swatch */
+            --t-meas1: calc(var(--height-page) * 0.76 * 0.5 * 0.5);
+            --t-meas2: calc((var(--width-screen) - var(--width-sidebar-perm) - 2 * var(--marg-bound)) * 0.5);
+            --cola-height-swatch: min(var(--t-meas1), var(--t-meas2));
+            --cola-width-swatch: var(--cola-height-swatch);
+            --cola-height-swatch-hue: calc(var(--height-page) * 0.76 * 0.5 * 0.1);
+
+            /* layout desktop */
+            --cola-grid-cols-ana-page: 50% 50%;
+            --cola-grid-rows-ana-page: 64% 12% 12% 12%;
+            --cola-grid-cols-ana-names: 'cola-part1 cola-part2'
+                                        'cola-part3 cola-part3'
+                                        'cola-part4 cola-part4'
+                                        'cola-part5 cola-part5';
+
+            --cola-grid-rows-part3: 30% 70%;
+
+            --cola-grid-rows-shades: auto;
+            --cola-grid-cols-shades: repeat(10, 10%);
+        }
+    }
+}
+
+
+/* -------------- whole page -------------- */
+.cola-whole-page {
+    height: var(--cola-height-whole-page);
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-whole-page);
+    background: var(--col-bg-grey-ll);
+}
+.cola-page-title {
+    height: 100%;
+    display: flex;
+    background: var(--col-bg-grey-title-l);
+}
+.cola-page-title > * {
+    margin: auto;
+}
+.cola-search-sec {
+    height: 100%;
+    display: flex;
+    background: var(--col-bg-grey-title-l);
+}
+/* overlap */
+.cola-page-empty {
+    height: 100%;
+    background: var(--col-bg-grey-title-l);
+}
+/* main container with info */
+.cola-whole-page-part3 {
+    height: 100%;
+    margin-left: var(--marg-bound);
+    margin-right: var(--marg-bound);
+}
+
+/* main subcontainer - white card */
+/* grid of 5 areas: (swatch & title), (composition & combos), (tints), (shades), (tones) */
+.col-ana-page {
+    height: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: var(--cola-grid-cols-ana-page);
+    grid-template-rows: var(--cola-grid-rows-ana-page);
+    grid-template-areas: var(--cola-grid-cols-ana-names);
+    align-items: center;
+    position: relative;
+    border-radius: var(--radius-swatch);
+    top: calc(-1 * var(--height-overlap-bg));
+}
+
+/* --- part1: hex, name & swatch */
+.cola-part1 {
+    grid-area: cola-part1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-part1);
+}
+.cola-title {
+    display: flex; 
+    margin: auto;   
+}
+.cola-swatch {
+    display: flex;    
+    margin: auto;
+}
+.cola-name {
+    display: inline-block;
+    margin: auto; 
+}
+.cola-hue {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    display: var(--cola-hue-part-display);
+}
+
+/* --- part2: composition & combinations */
+.cola-part2 {
+    grid-area: cola-part2;
+    height: 100%;
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-part2);
+}
+.cola-compo-title {
+    display: flex;
+    margin: auto;
+}
+.cola-compo {
+    padding: var(--cola-marg) var(--cola-marg);
+    height: 100%;
+    width: 100%;   
+}
+.cola-combo-title {
+    display: flex;
+    margin: auto;
+}
+.cola-combo-groups {
+    height: 100%;
+    width: 100%;
+}
+
+/* --- part3: tints, part4: shades, part5: tones */
+.cola-part3, .cola-part4, .cola-part5 {
+    grid-area: cola-part3;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-part3);
+}
+.cola-tint-title {
+    display: flex;
+    margin: auto;
+}
+.cola-tint-groups {
+}
+
+.cola-part4 {
+    grid-area: cola-part4;
+}
+
+.cola-part5 {
+    grid-area: cola-part5;
+}
+
+
+/* shades group - class */
+.cola-tint-groups, .cola-combo-groups {
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-shades);
+    grid-template-columns: var(--cola-grid-cols-shades);
+    padding: var(--cola-marg) var(--cola-marg);
+}
+.cola-combo-groups {
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.cola-tint-card, .cola-combo-card {
+    height: calc(100% - 2 * var(--cola-tint-card-marg));
+    width: calc(100% - 2 * var(--cola-tint-card-marg));
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+
+ -webkit-box-shadow: var(--cola-swatch-shadow);
+    -moz-box-shadow: var(--cola-swatch-shadow);
+     -ms-box-shadow: var(--cola-swatch-shadow);
+      -o-box-shadow: var(--cola-swatch-shadow);
+         box-shadow: var(--cola-swatch-shadow);
+}
+.cola-combo-card {
+    height: calc(100% - 6 * var(--cola-tint-card-marg));
+    width: calc(100% - 6 * var(--cola-tint-card-marg));
+}
+
+.cola-tint-card p, .cola-combo-card p {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    opacity: 0;
+
+    font-size: var(--cola-swatch-text-size);
+
+-webkit-transform: translate(0%,-50%);
+   -moz-transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+     -o-transform: translate(0%,-50%);
+        transform: translate(0%,-50%);
+}
+.cola-combo-card p {
+    text-align: right;
+    padding: 5px;
+    top: 20%;
+}
+
+.cola-tint-card:hover p, .cola-combo-card:hover p {
+    opacity: 1;
+}
+
+
+/* -------------- search bar -------------- */
+.cola-search-sec > * {
+    margin: auto;
+}
+#colaMyColor {
+    opacity: 0;
+    position: relative;
+}
+#colaPickerCover {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: var(--height-searchb);
+    width: var(--height-searchb);
+}
+
+.tab-search {
+    position: relative;
+}
+.searchInput {
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+.searchButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cola-list {
+    display: none;
+}
+
+
+/* -------------- title -------------- */
+.cola-title > * {
+}
+#cola-artista-name {
+    line-height: auto;
+    padding: 0;
+}
+#cola-perc-match {
+    line-height: auto;
+    padding: 0;
+}
+
+
+/* -------------- swatch -------------- */
+.cola-swatch-sub {
+    height: var(--cola-height-swatch);
+    width: var(--cola-width-swatch);
+    border-radius: var(--cola-swatch-radius);
+    background: #00BFFF;
+
+ -webkit-box-shadow: var(--cola-swatch-shadow);
+    -moz-box-shadow: var(--cola-swatch-shadow);
+     -ms-box-shadow: var(--cola-swatch-shadow);
+      -o-box-shadow: var(--cola-swatch-shadow);
+         box-shadow: var(--cola-swatch-shadow);
+}
+
+
+/* -------------- name -------------- */
+.cola-name-sub {
+    text-align: center;
+    padding-top: 1vh;
+}
+
+
+/* -------------- hue -------------- */
+.cola-hue > * {
+    margin: auto;
+}
+
+.cola-hue-swatch {
+    height: var(--cola-height-swatch-hue);
+    width: var(--cola-height-swatch-hue);
+    border-radius: 50%;
+
+    background: #00BFFF;
+
+ -webkit-box-shadow: var(--cola-swatch-shadow);
+    -moz-box-shadow: var(--cola-swatch-shadow);
+     -ms-box-shadow: var(--cola-swatch-shadow);
+      -o-box-shadow: var(--cola-swatch-shadow);
+         box-shadow: var(--cola-swatch-shadow);
+}
+
+
+/* -------------- tints -------------- */
+#tint1 {
+    background: #00bfff;
+}
+#tint2 {
+    background: #1ac6ff;
+}
+#tint3 {
+    background: #33ccff;
+}
+#tint4 {
+    background: #4dd2ff;
+}
+#tint5 {
+    background: #66d9ff;
+}
+#tint6 {
+    background: #80dfff;
+}
+#tint7 {
+    background: #99e6ff;
+}
+#tint8 {
+    background: #b3ecff;
+}
+#tint9 {
+    background: #b3ecff;
+}
+#tint10 {
+    background: #e5f9ff;
+}
+
+/* -------------- shades -------------- */
+#shade1 {
+    background: #00bfff;
+}
+#shade2 {
+    background: #00ace6;
+}
+#shade3 {
+    background: #0099cc;
+}
+#shade4 {
+    background: #0086b3;
+}
+#shade5 {
+    background: #007399;
+}
+#shade6 {
+    background: #006080;
+}
+#shade7 {
+    background: #004d66;
+}
+#shade8 {
+    background: #00394d;
+}
+#shade9 {
+    background: #002633;
+}
+#shade10 {
+    background: #001319;
+}
+
+#text-shade4, #text-shade5, #text-shade6, #text-shade7, #text-shade8, #text-shade9, #text-shade10 {
+    color: white;
+}  
+
+
+/* -------------- tones -------------- */
+#tone1 {
+    background: #00bfff;
+}
+#tone2 {
+    background: #18bcf2;
+}
+#tone3 {
+    background: #2eb8e6;
+}
+#tone4 {
+    background: #41b3d9;
+}
+#tone5 {
+    background: #52adcc;
+}
+#tone6 {
+    background: #60a7bf;
+}
+#tone7 {
+    background: #6ba1b3;
+}
+#tone8 {
+    background: #7499a6;
+}
+#tone9 {
+    background: #7a9199;
+}
+#tone10 {
+    background: #7e898c;
+}
+
+#text-tone9, #text-tone10 {
+    color: white;
+}
+
+
+/* -------------- combos -------------- */
+#combo1 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+}
+#combo2 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+}
+#combo3 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+}
+#combo4 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+}
+#combo5 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+}
+#combo6 {
+    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+}
+
+#text-combo2 {
+    color: white;
+}
+
+/* -------------- composition -------------- */
+.compo-table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+.compo-table td, .compo-table th {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid var(--col-bg-grey-title-l);
+}
+.compo-table th {
+    background: var(--col-bg-grey-ll);
+}
+.compo-table tr:hover {
+    background: var(--col-bg-grey-ll);
+}
+
+
+
+
+
+
+
+
+

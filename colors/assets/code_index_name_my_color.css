@@ -23,6 +23,7 @@
     /* color picker */
     --height-colpicker: 30px;
     --scale-colpick-hover: 1.3;
+    --scale-icon-hover: 1.3;
 
     /* hue table */
     --grid-tab-hue-groups: 50% 50%;
@@ -144,6 +145,34 @@
 
     width: var(--height-colpicker);
     height: var(--height-colpicker);
+}
+.color-picker-cover {
+    z-index: 1;
+}
+
+#MyColor {
+    opacity: 0;
+    position: relative;
+}
+
+#PickerCover {
+    position: absolute; 
+    top:0;
+    left:0;
+}
+
+.colopick-cont:hover {
+ -webkit-transform: scale(var(--scale-icon-hover));
+    -moz-transform: scale(var(--scale-icon-hover));
+     -ms-transform: scale(var(--scale-icon-hover));
+      -o-transform: scale(var(--scale-icon-hover));
+         transform: scale(var(--scale-icon-hover));
+
+-webkit-transition: .5s;
+   -moz-transition: .5s;
+    -ms-transition: .5s;
+     -o-transition: .5s;
+        transition: .5s;
 }
 
 input[type="color"] {

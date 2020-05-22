@@ -35,114 +35,178 @@
 
 	<div class="sidebar-content">
 
-	<section>
-		<div w3-include-html="/colors/assets/sidebar.html"></div>
-	</section>        
+		<section>
+			<div w3-include-html="/colors/assets/sidebar.html"></div>
+		</section>        
 
-	<section class="col-overview-page">
+		<section id="all-content">
 
-		<section class="huegr-title">
-			<div class="title-desc">
-				<h1>Name My Color</h1>
-				<div class="help-tip">
+			<section class="col-overview-page">
+
+				<section class="huegr-title">
+					<div class="title-desc">
+						<h1>Name My Color</h1>
+						<div class="help-tip">
+							<p>
+							<span class="tooltiptext">
+								Is the dress pink or orange? 👗 
+								Are the eyes brown or green? 👁️ 
+								Is the undertone of floor tiles purple or red? 🀚
+								Does my screen display blue as green? 💻 
+								Will my audience perceive the color I anticipate it to? 
+								<br>Artista's feature "Name My Color" is here to assist.
+							</span>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="huegr-search-title">
+
+					<div></div>
+					
+					<div>
+						<h4>Select Image</h4>
+					</div>
+					
+					<div>
+						<h4>Color Code</h4>
+					</div>				
+					
+					<div>
+						<h4>Color Picker</h4>
+					</div>
+
+					<div></div>
+				</section>
+
+				<section class="huegr-search">
+
+					<div></div>	
+
+					<div class="colopick-cont">					
+						<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
+						<label for="file" style="cursor: pointer;">
+							<img src="images/icon_image.svg" class="color-picker-cover">
+						</label>
+					</div>
+					
+					<div class="tab-search">
+						<div class="searchBox">            
+							<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
+							<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+						</div>
+					</div>
+
+					<div class="colopick-cont">
+						<img src="images/icon_color_wheel.png" id="PickerCover" class="color-picker-cover">
+						<input type="color" id="myColor" class="color-picker" value="#00BFFF">
+					</div>
+
+					<div></div>
+
+				</section>
+
+				<section class="huegr-empty"></section>
+
+				<section class="huegr-overview">
+					<div class="table-hue-all">
+						
+						<div class="resgr-orcard card" id="card_my_color">
+							<img id="uploaded_image" onclick="fctShowCoor(event)"/>
+							<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
+						</div>
+
+						<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
+						</a>
+
+						<div class="resgr-name">
+							<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
+								<h2 id="name_artista_color">Artista Sky Blue</h2>
+								<h4 id="perc_match">100% match</h4>
+							</a>
+						</div>
+
+						<div class="resgr-orhex">
+							<h4 id="desc_my_color">My Color: #00BFFF</h4>
+						</div>
+
+						<div class="resgr-arhex">
+							<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
+						</div>
+
+						<div class="resgr-desc">
+							<h4>Color Name</h4>
+						</div>
+
+					</div> 
+				</section>
+
+			</section>
+
+			<ul id="ColNameList" style="display: none;">   
+				<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
+			</ul>
+
+			<div class="desc-cont"> 
+				<div>
+					<h2>Give Your Color an Identity</h2>
+
+					<p class="desc-text-title">No More "a Little Dark"</p>
 					<p>
-					<span class="tooltiptext">We are all familiar with those moment when we are to describe a color and all that comes to our mind is "a little dark" or "very light". 
-						The "Name My Color" feature eliminates such moments. 
-						<br><br>Use the color picker or provide a hex code of your color, and Artista will find the best match from the dictionary of 1,800 color names.
-						<br><br>Alternatively, upload your image to get the names of colors in your banner or a dress. Is it blue or green? Let Artista assist. 
-					</span>
+					Most of us are familiar with situations when we need to describe a color and all that comes to mind is “a little dark” or “very light”.
+					Communicating colors is challenging since broad descriptions interfere with personal associations, leading to divergent notions about the delineated colors.
+					<br>There are also times when we are not sure about a color. 
+					Is the shirt blue or green? Are the eyes grey or blue? Are the floor tiles of a purple or an orange hue? 
+					<br>Artista’s feature “Name My Color” exists to assist in such situations. 
+					It helps navigating in the world of 10 million colors that our eyes can differentiate, by providing color names from the dictionary of approximately 1,800 curated records (click <a href="/colors/index.html#desc-col-dict">here</a> for more details).
 					</p>
+
+					<br>
+					<p class="desc-text-title">Name My Color</p>
+					<p>The feature "Name My Color" accepts 3 types of input:</p>
+					<ul class="desc-list">
+						<li><p>Selecting an image or taking a photo</p></li>
+						<li><p>Typing hex or RGB color code</p></li>
+						<li><p>Using color picker</p></li>
+					</ul>	
+					<p>The feature yields the following outputs:</p>
+					<ul class="desc-list">
+						<li><p>Color name determined by Artista</p></li>
+						<li><p>Match score (ranging between 0% and 100%; most matches lie between 95% and 100%)</p></li>
+						<li><p>Color swatch showing the matched color</p></li>
+						<li><p>Color swatch showing the original color</p></li>
+					</ul>						
+
+					<br>
+					<p class="desc-text-title">Naming Colors In an Image</p>
+					<img src="/colors/images/icon_image.svg" style="height: 5vh; float: left; margin: 20px; border-radius: 50%;"/>
+					<p>                
+					The image icon can be used to select an image (most formats are accepted) or take a photo.
+					Once the image is loaded, clicking on its areas will initiate the color name identification.
+					<br>Since lighting conditions strongly affect the colors in an image, it is recommended to take pictures in natural light.
+					<br>Artista also cares about your privacy: all uploads remain local and no images are sent to the cloud.
+					</p>
+
+					<br>
+					<p class="desc-text-title">Naming a Given Color</p>
+					<p>Artista accepts 3 types of color codes:</p>
+						<ul class="desc-list">
+							<li><p>Hex color code</p></li>
+							<li><p>RGB color code</p></li>
+							<li><p>Inputs from Color Picker</p></li>
+						</ul>					
+					<p>
+					Hex codes can be of the form "#FF0000", "FF0000" or "ff0000".
+					<br>The supported RGB codes correspond to the 24-bit system where each component ranges between 0 and 255 (8-bit encoding).
+					Accepted forms are "RGB(255,0,0)", "rgb(255,0,0)" or "rgb(255, 0, 0)".
+					</p>
+
 				</div>
 			</div>
-		</section>
-
-		<section class="huegr-search-title">
-
-			<div></div>
-			
-			<div>
-				<h4>Color Picker:</h4>
-			</div>
-			
-			<div>
-				<h4>Color Code:</h4>
-			</div>				
-			
-			<div>
-				<h4>Upload File:</h4>
-			</div>
-
-			<div></div>
-		</section>
-
-		<section class="huegr-search">
-
-			<div></div>				
-
-			<div class="colopick-cont">
-				<img src="images/icon_color_wheel.png" class="color-picker-cover" style="position: absolute; top:0; left:0;">
-				<input type="color" id="myColor" class="color-picker" value="#00BFFF" style="opacity: 0;">
-			</div>
-			
-			<div class="tab-search">
-				<div class="searchBox">            
-					<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
-					<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
-				</div>
-			</div>
-
-			<div class="colopick-cont">					
-				<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
-				<label for="file" style="cursor: pointer;">
-					<img src="images/icon_image.svg" class="color-picker-cover">
-				</label>
-			</div>
-			
-			<div></div>
 
 		</section>
-
-		<section class="huegr-empty"></section>
-
-		<section class="huegr-overview">
-			<div class="table-hue-all">
-				
-				<div class="resgr-orcard card" id="card_my_color">
-					<img id="uploaded_image" onclick="fctShowCoor(event)"/>
-					<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
-				</div>
-
-				<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
-				</a>
-
-				<div class="resgr-name">
-					<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
-						<h2 id="name_artista_color">Artista Sky Blue</h2>
-						<h4 id="perc_match">100% match</h4>
-					</a>
-				</div>
-
-				<div class="resgr-orhex">
-					<h4 id="desc_my_color">My Color: #00BFFF</h4>
-				</div>
-
-				<div class="resgr-arhex">
-					<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
-				</div>
-
-				<div class="resgr-desc">
-					<h4>Color Name</h4>
-				</div>
-
-			</div> 
-		</section>
-
-	</section>
 	</div>
-
-	<ul id="ColNameList" style="display: none;">   
-	<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
-	</ul>  
 
 	<script src = "/js/header.js"></script>
 	<div w3-include-html="/colors/assets/footer.html"></div>

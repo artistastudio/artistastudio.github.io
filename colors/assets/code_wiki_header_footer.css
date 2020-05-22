@@ -339,8 +339,15 @@
   width: 100%;
 }
 
-#logo_icon_as, #logo_icon_ac, #icon_name_my_col {
-  width: 20px;
+.icon_next_to_text {
+  max-width: 20px; 
+  max-height: 20px; 
+  margin-right: 10px;
+}
+
+.icon_main_p {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .tooltip-menu {
@@ -481,8 +488,9 @@
   }
 
   /* width of logo icons */
-  #logo_icon_as, #logo_icon_ac, #icon_name_my_col {
-    width: 30px;
+  .icon_main_p {
+    max-width: 30px;
+    max-height: 30px;
   }
 
   /* tooltip explanations */
