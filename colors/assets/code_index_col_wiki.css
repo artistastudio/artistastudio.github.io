@@ -25,6 +25,7 @@
 
     /* hue table */
     --grid-tab-hue-groups: 50% 50%;
+    --grid-tab-hue-groups-rows: 25% 25% 25% 25%;
 
     /* each swatch */
     --radius-swatch: 5px;
@@ -81,6 +82,7 @@
 
         /* hue table */
         --grid-tab-hue-groups: 25% 25% 25% 25%;
+        --grid-tab-hue-groups-rows: 50% 50%;
 
         /* each swatch */
         --radius-swatch: 5px;
@@ -344,10 +346,55 @@
       -o-transition: .5s;
          transition: .5s;
 
-    -webkit-animation: searchbox-animate 2s ease-in-out;
-    -moz-animation: searchbox-animate 2s ease-in-out;
-    -o-animation: searchbox-animate 2s ease-in-out;
-    animation: searchbox-animate 2s ease-in-out;
+    -webkit-animation: searchbox-input-animate 2s ease-in-out;
+    -moz-animation: searchbox-input-animate 2s ease-in-out;
+    -o-animation: searchbox-input-animate 2s ease-in-out;
+    animation: searchbox-input-animate 2s ease-in-out;
+}
+
+@-webkit-keyframes searchbox-input-animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: var(--width-searchb-whole);
+    }
+}
+@-moz-keyframes searchbox-input-animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: var(--width-searchb-whole);
+    }
+}
+@-o-keyframes searchbox-input-animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: var(--width-searchb-whole);
+    }
+}
+@keyframes searchbox-input-animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: var(--width-searchb-whole);
+    }
 }
 
 .searchBox ::-moz-input-placeholder {
@@ -400,6 +447,7 @@
     width: 95%;
     display: grid;
     grid-template-columns: var(--grid-tab-hue-groups);
+    grid-template-rows: var(--grid-tab-hue-groups-rows);
     background: white;
     border-radius: var(--radius-swatch);
 }
