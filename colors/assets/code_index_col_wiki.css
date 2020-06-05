@@ -20,7 +20,7 @@
 
     /* search box width */
     --align-search-left: auto;
-    --width-searchb-whole: max(200px, 30vw);
+    --width-searchb-whole: 200px;
     --height-searchb: 25px; 
 
     /* hue table */
@@ -125,6 +125,7 @@
 
         /* search */
         --align-search-left: 0;
+        --width-searchb-whole: 30vw;
 
         /* description - text */
         --desc-num-col: 3;

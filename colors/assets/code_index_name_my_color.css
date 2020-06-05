@@ -88,7 +88,6 @@
 /* -------------- search bar -------------- */
 .tab-search {
     display: flex;
-    width: var(--width-searchb-whole);
     width: calc(var(--width-searchb-whole) + var(--height-upload-icon) + 2vw);
     flex-direction: row;
 
