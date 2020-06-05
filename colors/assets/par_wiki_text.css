@@ -9,16 +9,16 @@
     --font-fam: "Montserrat"; /* Raleway */
 
     /* text - paragraph */
-    --font-size-p-small: 3.4vw;
-    --font-size-p: 3.8vw;
-    --font-size-h6: 3.8vw;
-    --font-size-h5: 4vw;
+    --font-size-p-small: 0.85em;
+    --font-size-p: 0.9em;
+    --font-size-h6: 0.9em;
+    --font-size-h5: 1em;
 
     /* text - title */
-    --font-size-h4: 4.2vw;
-    --font-size-h3: 4.8vw;
-    --font-size-h2: 5.5vw;
-    --font-size-h1: 6.5vw;
+    --font-size-h4: 1.1em;
+    --font-size-h3: 1.3em;
+    --font-size-h2: 1.4em;
+    --font-size-h1: 1.6em;
 
     /* space between lines */
     --font-lspace-p: 25px;
@@ -39,16 +39,20 @@
 @media all and (min-width: 768px) {
     :root {
         /* text - paragraph */
+        /*
         --font-size-p-small: 12.5px;
         --font-size-p: 14px;
         --font-size-h6: 13px;
         --font-size-h5: 16px;
+        */
 
         /* text - title */        
+        /*
         --font-size-h4: 18px;
         --font-size-h3: 22px;
         --font-size-h2: 26px;
         --font-size-h1: 32px;
+        */
 
         /* space between characters */
         --font-chspace-h5: 1.3px;
@@ -57,6 +61,7 @@
         --font-chspace-h1: 0.6vw;
     }
 }
+
 
 
 

@@ -265,7 +265,7 @@
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
-  background-color: #F0F0F0;
+  background: white;
 
 -webkit-box-shadow: var(--shadow-swatch);
   -moz-box-shadow: var(--shadow-swatch);
@@ -293,6 +293,7 @@
   height: var(--height-sidebar-perm);
   padding-left: 0px;
   padding-right: 15px;
+  background: white;
 }
 
 /* each entry */
@@ -326,14 +327,19 @@
   text-align: center;
 }
 
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+}
+
 /* main botton at the top */
 #menu-botton-close, #menu-botton-open {
-  background-color: #DCDCDC;
+  background-color: var(--col-accent2-light);
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
 #menu-botton-close:hover, #menu-botton-open:hover {
-  background-color: silver;
+  background-color: var(--col-accent2-dark)
 }
 #menu-botton-close {
   width: 100%;
@@ -404,7 +410,6 @@
     overflow: visible;
     justify-content: center;
     text-align: center;
-    background-color: var(--col-bg-grey-light); 
 
   -webkit-box-shadow: var(--shadow-swatch);
     -moz-box-shadow: var(--shadow-swatch);
@@ -445,10 +450,6 @@
     outline: 0;
     border: none;
   }
-  /* each entry hover */
-  .w3-button:hover, .w3-button-list:hover {
-    background-color: var(--col-accent2);
-  }
   .w3-button:hover h5, .w3-button-list:hover p {
     color:white;
   }
@@ -469,37 +470,19 @@
     text-align: center;
   }
 
-  /* main botton at the top */
-  #menu-botton-close, #menu-botton-open {
-    background-color: var(--col-bg-grey-title);
-  }
-  #menu-botton-close:hover, #menu-botton-open:hover {
-    background-color: silver;
-  }
-
-  /* Add an active class to the active dropdown button */
-  .dropdown-btn.active {
-    background-color: silver;
-    color: white;
-  }
-  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-  .dropdown-container {
-    display: none;
-  }
-
   /* width of logo icons */
   .icon_main_p {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 1.5em;
+    max-height: 1.5em;
   }
 
   /* tooltip explanations */
   .tooltip-menu:hover .tooltip-menu-desc {
     visibility: visible;
- -webkit-transition-delay: 1s;
-    -moz-transition-delay: 1s;
-     -ms-transition-delay: 1s;
-      -o-transition-delay: 1s;
-         transition-delay: 1s;
+ -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+     -ms-transition-delay: 0.5s;
+      -o-transition-delay: 0.5s;
+         transition-delay: 0.5s;
   }
 }

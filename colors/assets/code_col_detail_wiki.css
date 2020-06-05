@@ -360,7 +360,7 @@
 
 /* collapsible content */
 .collapsible {
-  background-color: var(--col-grey-light);
+  background-color: var(--col-accent2-ll);
   cursor: pointer;
   width: 100%;
   text-align: center;
@@ -374,7 +374,10 @@
 }
 
 .collapsible.active, .collapsible:hover {
-  background-color: var(--col-grey);
+  background-color: var(--col-accent2-light);
+}
+.collapsible:focus {
+  outline: none;
 }
 
 .collapsible:after {

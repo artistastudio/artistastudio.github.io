@@ -41,11 +41,11 @@
 
 		<section id="all-content">
 
-			<section class="col-overview-page">
+			<section class="col-overview-page" id="overview-page1">
 
 				<section class="huegr-title">
-					<div class="title-desc">
-						<h1>Name My Color</h1>
+					<div class="title-desc title-block">
+						<h1 id='titleCenter'></h1>
 						<div class="help-tip">
 							<p>
 							<span class="tooltiptext">
@@ -60,79 +60,66 @@
 						</div>
 					</div>
 				</section>
-
-				<section class="huegr-search-title">
-
-					<div></div>
-					
-					<div>
-						<h4>Select Image</h4>
-					</div>
-					
-					<div>
-						<h4>Color Code</h4>
-					</div>				
-					
-					<div>
-						<h4>Color Picker</h4>
-					</div>
-
-					<div></div>
-				</section>
-
+				
 				<section class="huegr-search">
 
-					<div></div>	
-
-					<div class="colopick-cont">					
-						<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
-						<label for="file" style="cursor: pointer;">
-							<img src="images/icon_image.svg" class="color-picker-cover">
-						</label>
-					</div>
-					
 					<div class="tab-search">
-						<div class="searchBox">            
+						<div class="searchBox">
+							<img src="/colors/images/icon_color_wheel.png" id="PickerCover" class="color-picker-cover">
+							<input class="color-picker" type="color" id="MyColor" value="#00BFFF">
 							<input class="searchInput" placeholder="#00BFFF or RGB(0,191,255)" id="StringToSearch" autocomplete="off">
-							<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-crosshairs"></i></button>
+							<button class="searchButton" onclick="fctFindForMyHex()" id="SearchBotton"><i class="fas fa-search"></i></button>
+						</div>
+
+						<div>
+							<input type="file"  accept="image/*" name="image" id="file" onchange="fctLoadFile(event)" style="display: none">
+							<label for="file" style="cursor: pointer;">
+								<img src="/colors/images/icon_blue_picture.svg" id="upload-icon">
+							</label>
+						</div>
+					</div>
+					<div class="title-desc title-inline">
+						<h1 id='titleRight'></h1>
+						<div class="help-tip">
+							<p>
+							<span class="tooltiptext">
+								Is the dress pink or orange? 👗 
+								Are the eyes brown or green? 👁️ 
+								Is the undertone of floor tiles purple or red? 🀚
+								Does my screen display blue as green? 💻 
+								Will my audience perceive the color I anticipate it to? 
+								<br>Artista's feature "Name My Color" is here to assist.
+							</span>
+							</p>
 						</div>
 					</div>
 
-					<div class="colopick-cont">
-						<img src="images/icon_color_wheel.png" id="PickerCover" class="color-picker-cover">
-						<input type="color" id="myColor" class="color-picker" value="#00BFFF">
-					</div>
-
-					<div></div>
-
 				</section>
-
-				<section class="huegr-empty"></section>
 
 				<section class="huegr-overview">
 					<div class="table-hue-all">
 						
 						<div class="resgr-orcard card" id="card_my_color">
-							<img id="uploaded_image" onclick="fctShowCoor(event)"/>
-							<img src="images/icon_mouse_pos.svg" id="mouse_pos"/>
+							<img id="uploaded_image" onmousemove="img_mmove(event)" ontouchmove="fctShowCoor(event)"/>
+							<img src="/colors/images/icon_mouse_pos.svg" id="mouse_pos"/>
 						</div>
 
-						<a class="resgr-arcard card" href="/colors/colors/color_00BFFF.html" id="card_artista_color">
+						<a class="resgr-arcard card" href="/colors/colors/78D1B6/" id="card_artista_color">
 						</a>
 
 						<div class="resgr-name">
-							<a href="/colors/colors/color_00BFFF.html" id="link_name_artista_color">
-								<h2 id="name_artista_color">Artista Sky Blue</h2>
-								<h4 id="perc_match">100% match</h4>
+							<a href="/colors/colors/78D1B6/" id="link_name_artista_color">
+								<h2 id="name_artista_color">Seafoam Blue</h2>
+								<h4 id="perc_match">97.6% match</h4>
 							</a>
 						</div>
 
 						<div class="resgr-orhex">
-							<h4 id="desc_my_color">My Color: #00BFFF</h4>
+							<h4 id="desc_my_color">My Color: #82D3AB</h4>
 						</div>
 
 						<div class="resgr-arhex">
-							<h4 id="desc_artista_color">Artista Color: #00BFFF</h4>
+							<h4 id="desc_artista_color">Artista Color: #78D1B6</h4>
 						</div>
 
 						<div class="resgr-desc">
@@ -148,9 +135,9 @@
 				<div w3-include-html="color-dict/color-groups/searchbar_items.html"></div>
 			</ul>
 
-			<div class="desc-cont"> 
+			<div class="desc-cont" id="desc-page2"> 
 				<div>
-					<h2>Give Your Color an Identity</h2>
+					<h2 id="titleDesc"></h2>
 
 					<p class="desc-text-title">No More "a Little Dark"</p>
 					<p>
@@ -180,7 +167,7 @@
 
 					<br>
 					<p class="desc-text-title">Naming Colors In an Image</p>
-					<img src="/colors/images/icon_image.svg" style="height: 5vh; float: left; margin: 20px; border-radius: 50%;"/>
+					<img src="/colors/images/icon_blue_picture.svg" style="height: 5vh; float: left; margin: 20px; border-radius: 50%;"/>
 					<p>                
 					The image icon can be used to select an image (most formats are accepted) or take a photo.
 					Once the image is loaded, clicking on its areas will initiate the color name identification.
@@ -211,7 +198,73 @@
 	<script src = "/js/header.js"></script>
 	<div w3-include-html="/colors/assets/footer.html"></div>
 
-    <script src = "functions/name_color.min.js"></script>
+	<script src = "/colors/functions/functions.min.js"></script>
+
+	<script>
+		document.getElementById('StringToSearch').addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();			
+				document.getElementById("SearchBotton").click();
+			}
+		});
+
+		document.getElementById("MyColor").onchange = function() {
+			let my_col = this.value;
+			findAndReplaceCol_NMC(my_col);
+			document.getElementById('uploaded_image').style.visibility = 'hidden';
+			document.getElementById('mouse_pos').style.visibility = 'hidden';
+		}
+
+		document.getElementById('uploaded_image').src = "/colors/images/sharon-pittaway-iMdsjoiftZo-unsplash.jpg";
+		document.getElementById("uploaded_image").style.visibility = "visible";
+		document.getElementById("mouse_pos").style.visibility = "visible";
+		document.getElementById("mouse_pos").style.left = document.getElementById('card_my_color').offsetWidth / 2;
+		document.getElementById("mouse_pos").style.top = document.getElementById('card_my_color').offsetHeight / 2;
+
+		let allow_mmove = true;
+		if (window.outerWidth > 768){
+			document.addEventListener('click', function() {
+				allow_mmove = !allow_mmove;
+			})
+		}
+		function img_mmove(event) {
+			if (allow_mmove) {
+				fctShowCoor(event);
+			}
+		}
+
+		window.addEventListener('wheel', () => {scrollToPage(event)}, false)
+	</script>
+
+	<script>
+		let m = 0;
+		let txt = 'Name My Color';
+		let speed = 1000 / txt.length;
+		typeWriter();      
+		function typeWriter() {
+			if (m < txt.length) {
+				//document.getElementById("titleRight").innerHTML += txt.charAt(m);
+				document.getElementById("titleRight").innerHTML = txt.charAt(txt.length - 1 - m) + document.getElementById("titleRight").innerHTML;
+				document.getElementById("titleCenter").innerHTML += txt.charAt(m);
+				m++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+	</script>
+
+	<script>
+		let n = 0;
+		let txt_desc = "Give Your Color an Identity";
+		let speed_desc = 2500 / txt_desc.length;
+
+		function fct_type_title_desc() {
+			if (n < txt_desc.length) {
+				document.getElementById("titleDesc").innerHTML += txt_desc.charAt(n);
+				n++;
+				setTimeout(fct_type_title_desc, speed_desc);
+			}        
+		}
+	</script>
 
   </body>
 </html>

@@ -2,36 +2,29 @@
 :root {
     /* all */
     --height-page: calc(100vh - var(--height-header) - var(--height-sidebar-perm));
-    --height-overlap-bg: 4vh;
+    --height-whole-page: auto;
+    --height-main-card: 98%;
+    --padding-main-card: 2vw;
 
     /* swatch */
-    --cola-height-swatch: 10vh;
-    --cola-width-swatch: calc(100vw - 2 * var(--marg-bound) - 2 * var(--cola-marg));
+    --cola-swatch-height: 95%;
     --cola-swatch-radius: var(--radius-swatch);
-    --cola-swatch-shadow: 0 5px 10px rgba(0,0,0,.1);
     --cola-swatch-text-size: var(--font-size-p-small);
 
-    /* search */
-    --width-searchb-whole: 70vw;
-    --cola-search-marg-lr: 10vw;
-
-    /* tints */
-    --cola-marg: 1.5vw;
-    --cola-tint-card-marg: 1px;
-
-    /* combos */
+    /* shades */
+    --cola-height-card: 95%;
+    --cola-width-card: 90%;
 
     /* layout mobile */
-    --cola-grid-rows-whole-page: max(8vh, 40px) max(8vh, 40px) var(--height-overlap-bg) auto;
-    --cola-height-whole-page: auto;
+    --grid-ratio-hue-tab: 8vh 8vh auto;
 
-    --cola-grid-cols-ana-page: 33.3% 33.3% 33.3%;
+    --cola-grid-cols-ana-page: 33.33% 33.33% 33.33%;
     --cola-grid-rows-ana-page: repeat(3, auto);
     --cola-grid-cols-ana-names: 'cola-part1 cola-part1 cola-part1'
                                 'cola-part3 cola-part4 cola-part5'
                                 'cola-part2 cola-part2 cola-part2';
 
-    --cola-grid-rows-part1: max(6vh, 30px) max(var(--cola-height-swatch), 50px) max(10vh, 50px) 0vh;
+    --cola-grid-rows-part1: 6vh 12vh 10vh 0vh;
     --cola-hue-part-display: none;
 
     --cola-grid-rows-part2: max(10vh, 50px) max(30vh, 150px) max(10vh, 50px) max(30vh, 150px);
@@ -45,31 +38,26 @@
 /* desktop - landscape */
 @media all and (min-width: 768px) {
     :root {
-        /* whole page */
-        --height-overlap-bg: 5%;
+        /* all */
+        --height-whole-page: var(--height-page);
+        --height-main-card: 95%;
+        --padding-main-card: 1vw;
 
         /* swatch */
-        --t-meas1: calc(var(--height-page) * 0.76 * 0.5);
-        --t-meas2: calc((var(--width-screen) - var(--width-sidebar-perm) - 2 * var(--marg-bound)) * 0.3);
-        --cola-height-swatch: min(var(--t-meas1), var(--t-meas2));
-        --cola-width-swatch: var(--cola-height-swatch);
-        --cola-height-swatch-hue: calc(var(--height-page) * 0.76 * 0.1 * 0.8);
+        --cola-swatch-height: min(calc(var(--height-page) * 0.8 * 0.5 * 0.9), calc((var(--width-screen) - var(--width-sidebar-perm)) * 0.3 * 0.9));
         --cola-swatch-radius: 50%;
         --cola-swatch-text-size: var(--font-size-p);
+        --cola-height-swatch-hue: calc(var(--height-page) * 0.8 * 0.1 * 0.9);
 
-        /* search */
-        --width-searchb-whole: 280px;
-        --cola-search-marg-lr: 25vw;
-
-        /* tints */
-        --cola-tint-card-marg: 2px;
+        /* shades */
+        --cola-height-card: 95%;
+        --cola-width-card: 90%;
 
         /* layout desktop */
-        --cola-grid-rows-whole-page: 8% 8% var(--height-overlap-bg) calc(84% - var(--height-overlap-bg));
-        --cola-height-whole-page: var(--height-page);
+        --grid-ratio-hue-tab: 0% 12% 88%;
 
-        --cola-grid-cols-ana-page: 30% 36% 11.3% 11.3% 11.3%;
-        --cola-grid-rows-ana-page: auto;
+        --cola-grid-cols-ana-page: 24% 36% 13.33% 13.33% 13.33%;
+        --cola-grid-rows-ana-page: 100%;
         --cola-grid-cols-ana-names: 'cola-part1 cola-part2 cola-part3 cola-part4 cola-part5';
 
         --cola-grid-rows-part1: 20% 50% 20% 10%;
@@ -83,11 +71,12 @@
 
         :root {
             /* swatch */
-            --t-meas1: calc(var(--height-page) * 0.76 * 0.5 * 0.5);
-            --t-meas2: calc((var(--width-screen) - var(--width-sidebar-perm) - 2 * var(--marg-bound)) * 0.5);
-            --cola-height-swatch: min(var(--t-meas1), var(--t-meas2));
-            --cola-width-swatch: var(--cola-height-swatch);
-            --cola-height-swatch-hue: calc(var(--height-page) * 0.76 * 0.5 * 0.1);
+            --cola-swatch-height: min(calc(var(--height-page) * 0.8 * 0.64 * 0.5 * 0.9), calc((var(--width-screen) - var(--width-sidebar-perm)) * 0.5 * 0.9));
+            --cola-height-swatch-hue: calc(var(--height-page) * 0.8 * 0.64 * 0.1 * 0.9);
+
+            /* shades */
+            --cola-height-card: 90%;
+            --cola-width-card: 95%;
 
             /* layout desktop */
             --cola-grid-cols-ana-page: 50% 50%;
@@ -107,105 +96,83 @@
 
 
 /* -------------- whole page -------------- */
-.cola-whole-page {
-    height: var(--cola-height-whole-page);
-    display: grid;
-    grid-template-rows: var(--cola-grid-rows-whole-page);
-    background: var(--col-bg-grey-ll);
-}
-.cola-page-title {
-    height: 100%;
-    display: flex;
-    background: var(--col-bg-grey-title-l);
-}
-.cola-page-title > * {
-    margin: auto;
-}
-.cola-search-sec {
-    height: 100%;
-    display: flex;
-    background: var(--col-bg-grey-title-l);
-}
-/* overlap */
-.cola-page-empty {
-    height: 100%;
-    background: var(--col-bg-grey-title-l);
-}
-/* main container with info */
-.cola-whole-page-part3 {
-    height: 100%;
-    margin-left: var(--marg-bound);
-    margin-right: var(--marg-bound);
+.col-overview-page {
+    height: var(--height-whole-page);
+    grid-template-rows: var(--grid-ratio-hue-tab);
 }
 
-/* main subcontainer - white card */
-/* grid of 5 areas: (swatch & title), (composition & combos), (tints), (shades), (tones) */
-.col-ana-page {
-    height: 100%;
-    background: white;
+.table-hue-all {
+    padding: var(--padding-main-card);
+    height: var(--height-main-card);
     display: grid;
     grid-template-columns: var(--cola-grid-cols-ana-page);
     grid-template-rows: var(--cola-grid-rows-ana-page);
     grid-template-areas: var(--cola-grid-cols-ana-names);
-    align-items: center;
-    position: relative;
-    border-radius: var(--radius-swatch);
-    top: calc(-1 * var(--height-overlap-bg));
 }
+
+.table-hue-all {
+    height: 98%;
+    width: 98%;
+}
+
 
 /* --- part1: hex, name & swatch */
 .cola-part1 {
     grid-area: cola-part1;
+    padding: var(--padding-main-card);
     height: 100%;
+    width: 100%;
     display: grid;
     grid-template-rows: var(--cola-grid-rows-part1);
+    overflow: hidden;
 }
-.cola-title {
+.cola-title, .cola-swatch, .cola-name {
+    height: 100%;
+    width: 100%;
     display: flex; 
-    margin: auto;   
-}
-.cola-swatch {
-    display: flex;    
-    margin: auto;
-}
-.cola-name {
-    display: inline-block;
-    margin: auto; 
+    justify-content: center;
+    align-items: center;
 }
 .cola-hue {
     display: grid;
     grid-template-columns: 50% 50%;
     display: var(--cola-hue-part-display);
 }
+.cola-hue > * {
+    display: flex; 
+    margin: auto;
+}
 
 /* --- part2: composition & combinations */
 .cola-part2 {
     grid-area: cola-part2;
-    height: 100%;
-    display: grid;
-    grid-template-rows: var(--cola-grid-rows-part2);
-}
-.cola-compo-title {
-    display: flex;
-    margin: auto;
-}
-.cola-compo {
-    padding: var(--cola-marg) var(--cola-marg);
-    height: 100%;
-    width: 100%;   
-}
-.cola-combo-title {
-    display: flex;
-    margin: auto;
-}
-.cola-combo-groups {
+    padding: var(--padding-main-card);
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-rows: var(--cola-grid-rows-part2);
+    overflow: hidden;
+}
+.cola-compo-title, .cola-combo-title, .cola-compo, .cola-combo-groups {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* --- part3: tints, part4: shades, part5: tones */
-.cola-part3, .cola-part4, .cola-part5 {
+.cola-part3 {
     grid-area: cola-part3;
+}
+.cola-part4 {
+    grid-area: cola-part4;
+}
+.cola-part5 {
+    grid-area: cola-part5;
+}
+.cola-part3, .cola-part4, .cola-part5 {
+    padding: var(--padding-main-card);
     height: 100%;
     width: 100%;
     display: grid;
@@ -215,66 +182,57 @@
     display: flex;
     margin: auto;
 }
-.cola-tint-groups {
-}
-
-.cola-part4 {
-    grid-area: cola-part4;
-}
-
-.cola-part5 {
-    grid-area: cola-part5;
-}
 
 
-/* shades group - class */
+/* -------------- shades group - class -------------- */
 .cola-tint-groups, .cola-combo-groups {
     display: grid;
     grid-template-rows: var(--cola-grid-rows-shades);
     grid-template-columns: var(--cola-grid-cols-shades);
-    padding: var(--cola-marg) var(--cola-marg);
+    overflow: hidden;
 }
 .cola-combo-groups {
     grid-template-columns: repeat(3, 33.3%);
     grid-template-rows: repeat(2, 50%);
 }
 
+.cola-tint-groups > *, .cola-combo-groups > * {
+    display: flex;
+}
 .cola-tint-card, .cola-combo-card {
-    height: calc(100% - 2 * var(--cola-tint-card-marg));
-    width: calc(100% - 2 * var(--cola-tint-card-marg));
+    height: var(--cola-height-card);
+    width: var(--cola-width-card);
     margin: auto;
-    border-radius: 5px;
+
+    border-radius: var(--radius-swatch);
     cursor: pointer;
 
- -webkit-box-shadow: var(--cola-swatch-shadow);
-    -moz-box-shadow: var(--cola-swatch-shadow);
-     -ms-box-shadow: var(--cola-swatch-shadow);
-      -o-box-shadow: var(--cola-swatch-shadow);
-         box-shadow: var(--cola-swatch-shadow);
+ -webkit-box-shadow: var(--shadow-swatch);
+    -moz-box-shadow: var(--shadow-swatch);
+     -ms-box-shadow: var(--shadow-swatch);
+      -o-box-shadow: var(--shadow-swatch);
+         box-shadow: var(--shadow-swatch);
 }
 .cola-combo-card {
-    height: calc(100% - 6 * var(--cola-tint-card-marg));
-    width: calc(100% - 6 * var(--cola-tint-card-marg));
+    height: 90%;
+    width: 90%;
+    position: relative;
 }
 
-.cola-tint-card p, .cola-combo-card p {
-    position: relative;
-    text-align: center;
-    top: 50%;
+.cola-tint-card p {
+    display: flex;
+    margin: auto;
+    padding: 3px 0;
     opacity: 0;
-
     font-size: var(--cola-swatch-text-size);
-
--webkit-transform: translate(0%,-50%);
-   -moz-transform: translate(0%,-50%);
-    -ms-transform: translate(0%,-50%);
-     -o-transform: translate(0%,-50%);
-        transform: translate(0%,-50%);
 }
 .cola-combo-card p {
-    text-align: right;
-    padding: 5px;
-    top: 20%;
+    display: block;
+    text-align: right;  
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    opacity: 0;
 }
 
 .cola-tint-card:hover p, .cola-combo-card:hover p {
@@ -283,42 +241,9 @@
 
 
 /* -------------- search bar -------------- */
-.cola-search-sec > * {
-    margin: auto;
-}
-#colaMyColor {
-    opacity: 0;
-    position: relative;
-}
-#colaPickerCover {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: var(--height-searchb);
-    width: var(--height-searchb);
-}
-
-.tab-search {
-    position: relative;
-}
-.searchInput {
-    position: absolute;
-    top: 0;
-    left: 10%;
-}
-.searchButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.cola-list {
-    display: none;
-}
 
 
 /* -------------- title -------------- */
-.cola-title > * {
-}
 #cola-artista-name {
     line-height: auto;
     padding: 0;
@@ -331,43 +256,34 @@
 
 /* -------------- swatch -------------- */
 .cola-swatch-sub {
-    height: var(--cola-height-swatch);
-    width: var(--cola-width-swatch);
+    height: var(--cola-swatch-height);
+    width: var(--cola-swatch-height);
     border-radius: var(--cola-swatch-radius);
     background: #00BFFF;
 
- -webkit-box-shadow: var(--cola-swatch-shadow);
-    -moz-box-shadow: var(--cola-swatch-shadow);
-     -ms-box-shadow: var(--cola-swatch-shadow);
-      -o-box-shadow: var(--cola-swatch-shadow);
-         box-shadow: var(--cola-swatch-shadow);
+ -webkit-box-shadow: var(--shadow-swatch);
+    -moz-box-shadow: var(--shadow-swatch);
+     -ms-box-shadow: var(--shadow-swatch);
+      -o-box-shadow: var(--shadow-swatch);
+         box-shadow: var(--shadow-swatch);
 }
 
 
 /* -------------- name -------------- */
-.cola-name-sub {
-    text-align: center;
-    padding-top: 1vh;
-}
 
 
 /* -------------- hue -------------- */
-.cola-hue > * {
-    margin: auto;
-}
-
 .cola-hue-swatch {
     height: var(--cola-height-swatch-hue);
     width: var(--cola-height-swatch-hue);
     border-radius: 50%;
-
     background: #00BFFF;
 
- -webkit-box-shadow: var(--cola-swatch-shadow);
-    -moz-box-shadow: var(--cola-swatch-shadow);
-     -ms-box-shadow: var(--cola-swatch-shadow);
-      -o-box-shadow: var(--cola-swatch-shadow);
-         box-shadow: var(--cola-swatch-shadow);
+ -webkit-box-shadow: var(--shadow-swatch);
+    -moz-box-shadow: var(--shadow-swatch);
+     -ms-box-shadow: var(--shadow-swatch);
+      -o-box-shadow: var(--shadow-swatch);
+         box-shadow: var(--shadow-swatch);
 }
 
 
@@ -479,46 +395,46 @@
 
 /* -------------- combos -------------- */
 #combo1 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #20F986 50%, #20F986 100%);
 }
 #combo2 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #003FFF 50%, #003FFF 100%);
 }
 #combo3 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #FF9999 50%, #FF9999 100%);
 }
 #combo4 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #BFF128 50%, #BFF128 100%);
 }
 #combo5 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #EEDC82 50%, #EEDC82 100%);
 }
 #combo6 {
-    background: -webkit-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
-    background: -moz-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
-    background: -ms-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
-    background: -o-linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
-    background: linear-gradient(45deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -webkit-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -moz-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -ms-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: -o-linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
+    background: linear-gradient(30deg, #00BFFF 0%, #00BFFF 50%, #E1E6D6 50%, #E1E6D6 100%);
 }
 
 #text-combo2 {
@@ -534,13 +450,13 @@
 .compo-table td, .compo-table th {
     text-align: center;
     vertical-align: middle;
-    border-bottom: 2px solid var(--col-bg-grey-title-l);
+    border-bottom: 1px solid var(--col-accent2);
 }
 .compo-table th {
-    background: var(--col-bg-grey-ll);
+    background: var(--col-accent2-ll);
 }
 .compo-table tr:hover {
-    background: var(--col-bg-grey-ll);
+    background: var(--col-accent2-ll);
 }
 
 

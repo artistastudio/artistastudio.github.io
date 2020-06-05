@@ -1,0 +1,241 @@
+
+:root {
+    --col-header-border: #CBDBD6;
+}
+
+#card_shade_1 {
+  background: #151716;
+}
+.card:hover #name_shade_1 p {
+  color: #ffffff;
+}
+
+#card_shade_2 {
+  background: #2C2F2E;
+}
+.card:hover #name_shade_2 p {
+  color: #ffffff;
+}
+
+#card_shade_3 {
+  background: #434846;
+}
+.card:hover #name_shade_3 p {
+  color: #ffffff;
+}
+
+#card_shade_4 {
+  background: #5A605E;
+}
+.card:hover #name_shade_4 p {
+  color: #ffffff;
+}
+
+#card_shade_5 {
+  background: #707976;
+}
+.card:hover #name_shade_5 p {
+  color: #ffffff;
+}
+
+#card_shade_6 {
+  background: #87918E;
+}
+.card:hover #name_shade_6 p {
+  color: #000000;
+}
+
+#card_shade_7 {
+  background: #9EAAA6;
+}
+.card:hover #name_shade_7 p {
+  color: #000000;
+}
+
+#card_shade_8 {
+  background: #B5C2BE;
+}
+.card:hover #name_shade_8 p {
+  color: #000000;
+}
+
+#card_shade_9 {
+  background: #CBDBD6;
+}
+.card:hover #name_shade_9 p {
+  color: #000000;
+}
+
+#card_shade_10 {
+  background: #E4EDEA;
+}
+.card:hover #name_shade_10 p {
+  color: #000000;
+}
+
+#card_tone_1 {
+  background: #8D9290;
+}
+.card:hover #name_tone_1 p {
+  color: #000000;
+}
+
+#card_tone_2 {
+  background: #CBDBD6;
+}
+.card:hover #name_tone_2 p {
+  color: #000000;
+}
+
+#card_tone_3 {
+  background: #B7DDD1;
+}
+.card:hover #name_tone_3 p {
+  color: #000000;
+}
+
+#card_tone_4 {
+  background: #A1DFCB;
+}
+.card:hover #name_tone_4 p {
+  color: #000000;
+}
+
+#card_tone_5 {
+  background: #8BE1C6;
+}
+.card:hover #name_tone_5 p {
+  color: #000000;
+}
+
+#card_tone_6 {
+  background: #75E3C0;
+}
+.card:hover #name_tone_6 p {
+  color: #000000;
+}
+
+#card_tone_7 {
+  background: #5FE5BA;
+}
+.card:hover #name_tone_7 p {
+  color: #000000;
+}
+
+#card_tone_8 {
+  background: #48E7B5;
+}
+.card:hover #name_tone_8 p {
+  color: #000000;
+}
+
+#card_tone_9 {
+  background: #30E9AF;
+}
+.card:hover #name_tone_9 p {
+  color: #000000;
+}
+
+#card_tone_10 {
+  background: #18EBA8;
+}
+.card:hover #name_tone_10 p {
+  color: #000000;
+}
+
+#card_simcol_1 {
+  background: #C8E3D7;
+}
+.circle:hover #name_simcol_1 p {
+  color: #000000;
+}
+
+#card_simcol_2 {
+  background: #B5D2CE;
+}
+.circle:hover #name_simcol_2 p {
+  color: #000000;
+}
+
+#card_simcol_3 {
+  background: #C2E8E5;
+}
+.circle:hover #name_simcol_3 p {
+  color: #000000;
+}
+
+#card_simcol_4 {
+  background: #A1DAD7;
+}
+.circle:hover #name_simcol_4 p {
+  color: #000000;
+}
+
+#card_simcol_5 {
+  background: #A1E9DE;
+}
+.circle:hover #name_simcol_5 p {
+  color: #000000;
+}
+
+#card_combo_1 {
+  background: -webkit-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #B93B8F 50%, #B93B8F 100%);
+  background: -moz-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #B93B8F 50%, #B93B8F 100%);
+  background: -o-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #B93B8F 50%, #B93B8F 100%);
+  background: linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #B93B8F 50%, #B93B8F 100%);
+}
+.combo:hover #name_combo_1 p {
+  color: #ffffff;
+}
+
+#card_combo_2 {
+  background: -webkit-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #E25098 50%, #E25098 100%);
+  background: -moz-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #E25098 50%, #E25098 100%);
+  background: -o-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #E25098 50%, #E25098 100%);
+  background: linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #E25098 50%, #E25098 100%);
+}
+.combo:hover #name_combo_2 p {
+  color: #000000;
+}
+
+#card_combo_3 {
+  background: -webkit-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #A4BE5C 50%, #A4BE5C 100%);
+  background: -moz-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #A4BE5C 50%, #A4BE5C 100%);
+  background: -o-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #A4BE5C 50%, #A4BE5C 100%);
+  background: linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #A4BE5C 50%, #A4BE5C 100%);
+}
+.combo:hover #name_combo_3 p {
+  color: #000000;
+}
+
+#card_combo_4 {
+  background: -webkit-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #63B365 50%, #63B365 100%);
+  background: -moz-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #63B365 50%, #63B365 100%);
+  background: -o-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #63B365 50%, #63B365 100%);
+  background: linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #63B365 50%, #63B365 100%);
+}
+.combo:hover #name_combo_4 p {
+  color: #000000;
+}
+
+#card_combo_5 {
+  background: -webkit-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #4E387E 50%, #4E387E 100%);
+  background: -moz-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #4E387E 50%, #4E387E 100%);
+  background: -o-linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #4E387E 50%, #4E387E 100%);
+  background: linear-gradient(45deg, #CBDBD6 0%, #CBDBD6 50%, #4E387E 50%, #4E387E 100%);
+}
+.combo:hover #name_combo_5 p {
+  color: #ffffff;
+}
+
+#card_shade_9 {
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+}
+
+#card_tone_2 {
+  -webkit-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+     -moz-box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+          box-shadow: 0 var(--underline-dist-inner) 0 white, 0 var(--underline-dist-outer) 0 #CBDBD6;
+}
