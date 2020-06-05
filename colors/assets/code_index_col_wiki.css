@@ -201,6 +201,13 @@
 
     margin-right: auto;
     margin-left: var(--align-search-left);
+
+    /*
+    -webkit-animation: searchbox-animate 2s ease-in-out;
+    -moz-animation: searchbox-animate 2s ease-in-out;
+    -o-animation: searchbox-animate 2s ease-in-out;
+    animation: searchbox-animate 2s ease-in-out;
+    */
 }
 
 @-webkit-keyframes searchbox-animate {
@@ -258,10 +265,12 @@
     width: var(--height-searchb);
     height: var(--height-searchb);
 
+    /*
     -webkit-animation: searchbox-button-animate 0.5s ease-in-out 2s;
     -moz-animation: searchbox-button-animate 0.5s ease-in-out 2s;
     -o-animation: searchbox-button-animate 0.5s ease-in-out 2s;
     animation: searchbox-button-animate 0.5s ease-in-out 2s;
+    */
 }
 
 @-webkit-keyframes searchbox-button-animate {
@@ -338,10 +347,12 @@
       -o-transition: .5s;
          transition: .5s;
 
+         /*
     -webkit-animation: searchbox-animate 2s ease-in-out;
     -moz-animation: searchbox-animate 2s ease-in-out;
     -o-animation: searchbox-animate 2s ease-in-out;
     animation: searchbox-animate 2s ease-in-out;
+    */
 }
 
 .searchBox ::-moz-input-placeholder {

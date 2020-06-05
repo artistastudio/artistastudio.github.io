@@ -226,7 +226,7 @@
       let txt = 'Color Dictionary';
       let speed = 1000 / txt.length;
 
-      typeWriter();      
+      //typeWriter();      
       function typeWriter() {
         if (m < txt.length) {
           //document.getElementById("titleRight").innerHTML += txt.charAt(m);
@@ -236,21 +236,6 @@
           setTimeout(typeWriter, speed);
         }
       }
-    </script>
-
-    <script>
-      let n = 0;
-      let txt_desc = "Welcome to Artista's world of colors!";
-      let speed_desc = 2500 / txt_desc.length;
-
-      function fct_type_title_desc() {
-        if (n < txt_desc.length) {
-          document.getElementById("titleDesc").innerHTML += txt_desc.charAt(n);
-          n++;
-          setTimeout(fct_type_title_desc, speed_desc);
-        }        
-      }
-    </script>  
-    
+    </script>    
   </body>
 </html>
