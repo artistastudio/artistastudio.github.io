@@ -20,6 +20,7 @@
 
     /* search box width */
     --align-search-left: auto;
+    --width-searchb-whole: 30vw;
     --width-searchb-whole: max(200px, 30vw);
     --height-searchb: 25px; 
 
@@ -125,6 +126,8 @@
 
         /* search */
         --align-search-left: 0;
+        --width-searchb-whole: 200px;
+        --width-searchb-whole: max(200px, 30vw);
 
         /* description - text */
         --desc-num-col: 3;
@@ -209,46 +212,46 @@
 }
 
 @-webkit-keyframes searchbox-animate {
-    from {
+    0% {
         width: var(--height-searchb);
     }
     50% {
         width: var(--height-searchb);
     }
-    to {
+    100% {
         width: var(--width-searchb-whole);
     }
 }
 @-moz-keyframes searchbox-animate {
-    from {
+    0% {
         width: var(--height-searchb);
     }
     50% {
         width: var(--height-searchb);
     }
-    to {
+    100% {
         width: var(--width-searchb-whole);
     }
 }
 @-o-keyframes searchbox-animate {
-    from {
+    0% {
         width: var(--height-searchb);
     }
     50% {
         width: var(--height-searchb);
     }
-    to {
+    100% {
         width: var(--width-searchb-whole);
     }
 }
 @keyframes searchbox-animate {
-    from {
+    0% {
         width: var(--height-searchb);
     }
     50% {
         width: var(--height-searchb);
     }
-    to {
+    100% {
         width: var(--width-searchb-whole);
     }
 }
@@ -270,46 +273,46 @@
 }
 
 @-webkit-keyframes searchbox-button-animate {
-    from {
+    0% {
         -webkit-transform: scale(1);
     }
     30% {
         -webkit-transform: scale(1.2);
     }
-    to {
+    100% {
         -webkit-transform: scale(1);
     }
 }
 @-moz-keyframes searchbox-button-animate {
-    from {
+    0% {
         -moz-transform: scale(1);
     }
     30% {
         -moz-transform: scale(1.2);
     }
-    to {
+    100% {
         -moz-transform: scale(1);
     }
 }
 @-o-keyframes searchbox-button-animate {
-    from {
+    0% {
         -o-transform: scale(1);
     }
     30% {
         -o-transform: scale(1.2);
     }
-    to {
+    100% {
         -o-transform: scale(1);
     }
 }
 @keyframes searchbox-button-animate {
-    from {
+    0% {
         transform: scale(1);
     }
     30% {
         transform: scale(1.2);
     }
-    to {
+    100% {
         transform: scale(1);
     }
 }

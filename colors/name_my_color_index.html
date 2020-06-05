@@ -136,7 +136,7 @@
 
 			<div class="desc-cont" id="desc-page2"> 
 				<div>
-					<h2 id="titleDesc"></h2>
+					<h2 id="titleDesc">Give Your Color an Identity</h2>
 
 					<p class="desc-text-title">No More "a Little Dark"</p>
 					<p>
@@ -248,20 +248,6 @@
 				m++;
 				setTimeout(typeWriter, speed);
 			}
-		}
-	</script>
-
-	<script>
-		let n = 0;
-		let txt_desc = "Give Your Color an Identity";
-		let speed_desc = 2500 / txt_desc.length;
-
-		function fct_type_title_desc() {
-			if (n < txt_desc.length) {
-				document.getElementById("titleDesc").innerHTML += txt_desc.charAt(n);
-				n++;
-				setTimeout(fct_type_title_desc, speed_desc);
-			}        
 		}
 	</script>
 
