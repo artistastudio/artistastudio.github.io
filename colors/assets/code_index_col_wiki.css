@@ -201,11 +201,6 @@
 
     margin-right: auto;
     margin-left: var(--align-search-left);
-
-    -webkit-animation: searchbox-animate 2s ease-in-out;
-    -moz-animation: searchbox-animate 2s ease-in-out;
-    -o-animation: searchbox-animate 2s ease-in-out;
-    animation: searchbox-animate 2s ease-in-out;
 }
 
 @-webkit-keyframes searchbox-animate {
